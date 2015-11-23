@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+
+  RewriteEngine On
+
+  RewriteRule ^contato/?$ ./index.php?anchor=$1
+  RewriteRule ^local/?$ ./index.php?anchor=$1
+
+</IfModule>
