@@ -1,16 +1,18 @@
 {
-  "name": "promafa-beta",
-  "version": "0.0.0",
-  "description": "Promafa Beta Project",
+  "name": "promafa",
+  "version": "1.0.0",
+  "description": "Promafa - A Mowe Project",
   "main": "gulpfile.js",
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-concat": "^2.6.0",
-    "gulp-jshint": "*",
-    "gulp-minify-css": "*",
+    "gulp-concat-css": "^2.2.0",
+    "gulp-jshint": "^1.12.0",
+    "gulp-minify-css": "^1.2.1",
     "gulp-rename": "^1.2.2",
     "gulp-tinypng": "^1.0.2",
-    "gulp-uglify": "^1.4.1"
+    "gulp-image-resize": "^0.7.1",
+    "gulp-uglify": "^1.5.1"
   },
   "devDependencies": {},
   "scripts": {
