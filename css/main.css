@@ -1,0 +1,8 @@
+/* Main */
+
+.Main {  }
+
+.is-landscape .Main {
+	width: 66.666666666%;
+	float: right;
+}

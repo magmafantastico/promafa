@@ -1,0 +1,12 @@
+/* Header */
+
+.Header {
+	height: 50vh;
+}
+
+.is-landscape .Header {
+	height: 100vh;
+	width: 33.333333333%;
+	position: fixed;
+	float: left;
+}
