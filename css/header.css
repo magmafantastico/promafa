@@ -1,7 +1,16 @@
 /* Header */
 
 .Header {
-	height: 50vh;
+	min-height: 50vh;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	-webkit-flex-direction: column;
+	flex-direction: column;
 }
 
 .is-landscape .Header {

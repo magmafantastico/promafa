@@ -1,13 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="">
+<html lang="pt-br" class="roboto grey-100">
 <meta charset="UTF-8">
 <title>Promafa</title>
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 <script src="dist/js/villa.min.js"></script>
 <link rel="stylesheet" href="dist/css/villa.min.css"/>
+<link rel="stylesheet" href="css/icon.css"/>
 <link rel="stylesheet" href="css/header.css"/>
 <link rel="stylesheet" href="css/main.css"/>
+<link rel="stylesheet" href="css/nav.css"/>
+<link rel="stylesheet" href="css/menu.css"/>
+<link rel="stylesheet" href="css/logo.css"/>
+<link rel="stylesheet" href="css/social.css"/>
+<link rel="stylesheet" href="css/certificate.css"/>
 <link rel="stylesheet" href="css/block.css"/>
 <!--[if lt IE 9]>
 <link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
@@ -18,21 +24,260 @@
 <![endif]-->
 <script src="js/is.js"></script>
 
-<body class="Layout">
+<header class="Header">
 
-<header class="Header red">
+	<!-- Header Logo element area -->
+	<div class="Logo">
 
-	<div id="logo" class="MainLogo">
+		<div id="header-logo-area" class="Logo-select-area">
 
-		<div class="MainLogo-select-area">
+			<svg version="1.1" id="logo" class="Logo-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1000 600" style="enable-background:new 0 0 1000 600;" xml:space="preserve">
 
-			<svg class="MainLogo-svg"></svg>
+				<g class="Logo-svg-lines">
+					<path id="XMLID_37_" class="lines" d="M6.9,350H500v-45H0.1C0.5,320.3,2.8,335.3,6.9,350z"/>
+					<path id="XMLID_29_" class="lines" d="M28.5,400H500v-45H8.4C13.2,370.4,19.9,385.5,28.5,400z"/>
+					<path id="XMLID_35_" class="lines" d="M66.9,450H500v-45H31.5C41.2,420.7,53.1,435.7,66.9,450z"/>
+					<path id="XMLID_30_" class="lines" d="M127.3,500H500v-45H71.8C88,471,106.6,486.1,127.3,500z"/>
+					<path id="XMLID_33_" class="lines" d="M223.5,550H500v-45H135C161.4,522,191.2,537.1,223.5,550z"/>
+					<path id="XMLID_31_" class="lines" d="M500,600v-45H236.5C313,583.5,403.3,600,500,600z"/>
+				</g>
+				<g class="Logo-svg-main">
+					<path id="half-circle_1_" class="lines" d="M1000,300C1000,134.3,776.1,0,500,0C318.4,0,159.4,58.1,71.8,145h0v0
+						C26.2,190.2,0,243.3,0,300H1000z"/>
+				</g>
+				<g class="Logo-svg-main-marked">
+					<path id="half-circle-marked" class="lines" d="M500,0C223.9,0,0,134.3,0,300h1000C1000,134.3,776.1,0,500,0z M138.4,222.3h-32.1
+						l-8.5,41.1H79l22.2-107.1h43c33.4,0,33.4,22.6,33.4,32.7C177.6,189.6,177.2,222.3,138.4,222.3z M271.8,212.7v0.3
+						c9,3.3,11.4,10.5,11.4,19.3c0,7.3-1.8,14.8-1.6,22.2c0,3,0.3,6.1,1.9,8.8h-19.6c-0.9-2.7-1.2-5.3-1.2-8.2c0-7.9,1.8-15.6,1.8-23.4
+						c0-12.4-10-12.4-20.1-12.4h-22.3l-9.1,44.1h-19l22.2-107.1h46.3c9.1,0,33.7,1.2,33.7,27.3C296.1,200.5,287,210,271.8,212.7z
+						 M366.8,265.9c-30.6,0-47.5-20.2-47.5-46.8c0-45,29.5-65.4,57.4-65.4c28.2,0,46.8,19.3,46.8,46.8
+						C423.5,245.5,395.4,265.9,366.8,265.9z M555.3,263.4h-18l18.6-85.8h-0.3l-48.4,85.8h-14.7L479,177.6h-0.3l-16.3,85.8h-18
+						l22.2-107.1h25.8l11.7,81.6h0.3l46.5-81.6h26.5L555.3,263.4z M666.9,263.4l-4.3-28.3H620l-16.5,28.3h-20.1l64.2-107.1h19.8
+						L686,263.4H666.9z M786.3,215.8h-47.1l-9.9,47.5h-18.7l22.3-107.1h73l-3.3,16.2h-54.4l-5.9,28h47.2L786.3,215.8z M878.1,263.4
+						l-4.3-28.3h-42.6l-16.5,28.3h-20.1l64.2-107.1h19.8l18.6,107.1H878.1z"/>
+					<path id="XMLID_13_" class="lines" d="M141.1,171.6h-24.3l-7.3,35.4h28.3c16.8,0,21.1-11.3,21.1-20.7
+						C158.9,180.3,156.4,171.6,141.1,171.6z"/>
+					<path id="XMLID_14_" class="lines" d="M258.2,171.6H232l-6.9,33.4h27.4c15.9,0,24.9-7,24.9-19.5C277.4,173.8,268.1,171.6,258.2,171.6
+						z"/>
+					<path id="XMLID_11_" class="lines" d="M376.1,169c-25.5,0-38.1,25.6-38.1,49.5c0,19.9,10.6,32.1,29.4,32.1
+						c24.7,0,37.3-25.6,37.3-49.5C404.7,181.2,394.8,169,376.1,169z"/>
+					<polygon id="XMLID_12_" class="lines" points="653.7,175.2 627.9,220.8 660.6,220.8 654,175.2 	"/>
+					<polygon id="XMLID_1_" class="lines" points="864.9,175.2 839.1,220.8 871.8,220.8 865.2,175.2 	"/>
+				</g>
+				<g class="Logo-svg-typo">
+					<g class="Logo-svg-text">
+						<path id="XMLID_22_" d="M549.7,355h19.2c9.6,0.1,16.6,3.3,16.6,13.9c0,10.6-8.7,16.8-18.6,16.8h-13l-3.6,17.2h-10.5L549.7,355z
+							 M555.6,377.5h10.7c5.3,0,8.6-2.7,8.6-8.4c0-4.8-3.8-6-7.4-6h-9L555.6,377.5z"/>
+						<path id="XMLID_25_" d="M591.3,355h22.8c8.6-0.1,14.3,3.3,14.3,12.5c0,6.5-4.6,11.9-11,12.9v0.1c4,1.2,5,4.7,5,8.4
+							c0,2.1-0.3,5.4-0.3,8.3c0,2.1,0.1,4.2,0.7,5.6h-10.3c-0.3-1.1-0.5-2.1-0.5-3.2c0-3.2,0.5-6.5,0.5-9.7c0-4.6-2.7-5.8-6.9-5.8h-9.9
+							l-4,18.7h-10.5L591.3,355z M597.3,376.6h9.7c5.6-0.1,10.9-2.2,10.9-7.6c0-5.2-3.6-5.9-7.8-5.9h-10L597.3,376.6z"/>
+						<path id="XMLID_28_" d="M655.2,353.9c12.9,0,21.2,7.1,21.2,20.5c0,15.7-9.4,29.6-26.1,29.6c-13.4,0-21.2-7.7-21.2-21.2
+							C629.1,367.3,639.1,353.9,655.2,353.9z M650.5,395.1c10.3,0,15.5-11,15.5-20c0-6.7-2.9-12.4-10.7-12.4
+							c-10.8,0-15.7,10.9-15.7,20.1C639.6,389.4,642.8,395.1,650.5,395.1z"/>
+						<path id="XMLID_36_" d="M685.4,355h17.3c13.3,0,20.3,6.9,20.3,18.6c0,16.7-9.2,29.2-27.7,29.2h-20L685.4,355z M687.7,394h8.1
+							c10.7,0,16.7-8.4,16.7-18.6c0-6.9-2.9-11.6-10.5-11.6h-7.9L687.7,394z"/>
+						<path id="XMLID_40_" d="M766.4,382.8c-2.9,13.7-8.2,21.2-23,21.2c-9.3,0-18.8-3.8-18.8-14.2c0-2.4,0.5-4.8,1-7.1l5.8-27.7h10.5
+							l-5.8,27.7c-0.3,1.5-1,4.5-1,6c0,2.4,1.7,6.4,9,6.4c8.6,0,10.2-4.6,11.7-11.8l6-28.3h10.5L766.4,382.8z"/>
+						<path id="XMLID_42_" d="M787,363.8h-15l1.9-8.8h39.9l-1.9,8.8h-14.3l-8.2,39h-10.6L787,363.8z"/>
+						<path id="XMLID_44_" d="M834.7,353.9c12.9,0,21.2,7.1,21.2,20.5c0,15.7-9.4,29.6-26.1,29.6c-13.4,0-21.2-7.7-21.2-21.2
+							C808.6,367.3,818.6,353.9,834.7,353.9z M830,395.1c10.3,0,15.5-11,15.5-20c0-6.7-2.9-12.4-10.7-12.4c-10.8,0-15.7,10.9-15.7,20.1
+							C819.1,389.4,822.3,395.1,830,395.1z"/>
+						<path id="XMLID_47_" d="M865.3,387c-0.3,6.8,4.3,8.8,10.3,8.8c4.2,0,9.1-2,9.1-6.8c0-4.7-6.2-5.6-12.1-7.4
+							c-6-1.9-12.1-4.6-12.1-12.9c0-10.7,9.7-14.9,19-14.9c9.8,0,18,4.4,18,15.4h-10c0.2-5.4-3.7-7.2-8.6-7.2c-4,0-8.4,1.5-8.4,6
+							c0,4.8,8.1,6,11.4,6.8c7.5,1.9,12.8,4.8,12.8,13.4c0,11.5-10.4,15.8-19.5,15.8c-13.2,0-19.9-5.5-19.9-17H865.3z"/>
+						<path id="XMLID_49_" d="M549.8,441h17.3c13.3,0,20.3,6.9,20.3,18.6c0,16.7-9.2,29.2-27.7,29.2h-20L549.8,441z M552.1,480h8.1
+							c10.7,0,16.7-8.4,16.7-18.6c0-6.9-2.9-11.6-10.5-11.6h-7.9L552.1,480z"/>
+						<path id="XMLID_52_" d="M596.2,441h36.5l-1.8,8.8h-26l-2.1,10.3h24.1l-1.7,8.2H601l-2.5,11.7H625l-1.9,8.8h-36.9L596.2,441z"/>
+						<path id="XMLID_54_" d="M653.2,441h14.5l3.7,34.6h0.1l18.4-34.6h14.7l-10.1,47.8h-9.8l8.7-38.1h-0.1L673,488.8h-8l-4.6-38.1h-0.1
+							l-7.2,38.1h-10L653.2,441z"/>
+						<path id="XMLID_56_" d="M724,441h10.8l8,47.8h-10.5l-1.5-10.7h-17.9l-6,10.7h-11.1L724,441z M717,470.3h12.8l-2.3-19h-0.1
+							L717,470.3z"/>
+						<path id="XMLID_59_" d="M753.4,441h10.9l13,34h0.1l6.8-34h9.6l-10.1,47.8h-10.5l-13.1-33.6H760l-6.8,33.6h-9.8L753.4,441z"/>
+						<path id="XMLID_61_" d="M799.8,441h17.3c13.3,0,20.3,6.9,20.3,18.6c0,16.7-9.2,29.2-27.7,29.2h-20L799.8,441z M802.1,480h8.1
+							c10.7,0,16.7-8.4,16.7-18.6c0-6.9-2.9-11.6-10.5-11.6h-7.9L802.1,480z"/>
+						<path id="XMLID_64_" d="M846.3,441h10.6l-10.1,47.8h-10.6L846.3,441z"/>
+						<path id="XMLID_66_" d="M881.6,439.9c12.9,0,21.2,7.1,21.2,20.5c0,15.7-9.4,29.6-26.1,29.6c-13.4,0-21.2-7.7-21.2-21.2
+							C855.5,453.3,865.5,439.9,881.6,439.9z M876.9,481.1c10.3,0,15.5-11,15.5-20c0-6.7-2.9-12.4-10.7-12.4
+							c-10.8,0-15.7,10.9-15.7,20.1C866,475.4,869.2,481.1,876.9,481.1z"/>
+						<path id="XMLID_69_" d="M939.2,457.6c0-5.9-3.6-8.9-8.6-8.9c-10.8,0-15.7,10.9-15.7,20.1c0,6.6,3.2,12.3,10.9,12.3
+							c5.8,0,10.3-4.5,11.3-9.5h10.5C943.3,485,936,490,925.6,490c-13.4,0-21.2-7.7-21.2-21.2c0-15.5,10-28.9,26.1-28.9
+							c11.1,0,19.4,6.1,19.2,17.8H939.2z"/>
+						<path id="XMLID_71_" d="M971.5,441h10.8l8,47.8h-10.5l-1.5-10.7h-17.9l-6,10.7h-11.1L971.5,441z M964.5,470.3h12.8l-2.3-19h-0.1
+							L964.5,470.3z"/>
+						<path id="XMLID_74_" d="M549.8,527h34l-1.9,8.8h-23.5l-2.3,11.1h20.5l-1.7,8.2h-20.4l-4.2,19.8h-10.5L549.8,527z"/>
+						<path id="XMLID_76_" d="M595.9,527h10.8l8,47.8h-10.5l-1.5-10.7h-17.9l-6,10.7h-11.1L595.9,527z M589,556.3h12.8l-2.3-19h-0.1
+							L589,556.3z"/>
+						<path id="XMLID_79_" d="M625.4,527h17.3c13.3,0,20.3,6.9,20.3,18.6c0,16.7-9.2,29.2-27.7,29.2h-20L625.4,527z M627.6,566h8.1
+							c10.7,0,16.7-8.4,16.7-18.6c0-6.9-2.9-11.6-10.5-11.6h-7.9L627.6,566z"/>
+						<path id="XMLID_82_" d="M671.7,527h36.5l-1.8,8.8h-26l-2.1,10.3h24.1l-1.7,8.2h-24.1l-2.5,11.7h26.4l-1.9,8.8h-36.9L671.7,527z"/>
+						<path id="XMLID_84_" d="M713.2,527h10.6l-8.2,39h23.1l-1.9,8.8h-33.7L713.2,527z"/>
+						<path id="XMLID_86_" d="M763.8,527h10.6l-8.2,39h23.1l-1.9,8.8h-33.7L763.8,527z"/>
+						<path id="XMLID_88_" d="M801.8,535.8h-15l1.9-8.8h39.9l-1.9,8.8h-14.3l-8.2,39h-10.6L801.8,535.8z"/>
+						<path id="XMLID_90_" d="M830.7,527H848c13.3,0,20.3,6.9,20.3,18.6c0,16.7-9.2,29.2-27.7,29.2h-20L830.7,527z M833,566h8.1
+							c10.7,0,16.7-8.4,16.7-18.6c0-6.9-2.9-11.6-10.5-11.6h-7.9L833,566z"/>
+						<path id="XMLID_93_" d="M890.4,527h10.8l8,47.8h-10.5l-1.5-10.7h-17.9l-6,10.7h-11.1L890.4,527z M883.4,556.3h12.8l-2.3-19h-0.1
+							L883.4,556.3z"/>
+						<path id="XMLID_96_" d="M911.3,564.5h10.6l-2.2,10.3h-10.6L911.3,564.5z"/>
+					</g>
+					<g class="Logo-svg-mark">
+						<path id="XMLID_130_" class="mark" d="M144.2,156.3h-43L79,263.4h18.7l8.5-41.1h32.1c38.8,0,39.3-32.7,39.3-33.3
+							C177.6,178.9,177.6,156.3,144.2,156.3z M137.8,207h-28.3l7.3-35.4h24.3c15.3,0,17.8,8.7,17.8,14.7
+							C158.9,195.7,154.6,207,137.8,207z"/>
+						<path id="XMLID_133_" class="mark" d="M262.4,156.3h-46.3l-22.2,107.1h19l9.1-44.1h22.3c10,0,20.1,0,20.1,12.4
+							c0,7.8-1.8,15.4-1.8,23.4c0,3,0.3,5.5,1.2,8.2h19.6c-1.6-2.7-1.9-5.8-1.9-8.8c-0.1-7.3,1.6-14.8,1.6-22.2c0-8.8-2.4-16-11.4-19.3
+							v-0.3c15.1-2.7,24.3-12.1,24.3-29.1C296.1,157.5,271.5,156.3,262.4,156.3z M252.5,205h-27.4l6.9-33.4h26.2
+							c9.9,0,19.2,2.3,19.2,13.9C277.4,198,268.4,205,252.5,205z"/>
+						<path id="XMLID_136_" class="mark" d="M376.7,153.7c-27.9,0-57.4,20.4-57.4,65.4c0,26.5,16.9,46.8,47.5,46.8
+							c28.6,0,56.7-20.4,56.7-65.4C423.5,173.1,404.9,153.7,376.7,153.7z M367.4,250.6c-18.7,0-29.4-12.1-29.4-32.1
+							c0-23.8,12.6-49.5,38.1-49.5c18.7,0,28.6,12.1,28.6,32.1C404.7,225,392.1,250.6,367.4,250.6z"/>
+						<polygon id="XMLID_137_" class="mark" points="504.3,237.9 504,237.9 492.3,156.3 466.5,156.3 444.3,263.4 462.3,263.4
+							478.7,177.6 479,177.6 492.5,263.4 507.2,263.4 555.6,177.6 555.9,177.6 537.3,263.4 555.3,263.4 577.4,156.3 550.8,156.3 		"/>
+						<path id="XMLID_140_" class="mark" d="M647.6,156.3l-64.2,107.1h20.1L620,235h42.6l4.3,28.3h19l-18.6-107.1H647.6z M627.9,220.8
+							l25.8-45.6h0.3l6.6,45.6H627.9z"/>
+						<polygon id="XMLID_141_" class="mark" points="748.2,172.5 802.7,172.5 806,156.3 732.9,156.3 710.6,263.4 729.3,263.4
+							739.2,215.8 786.3,215.8 789.6,200.5 742.4,200.5 		"/>
+						<path id="XMLID_144_" class="mark" d="M858.8,156.3l-64.2,107.1h20.1l16.5-28.3h42.6l4.3,28.3h19l-18.6-107.1H858.8z M839.1,220.8
+							l25.8-45.6h0.3l6.6,45.6H839.1z"/>
+					</g>
+				</g>
+
+			</svg>
 
 		</div>
 
 	</div>
 
-	<nav></nav>
+	<!-- Main Nav -->
+	<nav class="MainNav">
+
+		<!-- Main Nav Logo element area -->
+		<div class="Logo Logo--white">
+
+			<div id="nav-logo-area"></div>
+
+		</div>
+
+		<!-- Main Nav Menu -->
+		<ul class="Menu">
+
+			<li class="MenuItem">
+
+				<a href="#institutional" id="institutional-anchor" class="MenuItem-select-area hfont-red-a700">
+
+					<span>Institucional</span>
+
+				</a>
+
+			</li>
+
+			<li class="MenuItem">
+
+				<a href="#products" id="products-anchor" class="MenuItem-select-area hfont-red-a700">
+
+					<span>Produtos</span>
+
+				</a>
+
+			</li>
+
+			<li class="MenuItem">
+
+				<a href="#recipes" id="recipes-anchor" class="MenuItem-select-area hfont-red-a700">
+
+					<span>Receitas</span>
+
+				</a>
+
+			</li>
+
+			<li class="MenuItem">
+
+				<a href="#reps" id="reps-anchor" class="MenuItem-select-area hfont-red-a700">
+
+					<span>Representantes</span>
+
+				</a>
+
+			</li>
+
+		</ul>
+
+	</nav>
+
+	<!-- Information Menu -->
+	<ul class="Menu Menu--portrait-centered">
+
+		<li class="MenuItem">
+
+			<a href="#local" class="MenuItem-select-area">
+
+				<span>Localização</span>
+
+			</a>
+
+		</li>
+
+		<li class="MenuItem">
+
+			<a href="#contact" class="MenuItem-select-area">
+
+				<span>Contato</span>
+
+			</a>
+
+		</li>
+
+	</ul>
+
+	<div class="flex flex-column">
+
+		<!-- Certificate Information -->
+		<div class="Certificate">
+
+			<div class="CertificateHeader">
+
+				<img class="Certificate-img" src="dist/img/sgs_iso_9001_tpl.png" alt="Empresa certificada ISO 9001 pela SGS"/>
+
+			</div>
+
+			<div class="CertificateBody">
+
+				<p>
+					Empresa certificada
+					<br/>iso 9001:2008
+				</p>
+
+			</div>
+
+		</div>
+
+		<!-- Social Information -->
+		<ul class="Social">
+
+			<li class="SocialItem">
+
+				<a href="#" class="SocialItem-select-area">
+
+					<span class="SocialItem-icon icon-facebook"></span>
+
+				</a>
+
+			</li>
+
+			<li class="SocialItem">
+
+				<a href="#" class="SocialItem-select-area">
+
+					<span class="SocialItem-icon icon-instagram"></span>
+
+				</a>
+
+			</li>
+
+		</ul>
+
+	</div>
 
 </header>
 
@@ -104,8 +349,7 @@
 	</article>
 
 	<!-- Institutional -->
-
-	<article class="Block Block--institutional Institutional green">
+	<article id="institutional" class="Block Block--institutional Institutional green-800">
 
 		<h1>Institucional</h1>
 
@@ -123,12 +367,53 @@
 
 	</article>
 
+	<!-- Products -->
+	<article id="products" class="Block Block--institutional Products yellow-800">
+
+	</article>
+
+	<!-- Recipes -->
+	<article id="recipes" class="Block Block--institutional Products pink-800">
+
+	</article>
+
+	<!-- Reps -->
+	<article id="reps" class="Block Block--institutional Products grey-800">
+
+	</article>
+
 </main>
 
-</body>
-
+<script src="js/f.js"></script>
+<script src="js/nav.js"></script>
 <script>
 
+	var activeClass = 'is-active';
+
+	var nav = new Nav([
+		{
+			menuItem: document.getElementById('institutional-anchor'),
+			scrollTarget: document.getElementById('institutional'),
+			activeClass: activeClass
+		},
+		{
+			menuItem: document.getElementById('products-anchor'),
+			scrollTarget: document.getElementById('products'),
+			activeClass: activeClass
+		},
+		{
+			menuItem: document.getElementById('recipes-anchor'),
+			scrollTarget: document.getElementById('recipes'),
+			activeClass: activeClass
+		},
+		{
+			menuItem: document.getElementById('reps-anchor'),
+			scrollTarget: document.getElementById('reps'),
+			activeClass: activeClass
+		}
+	]);
+
+	nav.init();
 
 </script>
 

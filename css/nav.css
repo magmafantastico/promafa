@@ -1,1 +1,25 @@
 /* Nav */
+
+/* Main Nav */
+
+.MainNav {  }
+
+.is-portrait .MainNav {
+	background-color: #d32f2f;
+	color: #ffffff;
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+}
+
+/* Nav Logo */
+.MainNav .Logo {
+	display: none;
+}
+
+.is-portrait .MainNav .Logo {
+	display: block;
+}

@@ -1,5 +1,5 @@
 /*!
- * Mowe is.js v0.6.0 (http://letsmowe.org/)
+ * Mowe is.js v1.0.0 (http://letsmowe.org/)
  * Copyright 2013-2015 Noibe Developers
  * Licensed under MIT (https://github.com/noibe/villa/blob/master/LICENSE)
  */
@@ -90,7 +90,7 @@ is.init = function() {
 
 };
 
-// initialize all the piece of shit
 (function(){
+	// initialize all the piece of shit
 	is.init();
 })();

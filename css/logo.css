@@ -1,0 +1,63 @@
+.Logo {
+	width: 100%;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
+}
+
+.is-portrait .Logo {
+	-webkit-justify-content: center;
+	justify-content: center;
+}
+
+.Logo-select-area {
+	padding: 1.125em;
+}
+
+.Logo-svg {
+	width: 8em;
+}
+
+.Logo-svg-main,
+.Logo-svg-mark {
+	display: none;
+}
+
+.Logo-svg-main-marked,
+.Logo-svg-lines {
+	fill: #e53935;
+}
+
+.Logo-svg-text {
+	fill: #000000;
+}
+
+.Logo--white .Logo-svg-main-marked,
+.Logo--white .Logo-svg-lines,
+.Logo--white .Logo-svg-text {
+	fill: #ffffff;
+}
+
+@media (max-height: 24em) {
+
+	.Logo-select-area {
+		padding: 1em;
+	}
+
+}
+
+@media (min-width: 96em) {
+
+	.Logo-svg {
+		width: 10em;
+	}
+
+	.Logo-select-area {
+		padding: 2.25em;
+	}
+
+}
