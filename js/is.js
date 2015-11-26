@@ -42,16 +42,6 @@ is.windowResizeCtrl = function() {
 	var _ = document.documentElement;
 	_.is = _.is || {};
 
-	// ctrl the class mobile
-	// if the var _.is.mobile is true, doesn't need to add the class (+ fast function)
-	if (is.mobile.any()) {
-		if (!_.is.mobile) _.classList.add('is-mobile');
-		_.is.mobile = true;
-	} else {
-		if (!_.is.mobile) _.classList.remove('is-mobile');
-		_.is.mobile = false;
-	}
-
 	// ctrl the class portrait and landscape
 	// if the var _.is.portrait is true, doesn't need to add the class (+ fast function)
 	if (is.portrait()) {
@@ -78,8 +68,17 @@ is.init = function() {
 	var _ = document.documentElement;
 	_.is = _.is || {};
 
+	// ctrl the class mobile
+	// if the var _.is.mobile is true, doesn't need to add the class (+ fast function)
+	if (is.mobile.any()) {
+		if (!_.is.mobile) _.classList.add('is-mobile');
+		_.is.mobile = true;
+	} else {
+		if (!_.is.mobile) _.classList.remove('is-mobile');
+		_.is.mobile = false;
+	}
+
 	// fall back to add the class
-	_.is.mobile = !is.mobile.any();
 	_.is.portrait = !is.portrait();
 
 	if (window.addEventListener)

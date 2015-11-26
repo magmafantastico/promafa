@@ -6,9 +6,11 @@
  @param {boolean} [useCapture]
  */
 var addListener = function(element, type, crossType, listener, useCapture) {
+
 	if (window.addEventListener)
 		element.addEventListener(type, listener, !!useCapture);
 	else element.attachEvent(crossType ? crossType : type, listener);
+
 };
 
 // easing functions http://goo.gl/5HLl8

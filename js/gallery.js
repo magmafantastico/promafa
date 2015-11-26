@@ -12,11 +12,59 @@ var Gallery = (function () {
 	 */
 	function Gallery() {
 
-		this.main = document.getElementById('main');
-		this.viewport = document.getElementById('hero-gallery');
-		this.gallery = document.getElementById('hero-gallery-slides');
+		var self = this;
 
-		this.slides = this.gallery.querySelectorAll('.gallery-content');
+		this.main = document.getElementById('main');
+		this.viewport = document.getElementById('hero');
+		this.gallery = document.getElementById('hero-gallery');
+
+		this.slides = this.gallery.querySelectorAll('.GalleryContent');
+
+		/**
+		 * Get, update and set the current to next slide
+		 */
+		this.nextSlide = function () {
+
+			var c, n, i;
+
+			if (c = self.getCurrent(true)) {
+
+				i = ( c.index == self.slides.length - 1 ) ? 0 : c.index + 1;
+				n = self.slides[i];
+				n.index = i;
+
+				self.setCurrent(self.updateCurrent(n));
+
+			}
+
+			self.translateSlides();
+			self.initInfiniteLoop();
+
+		};
+
+		/**
+		 * Controller of click and touch events
+		 */
+		this.ctrlClick = function () {
+
+			if (self.allowClick) self.nextSlide();
+
+		};
+
+		/**
+		 * Controller of size of gallery and slides
+		 * Also do a nextSlide function after 1200 milliseconds
+		 */
+		this.ctrlResize = function () {
+
+			setTimeout(function () {
+				self.resizeGallery();
+				self.resizeSlides();
+			}, 400);
+
+			self.initInfiniteLoop(1200);
+
+		};
 
 	}
 
@@ -29,15 +77,15 @@ var Gallery = (function () {
 
 		var c, n;
 
-		for (var i = gallery.slides.length; i--;)
-			if (gallery.slides[i].classList.contains('current')) {
-				if (remove) gallery.slides[i].classList.remove('current');
-				c = gallery.slides[i];
+		for (var i = this.slides.length; i--;)
+			if (this.slides[i].classList.contains('current')) {
+				if (remove) this.slides[i].classList.remove('current');
+				c = this.slides[i];
 				c.index = i;
 			}
 
 		if (!c) {
-			n = gallery.slides[0];
+			n = this.slides[0];
 			n.index = 0;
 		}
 
@@ -52,7 +100,7 @@ var Gallery = (function () {
 	 */
 	Gallery.prototype.setCurrent = function (current) {
 
-		gallery.current = current;
+		this.current = current;
 
 	};
 
@@ -65,28 +113,6 @@ var Gallery = (function () {
 
 		current.classList.add('current');
 		return current;
-
-	};
-
-	/**
-	 * Get, update and set the current to next slide
-	 */
-	Gallery.prototype.nextSlide = function () {
-
-		var c, n, i;
-
-		if (c = gallery.getCurrent(true)) {
-
-			i = ( c.index == gallery.slides.length - 1 ) ? 0 : c.index + 1;
-			n = gallery.slides[i];
-			n.index = i;
-
-			gallery.setCurrent(gallery.updateCurrent(n));
-
-		}
-
-		gallery.translateSlides();
-		gallery.initInfiniteLoop();
 
 	};
 
@@ -106,18 +132,20 @@ var Gallery = (function () {
 	 */
 	Gallery.prototype.translateSlides = function () {
 
+		var self = this;
+
 		var c, w;
 
-		gallery.allowClick = false;
+		this.allowClick = false;
 
-		c = gallery.current.index;
-		w = gallery.current.offsetWidth;
+		c = this.current.index;
+		w = this.current.offsetWidth;
 
-		for (var i = gallery.slides.length; i--;)
-			gallery.setSlideTranslate(gallery.slides[i], ( i - c ) * w);
+		for (var i = this.slides.length; i--;)
+			this.setSlideTranslate(this.slides[i], ( i - c ) * w);
 
 		setTimeout(function () {
-			gallery.allowClick = true;
+			self.allowClick = true;
 		}, 700);
 
 	};
@@ -127,8 +155,8 @@ var Gallery = (function () {
 	 */
 	Gallery.prototype.resizeSlides = function () {
 
-		for (var i = gallery.slides.length; i--;)
-			gallery.slides[i].style.width = gallery.viewport.offsetWidth + 'px';
+		for (var i = this.slides.length; i--;)
+			this.slides[i].style.width = this.viewport.offsetWidth + 'px';
 
 	};
 
@@ -139,46 +167,14 @@ var Gallery = (function () {
 
 		var h, w;
 
-		h = gallery.viewport.offsetWidth * .7;
-		w = gallery.viewport.offsetWidth * gallery.slides.length;
+		//h = this.viewport.offsetWidth * .7;
+		h = this.viewport.offsetHeight;
+		w = this.viewport.offsetWidth * this.slides.length;
 
 		if (h > window.innerHeight) h = window.innerHeight;
 
-		gallery.gallery.style.height = h + 'px';
-		gallery.gallery.style.width = w + 'px';
-
-	};
-
-	/**
-	 * Controller of click and touch events
-	 */
-	Gallery.prototype.ctrlClick = function () {
-
-		if (gallery.allowClick) gallery.nextSlide();
-
-	};
-
-	/**
-	 * Controller of size of gallery and slides
-	 * Also do a nextSlide function after 1200 milliseconds
-	 */
-	Gallery.prototype.ctrlResize = function () {
-
-		setTimeout(function () {
-			gallery.resizeGallery();
-			gallery.resizeSlides();
-		}, 400);
-
-		gallery.initInfiniteLoop(1200);
-
-	};
-
-	Gallery.prototype.doInfiniteLoop = function () {
-
-		if (gallery.infiniteLoop) clearInterval(gallery.infiniteLoop);
-
-		gallery.loopInterval = 5000;
-		gallery.infiniteLoop = setInterval(gallery.nextSlide, gallery.loopInterval);
+		this.gallery.style.height = h + 'px';
+		this.gallery.style.width = w + 'px';
 
 	};
 
@@ -187,13 +183,33 @@ var Gallery = (function () {
 	 */
 	Gallery.prototype.initInfiniteLoop = function (interval) {
 
+		var self = this;
+
 		if (interval) {
-			if (gallery.infiniteLoop) clearInterval(gallery.infiniteLoop);
-			gallery.infiniteLoop = setTimeout(function () {
-				gallery.nextSlide();
-				gallery.doInfiniteLoop();
+
+			if (this.infiniteLoop)
+				clearInterval(this.infiniteLoop);
+
+			this.infiniteLoop = setTimeout(function() {
+				self.nextSlide();
+				self.doInfiniteLoop();
 			}, interval);
-		} else gallery.doInfiniteLoop();
+
+		} else this.doInfiniteLoop();
+
+	};
+
+	/**
+	 * Do the infinite loop
+	 */
+	Gallery.prototype.doInfiniteLoop = function () {
+
+		var self = this;
+
+		if (self.infiniteLoop) clearInterval(self.infiniteLoop);
+
+		self.loopInterval = 5000;
+		self.infiniteLoop = setInterval(self.nextSlide, self.loopInterval);
 
 	};
 
@@ -215,7 +231,7 @@ var Gallery = (function () {
 		this.resizeSlides();
 		this.translateSlides();
 
-		this.initInfiniteLoop();
+		self.initInfiniteLoop();
 
 	};
 

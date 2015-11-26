@@ -15,6 +15,9 @@
 <link rel="stylesheet" href="css/social.css"/>
 <link rel="stylesheet" href="css/certificate.css"/>
 <link rel="stylesheet" href="css/block.css"/>
+<link rel="stylesheet" href="css/modal.css"/>
+<link rel="stylesheet" href="css/hero.css"/>
+<link rel="stylesheet" href="css/gallery.css"/>
 <!--[if lt IE 9]>
 <link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
 <link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
@@ -24,6 +27,67 @@
 <![endif]-->
 <script src="js/is.js"></script>
 
+<!-- Contact Modal -->
+<div id="modal-contact" class="Modal Modal--promafa ModalBackDrop">
+
+	<div class="ModalInner">
+
+		<div class="ModalHeader flex justify-end">
+
+			<a class="ModalClose">
+
+				<span class="text">voltar</span>
+
+				<span class="icon icon-cancel"></span>
+
+			</a>
+
+		</div>
+
+		<div class="ModalBody flex flex-column justify-center align-center font-deep-orange-900">
+
+			<h1>Entre em contato</h1>
+
+			<p>18 3351 1457</p>
+
+			<p>18 3351 1491</p>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Local Modal -->
+<div id="modal-local" class="Modal Modal--promafa ModalBackDrop">
+
+	<div class="ModalInner">
+
+		<div class="ModalHeader flex justify-end">
+
+			<a class="ModalClose">
+
+				<span class="text">voltar</span>
+
+				<span class="icon icon-cancel"></span>
+
+			</a>
+
+		</div>
+
+		<div class="ModalBody flex flex-column justify-center align-center font-deep-orange-900">
+
+			<h1>Entre em contato</h1>
+
+			<p>(18) 3351-4181</p>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Header -->
 <header class="Header">
 
 	<!-- Header Logo element area -->
@@ -210,7 +274,7 @@
 
 		<li class="MenuItem">
 
-			<a href="#local" class="MenuItem-select-area">
+			<a href="#local" class="MenuItem-select-area" onclick="promafa.modalLocal.triggerCtrl();">
 
 				<span>Localização</span>
 
@@ -220,7 +284,7 @@
 
 		<li class="MenuItem">
 
-			<a href="#contact" class="MenuItem-select-area">
+			<a href="#contact" class="MenuItem-select-area" onclick="promafa.modalLocal.triggerCtrl();">
 
 				<span>Contato</span>
 
@@ -281,12 +345,13 @@
 
 </header>
 
+<!-- Main -->
 <main id="main" class="Main blue">
 
 	<!-- Hero Gallery -->
-	<article id="hero-gallery" class="Block Block--hero">
+	<article id="hero" class="Block Block--hero">
 
-		<section id="hero-gallery-slides" class="Gallery">
+		<section id="hero-gallery" class="Gallery">
 
 			<section class="GalleryContent">
 
@@ -373,12 +438,17 @@
 	</article>
 
 	<!-- Recipes -->
-	<article id="recipes" class="Block Block--institutional Products pink-800">
+	<article id="recipes" class="Block Block--institutional Recipes pink-800">
 
 	</article>
 
 	<!-- Reps -->
-	<article id="reps" class="Block Block--institutional Products grey-800">
+	<article id="reps" class="Block Block--institutional Reps grey-800">
+
+	</article>
+
+	<!-- Reps -->
+	<article id="footer" class="Block Block--institutional Reps grey-800">
 
 	</article>
 
@@ -386,34 +456,72 @@
 
 <script src="js/f.js"></script>
 <script src="js/nav.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/gallery.js"></script>
 <script>
 
-	var activeClass = 'is-active';
+	var Promafa = (function() {
 
-	var nav = new Nav([
-		{
-			menuItem: document.getElementById('institutional-anchor'),
-			scrollTarget: document.getElementById('institutional'),
-			activeClass: activeClass
-		},
-		{
-			menuItem: document.getElementById('products-anchor'),
-			scrollTarget: document.getElementById('products'),
-			activeClass: activeClass
-		},
-		{
-			menuItem: document.getElementById('recipes-anchor'),
-			scrollTarget: document.getElementById('recipes'),
-			activeClass: activeClass
-		},
-		{
-			menuItem: document.getElementById('reps-anchor'),
-			scrollTarget: document.getElementById('reps'),
-			activeClass: activeClass
+		var activeClass = 'is-active';
+
+		function Promafa() {
+
+			// Nav instance
+			this.nav = new Nav([
+				{
+					menuItem: document.getElementById('institutional-anchor'),
+					scrollTarget: document.getElementById('institutional'),
+					activeClass: activeClass
+				},
+				{
+					menuItem: document.getElementById('products-anchor'),
+					scrollTarget: document.getElementById('products'),
+					activeClass: activeClass
+				},
+				{
+					menuItem: document.getElementById('recipes-anchor'),
+					scrollTarget: document.getElementById('recipes'),
+					activeClass: activeClass
+				},
+				{
+					menuItem: document.getElementById('reps-anchor'),
+					scrollTarget: document.getElementById('reps'),
+					activeClass: activeClass
+				}
+			]);
+
+			// Modal instance
+			this.modalContact = new Modal(document.getElementById('modal-contact'));
+			this.modalLocal = new Modal(document.getElementById('modal-local'));
+
+			// Hero Gallery
+			this.gallery = new Gallery();
+
 		}
-	]);
 
-	nav.init();
+		Promafa.prototype.init = function() {
+
+			this.nav.init();
+
+			this.modalContact.init();
+			this.modalLocal.init();
+
+			this.gallery.init();
+
+		};
+
+		return Promafa;
+
+	})();
+
+</script>
+
+<script>
+
+	var promafa = new Promafa();
+
+	// init all the shit!
+	promafa.init();
 
 </script>
 
