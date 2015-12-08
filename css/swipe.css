@@ -1,0 +1,53 @@
+/* Swipe */
+
+.Swipe {
+	overflow-x: hidden;
+	position: relative;
+}
+
+.Swipe--products {
+	width: 100%;
+	height: 100%;
+	min-height: 100vh;
+}
+
+.SwipeFrame {
+	height: auto;
+	position: absolute;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+	width: 100%;
+	overflow-y: hidden;
+	min-height: 100%;
+}
+
+.Swipe--products .SwipeFrame {
+	padding: 1em 0;
+}
+
+.SwipeFrame--left {
+	left: -100%;
+}
+
+.SwipeFrame--left.is-active {
+	-webkit-transform: translateX(100%);
+	-moz-transform: translateX(100%);
+	-ms-transform: translateX(100%);
+	-o-transform: translateX(100%);
+	transform: translateX(100%);
+}
+
+.SwipeFrame--right {
+	left: 100%;
+}
+
+.SwipeFrame--right.is-active {
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+	transform: translateX(-100%);
+}

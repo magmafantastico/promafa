@@ -8,11 +8,24 @@
 	background-color: #d32f2f;
 	color: #ffffff;
 	height: 100%;
-	left: 0;
+	left: 100%;
 	position: fixed;
 	top: 0;
+	-webkit-transition: transform .5s ease;
+	-moz-transition: transform .5s ease;
+	-ms-transition: transform .5s ease;
+	-o-transition: transform .5s ease;
+	transition: transform .5s ease;
 	width: 100%;
 	z-index: 99;
+}
+
+.is-portrait .MainNav.is-active {
+	-webkit-transform: translateX(-100%);
+	-moz-transform: translateX(-100%);
+	-ms-transform: translateX(-100%);
+	-o-transform: translateX(-100%);
+	transform: translateX(-100%);
 }
 
 /* Nav Logo */

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mowe Swipe</title>
+	<script src="dist/js/villa.min.js"></script>
+	<link rel="stylesheet" href="css/swipe.css"/>
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
+	<link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/cross/swipe.css"/>
+	<script src="dist/js/html5shiv.js"></script>
+	<script src="dist/js/html5shiv-printshiv.js"></script>
+	<script src="dist/js/classList.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<div id="swipe" class="Swipe">
+
+	<article class="SwipeFrame SwipeFrame--main blue"></article>
+
+	<article id="left" class="SwipeFrame SwipeFrame--left green"></article>
+
+	<article class="SwipeFrame SwipeFrame--right purple"></article>
+
+</div>
+
+<script src="js/swipe.js"></script>
+<script>
+
+	var swipe = new Swipe(document.getElementById('swipe'));
+
+</script>
+
+</body>
+</html>

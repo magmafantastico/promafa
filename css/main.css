@@ -6,3 +6,53 @@
 	width: 66.666666666%;
 	float: right;
 }
+
+.Main h1 {
+	font-weight: 100;
+	margin-bottom: .5em;
+	font-size: 3em;
+}
+
+.Main p {
+	font-size: 1em;
+	margin: 0 0 1em;
+	text-align: justify;
+	max-width: 40em;
+}
+
+@media (min-height: 24rem) {
+
+	.Main p {
+		font-size: 1.125em;
+	}
+
+}
+
+@media (max-width: 21rem) {
+
+	.Main h1 {
+		font-size: 2.25em;
+		font-weight: 400;
+	}
+
+}
+
+@media (min-width: 48rem) {
+
+	.Main h1 {
+		font-size: 3.75em;
+	}
+
+}
+
+@media (min-width: 48rem) {
+
+	.Main h1 {
+		font-size: 4.5em;
+	}
+
+	.Main p {
+		margin: 0 2.25em 1em 3em;
+	}
+
+}

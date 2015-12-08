@@ -1,0 +1,193 @@
+.Reps {
+	height: 16em;
+	overflow-x: hidden;
+	overflow-y: auto;
+	width: 100%;
+}
+
+.Reps .RepsWrapper,
+.Reps .RepsHeader,
+.Reps .RepsList,
+.Reps .RepsMap {
+	height: 100%;
+}
+
+/* Reps Frame Structure */
+
+.Reps .Frames {
+	display: flex;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+
+.Reps .Frames .Frame {
+	position: absolute;
+	height: 100%;
+}
+
+.Reps .Frames.animate .Frame {
+	-webkit-transition: transform .5s;
+	-moz-transition: transform .5s;
+	-ms-transition: transform .5s;
+	-o-transition: transform .5s;
+	transition: transform .5s;
+}
+
+/* Reps Intro */
+
+.Reps .RepsIntroFrame h1,
+.Reps .RepsIntroFrame p {
+	text-align: center;
+}
+
+.Reps .RepsIntroFrame p {
+	max-width: 36em;
+	padding: 1em;
+}
+
+/* Reps Content Options */
+
+.RepsContentOptions .option {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 4.5em;
+}
+
+.RepsContentOptions .option:hover {
+	background-color: #e0e0e0;
+	color: #b71c1c;
+}
+
+/* Reps Header */
+
+.Reps .RepsHeader {
+	display: flex;
+	flex-direction: column;
+	width: 40%;
+}
+
+/* Reps List */
+
+.Reps .RepsList {
+	width: 100%;
+	padding: 0 .5em .5em 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.Reps .rep {
+	max-width: 26em;
+	opacity: 0;
+	-webkit-transition: opacity .4s ease-in;
+	-moz-transition: opacity .4s ease-in;
+	-ms-transition: opacity .4s ease-in;
+	-o-transition: opacity .4s ease-in;
+	transition: opacity .4s ease-in;
+	width: 100%;
+}
+
+.Reps .rep.build {
+	opacity: 1;
+	-webkit-transition: opacity .2s ease-in;
+	-moz-transition: opacity .2s ease-in;
+	-ms-transition: opacity .2s ease-in;
+	-o-transition: opacity .2s ease-in;
+	transition: opacity .2s ease-in;
+}
+
+.Reps .rep .rep-inner {
+	background-color: #ffffff;
+	border-radius: 2px;
+	box-shadow: 1px 1px 4px -1px rgba(0,0,0,.2);
+	display: flex;
+	justify-content: space-between;
+	margin: .5em 0 0 .5em;
+	min-height: 8em;
+	padding: .6875em .375em .6875em .75em;
+}
+
+.Reps .rep:last-child .rep-inner {
+	margin-bottom: .5em;
+}
+
+.Reps .rep span {
+	font-size: .75em;
+}
+
+.Reps .rep .rep-header span {
+	color: #757575;
+}
+
+.Reps .rep .rep-title {
+	font-weight: 900;
+	margin-bottom: .375em;
+	max-width: 14em;
+}
+
+.Reps .rep .rep-title span {
+	color: #212121;
+	font-size: .875em;
+}
+
+.Reps .rep .rep-address {
+	max-width: 12em;
+}
+
+.Reps .rep .rep-footer {
+	display: flex;
+}
+
+.Reps .rep a,
+.Reps .rep .rep-footer span {
+	color: #00b0ff;
+}
+
+.Reps .rep a:hover span {
+	color: #0091ea;
+}
+
+.Reps .rep .rep-footer .link {
+	margin: 0 0 0 .5em;
+}
+
+.Reps .rep .rep-footer .link a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Reps .rep .rep-footer .link .icon {
+	font-size: 175%;
+}
+
+@media (min-width: 96em) {
+
+	.Reps.rep {
+		max-width: 28em;
+	}
+
+	.Reps .rep span {
+		font-size: .875em;
+	}
+
+	.Reps .rep .rep-title {
+		min-height: 3em;
+		max-width: 16em;
+	}
+
+	.Reps .rep .rep-title span {
+		font-size: 1em;
+	}
+
+}
+
+/* Reps Map */
+
+.Reps .RepsMap {
+	width: 60%;
+}

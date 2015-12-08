@@ -173,9 +173,6 @@ var Gallery = (function () {
 
 		if (h > window.innerHeight) h = window.innerHeight;
 
-		this.gallery.style.height = h + 'px';
-		this.gallery.style.width = w + 'px';
-
 	};
 
 	/**

@@ -158,52 +158,6 @@ reps.list = {};
 
 reps.list.viewport = document.getElementById('reps-list');
 
-reps.list.data = [
-	{
-		name: 'promafa',
-		title: 'PROMAFA - Produtos de Mandioca FADEL LTDA.',
-		address: 'R. São Paulo, 43, Palmital - SP, 19970-000, Brasil',
-		city: 'palmital',
-		state: 'sp',
-		zip: '19970-000',
-		country: 'brasil',
-		phone: '+55 18 3351 5050',
-		email: {
-			string: 'rep@promafa.com.br',
-			url: 'mailto:rep@promafa.com.br'
-		},
-		website: {
-			string: 'www.promafa.com.br',
-			url: 'http://www.promafa.com.br'
-		},
-		position: {
-			lat: -22.7753073,
-			lng: -50.2077834
-		}
-	},{
-		name: 'promafa',
-		title: 'Produtos de Mandioca FADEL LTDA.',
-		address: 'R. São Paulo, 43, Palmital - SP, 19970-000, Brasil',
-		city: 'palmital',
-		state: 'sp',
-		zip: '19970-000',
-		country: 'brasil',
-		phone: '+55 18 3351 5050',
-		email: {
-			string: 'rep@promafa.com.br',
-			url: 'mailto:rep@promafa.com.br'
-		},
-		website: {
-			string: 'www.promafa.com.br',
-			url: 'http://www.promafa.com.br'
-		},
-		position: {
-			lat: -22.3753073,
-			lng: -50.2017834
-		}
-	}
-];
-
 reps.list.buildRepWebSite = function(link) {
 
 	var website = document.createElement('div');

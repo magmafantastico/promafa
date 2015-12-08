@@ -1,0 +1,40 @@
+/* Toggle */
+
+.Toggle {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	padding: 1em;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 100;
+}
+
+.is-landscape .Toggle {
+	display: none;
+}
+
+.Toggle span {
+	line-height: 1;
+}
+
+.Toggle span:last-child {
+	margin-right: 0;
+}
+
+.ToggleIcon {
+	font-size: 1.125em;
+	margin: 0 .375em;
+}
+
+.ToggleText {
+	font-size: .875em;
+	text-transform: uppercase;
+}

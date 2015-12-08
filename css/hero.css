@@ -1,9 +1,5 @@
 /* Hero */
 
-.Block--hero {
-	overflow-x: hidden;
-}
-
 .Hero {
 	position: absolute;
 	display: block;

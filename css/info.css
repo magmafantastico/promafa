@@ -1,0 +1,94 @@
+.Info,
+.InfoHeader,
+.InfoList {
+	-webkit-align-items: stretch;
+	align-items: stretch;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.Info {
+	cursor: default;
+	height: 4.5em;
+	margin: 1em .5em;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: relative;
+	width: 21em;
+}
+
+.Info:hover {
+	background-color: #fafafa;
+}
+
+.InfoHeader,
+.InfoList {
+	position: absolute;
+	-webkit-transition: transform .3s ease;
+	-moz-transition: transform .3s ease;
+	-ms-transition: transform .3s ease;
+	-o-transition: transform .3s ease;
+	transition: transform .3s ease;
+}
+
+.Info:hover .InfoHeader,
+.Info:hover .InfoList {
+	-webkit-transform: translateX(-6em);
+	-moz-transform: translateX(-6em);
+	-ms-transform: translateX(-6em);
+	-o-transform: translateX(-6em);
+	transform: translateX(-6em);
+}
+
+.InfoHeader {
+	border-right: solid 1px #ef9a9a;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	height: 100%;
+	width: 6em;
+}
+
+.InfoHeader .icon {
+	font-size: 1.5em;
+	margin-bottom: 4px;
+}
+
+.InfoHeader h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: .6875em;
+	font-weight: 900;
+	letter-spacing: 1px;
+}
+
+.InfoList {
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	height: 100%;
+	-webkit-justify-content: space-around;
+	justify-content: space-around;
+	left: 6em; /* based on .InfoHeader width */
+	width: 100%;
+	padding: 0 0 0 1.125em;
+}
+
+.InfoItem {
+	max-width: 16em;
+}
+
+.InfoItem span {
+	font-weight: 600;
+}
+
+.Info:hover .InfoItem span {
+	font-size: 1.125em;
+	letter-spacing: .5pt;
+}

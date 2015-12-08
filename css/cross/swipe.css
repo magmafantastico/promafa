@@ -1,0 +1,6 @@
+/* Swipe */
+
+.SwipeFrame--left.is-active,
+.SwipeFrame--right.is-active {
+	left: 0;
+}

@@ -12,6 +12,9 @@
 .is-portrait .Logo {
 	-webkit-justify-content: center;
 	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	height: 36vh;
 }
 
 .Logo-select-area {

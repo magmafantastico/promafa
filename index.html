@@ -6,18 +6,26 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 <script src="dist/js/villa.min.js"></script>
 <link rel="stylesheet" href="dist/css/villa.min.css"/>
+<link rel="stylesheet" href="css/element.css"/>
 <link rel="stylesheet" href="css/icon.css"/>
 <link rel="stylesheet" href="css/header.css"/>
 <link rel="stylesheet" href="css/main.css"/>
 <link rel="stylesheet" href="css/nav.css"/>
+<link rel="stylesheet" href="css/toggle.css"/>
 <link rel="stylesheet" href="css/menu.css"/>
 <link rel="stylesheet" href="css/logo.css"/>
 <link rel="stylesheet" href="css/social.css"/>
 <link rel="stylesheet" href="css/certificate.css"/>
 <link rel="stylesheet" href="css/block.css"/>
 <link rel="stylesheet" href="css/modal.css"/>
+<link rel="stylesheet" href="css/info.css"/>
+<link rel="stylesheet" href="css/contact.css"/>
+<link rel="stylesheet" href="css/local.css"/>
 <link rel="stylesheet" href="css/hero.css"/>
 <link rel="stylesheet" href="css/gallery.css"/>
+<link rel="stylesheet" href="css/swipe.css"/>
+<link rel="stylesheet" href="css/products.css"/>
+<link rel="stylesheet" href="css/reps.css"/>
 <!--[if lt IE 9]>
 <link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
 <link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
@@ -26,6 +34,14 @@
 <script src="dist/js/classList.min.js"></script>
 <![endif]-->
 <script src="js/is.js"></script>
+<script id="maps-script"></script>
+
+<div class="Toggle">
+
+	<span class="ToggleText">menu</span>
+	<span class="ToggleIcon icon icon-menu"></span>
+
+</div>
 
 <!-- Contact Modal -->
 <div id="modal-contact" class="Modal Modal--promafa ModalBackDrop">
@@ -44,15 +60,147 @@
 
 		</div>
 
-		<div class="ModalBody flex flex-column justify-center align-center font-deep-orange-900">
+		<div class="ModalBody Contact flex justify-between align-center">
 
-			<h1>Entre em contato</h1>
+			<section class="ContactInfo flex flex-column">
 
-			<p>18 3351 1457</p>
+				<div class="Contact-title">
+					<h1>Nossos contatos</h1>
+				</div>
 
-			<p>18 3351 1491</p>
+				<div class="ContactInfoList">
+
+					<section class="Info">
+
+						<header class="InfoHeader">
+
+							<span class="icon icon-phone"></span>
+
+							<h1>Telefone</h1>
+
+						</header>
+
+						<ul class="InfoList">
+
+							<li class="InfoItem">
+
+								<span>18 3351 1457</span>
+
+							</li>
+
+							<li class="InfoItem">
+
+								<span>18 3351 1491</span>
+
+							</li>
+
+						</ul>
+
+					</section>
+
+					<section class="Info">
+
+						<header class="InfoHeader">
+
+							<span class="icon icon-fax"></span>
+
+							<h1>Fax</h1>
+
+						</header>
+
+						<ul class="InfoList">
+
+							<li class="InfoItem">
+
+								<span>18 3351 5576</span>
+
+							</li>
+
+						</ul>
+
+					</section>
+
+					<section class="Info">
+
+						<header class="InfoHeader">
+
+							<span class="icon icon-mail"></span>
+
+							<h1>E-mail</h1>
+
+						</header>
+
+						<ul class="InfoList">
+
+							<li class="InfoItem">
+
+								<span>promafa@promafa.com.br</span>
+
+							</li>
+
+						</ul>
+
+					</section>
+
+				</div>
+
+			</section>
+
+			<section id="contact-form" class="ContactForm flex flex-column">
+
+				<div class="Contact-title">
+					<h1>Entre em contato conosco</h1>
+				</div>
+
+				<div class="ContactForm-wrapper ContactForm-wrapper--personal-info flex flex-column">
+
+					<div class="ContactForm-field ContactForm-field--name">
+						<input class="name-text" type="text" size="26" name="tNome" id="cNome" maxlength="50"
+						       placeholder="Nome"
+						       title="Ops, o campo nome deve ser preenchido corretamente :)"
+						       x-moz-errormessage="Ops, o campo nome deve ser preenchido corretamente :)"/>
+						<label class="name" for="cNome">Nome</label>
+					</div>
+
+					<div class="ContactForm-field ContactForm-field--email">
+						<input class="email-text" type="text" size="26" name="tEmail" id="cPhone" maxlength="60"
+						       placeholder="Telefone"
+						       title="Ops, o campo email deve ser preenchido corretamente :)"
+						       x-moz-errormessage="Ops, o campo email deve ser preenchido corretamente :)"/>
+						<label class="phone" for="cPhone">Email</label>
+					</div>
+
+					<div class="ContactForm-field ContactForm-field--email">
+						<input class="email-text" type="email" size="26" name="tEmail" id="cEmail" maxlength="60"
+						       placeholder="E-mail"
+						       title="Ops, o campo email deve ser preenchido corretamente :)"
+						       x-moz-errormessage="Ops, o campo email deve ser preenchido corretamente :)"/>
+						<label class="email" for="cEmail">Email</label>
+					</div>
+
+				</div>
+
+				<div class="ContactForm-wrapper ContactForm-wrapper--personal-info flex flex-column">
+
+					<div class="ContactForm-field ContactForm-field--message">
+					<textarea class="lato" name="tMensagem" id="cMensagem" cols="36"
+					          placeholder="Digite a sua mensagem"
+					          title="Ops, o campo mensagem deve ser preenchido corretamente :)"
+					          x-moz-errormessage="Ops, o campo mensagem deve ser preenchido corretamente :)"></textarea>
+						<label class="text-message" for="cMensagem">Mensagem</label>
+					</div>
+
+					<div class="ContactForm-field ContactForm-field--submit flex align-end">
+						<input id="cSubmit" class="ContactForm-submit" name="ir" type="submit" value="Enviar"/>
+					</div>
+
+				</div>
+
+			</section>
 
 		</div>
+
+		<div class="ModalFooter"></div>
 
 	</div>
 
@@ -75,13 +223,45 @@
 
 		</div>
 
-		<div class="ModalBody flex flex-column justify-center align-center font-deep-orange-900">
+		<div class="ModalBody Local flex flex-column justify-center align-center font-deep-orange-900">
 
-			<h1>Entre em contato</h1>
+			<h1>Nossa Localização</h1>
 
-			<p>(18) 3351-4181</p>
+			<section class="Info">
+
+				<header class="InfoHeader">
+
+					<span class="icon icon-map"></span>
+
+					<h1>Endereço</h1>
+
+				</header>
+
+				<ul class="InfoList">
+
+					<li class="InfoItem">
+
+						<span>R. São Paulo, 43, Palmital - SP, 19970-000, Brasil</span>
+
+					</li>
+
+				</ul>
+
+			</section>
+
+			<div id="local-map" class="LocalMap red"></div>
+
+			<a href="https://maps.google.com/?daddr=Promafa+-+Produtos+de+Mandioca+Fadel+LTDA" class="btn ghost font-red-900 border-red-900 h-red-900 hfont-white">
+
+				<span class="icon icon-direction"></span>
+
+				<span>Como Chegar</span>
+
+			</a>
 
 		</div>
+
+		<div class="ModalFooter"></div>
 
 	</div>
 
@@ -223,7 +403,7 @@
 		</div>
 
 		<!-- Main Nav Menu -->
-		<ul class="Menu">
+		<ul class="Menu Menu--main">
 
 			<li class="MenuItem">
 
@@ -245,21 +425,46 @@
 
 			</li>
 
-			<li class="MenuItem">
+			<!--<li class="MenuItem">-->
 
-				<a href="#recipes" id="recipes-anchor" class="MenuItem-select-area hfont-red-a700">
+				<!--<a href="#recipes" id="recipes-anchor" class="MenuItem-select-area hfont-red-a700">-->
 
-					<span>Receitas</span>
+					<!--<span>Receitas</span>-->
 
-				</a>
+				<!--</a>-->
 
-			</li>
+			<!--</li>-->
 
 			<li class="MenuItem">
 
 				<a href="#reps" id="reps-anchor" class="MenuItem-select-area hfont-red-a700">
 
 					<span>Representantes</span>
+
+				</a>
+
+			</li>
+
+		</ul>
+
+		<!-- Social Information -->
+		<ul class="Social Social--nav">
+
+			<li class="SocialItem">
+
+				<a href="https://www.facebook.com/promafa/" class="SocialItem-select-area">
+
+					<span class="SocialItem-icon icon-facebook"></span>
+
+				</a>
+
+			</li>
+
+			<li class="SocialItem">
+
+				<a href="https://www.instagram.com/promafa/" class="SocialItem-select-area">
+
+					<span class="SocialItem-icon icon-instagram"></span>
 
 				</a>
 
@@ -274,7 +479,7 @@
 
 		<li class="MenuItem">
 
-			<a href="#local" class="MenuItem-select-area" onclick="promafa.modalLocal.triggerCtrl();">
+			<a href="#local" id="local-trigger" class="MenuItem-select-area">
 
 				<span>Localização</span>
 
@@ -284,7 +489,7 @@
 
 		<li class="MenuItem">
 
-			<a href="#contact" class="MenuItem-select-area" onclick="promafa.modalLocal.triggerCtrl();">
+			<a href="#contact" class="MenuItem-select-area" onclick="promafa.modalContact.triggerCtrl();">
 
 				<span>Contato</span>
 
@@ -321,7 +526,7 @@
 
 			<li class="SocialItem">
 
-				<a href="#" class="SocialItem-select-area">
+				<a href="https://www.facebook.com/promafa/" class="SocialItem-select-area">
 
 					<span class="SocialItem-icon icon-facebook"></span>
 
@@ -331,7 +536,7 @@
 
 			<li class="SocialItem">
 
-				<a href="#" class="SocialItem-select-area">
+				<a href="https://www.instagram.com/promafa/" class="SocialItem-select-area">
 
 					<span class="SocialItem-icon icon-instagram"></span>
 
@@ -346,7 +551,7 @@
 </header>
 
 <!-- Main -->
-<main id="main" class="Main blue">
+<main id="main" class="Main roboto">
 
 	<!-- Hero Gallery -->
 	<article id="hero" class="Block Block--hero">
@@ -414,7 +619,7 @@
 	</article>
 
 	<!-- Institutional -->
-	<article id="institutional" class="Block Block--institutional Institutional green-800">
+	<article id="institutional" class="Block Block--institutional Institutional red-900 font-white">
 
 		<h1>Institucional</h1>
 
@@ -433,37 +638,230 @@
 	</article>
 
 	<!-- Products -->
-	<article id="products" class="Block Block--institutional Products yellow-800">
+	<article id="products" class="Block Block--products Products">
+
+		<section id="products-swipe" class="Swipe Swipe--products">
+
+			<section id="main-swipe" class="SwipeFrame SwipeFrame--main flex flex-column justify-center">
+
+				<header class="ProductsHeader flex flex-column align-center font-red-900">
+
+					<h1>Produtos</h1>
+
+					<p>
+						A PROMAFA produz derivados de mandioca como: <br/>
+						fécula, farinha de raspa, polvilho doce, polvilho azedo e tapioca hidratada.
+					</p>
+
+				</header>
+
+				<ul class="ProductList flex font-red-900 flex-wrap flex-row child-flex justify-around child-justify-start child-align-center">
+
+					<li class="Product flex-column grey-50 border-red-900">
+
+						<header class="ProductHeader flex justify-center align-center">
+
+							<a href="#" class="flex justify-center">
+
+								<figure class="ProductLogo">
+
+									<img src="dist/img/fadel_marca.png" alt=""/>
+
+								</figure>
+
+							</a>
+
+						</header>
+
+						<div class="ProductBody">
+
+							<p>Conheça a nossa linha de produtos da marca FADEL.</p>
+
+						</div>
+
+						<footer class="ProductFooter flex justify-center">
+
+							<a id="swipe-fadel-frame" class="btn ghost font-red-900 border-red-900 h-red-900 hfont-white">Informações</a>
+
+						</footer>
+
+					</li>
+
+					<li class="Product flex-column grey-50 border-red-900">
+
+						<header class="ProductHeader flex justify-center align-center">
+
+							<a href="#" class="flex justify-center">
+
+								<figure class="ProductLogo">
+
+									<img src="dist/img/raiz_do_brasil_marca.png" alt=""/>
+
+								</figure>
+
+							</a>
+
+						</header>
+
+						<div class="ProductBody">
+
+							<p>Criamos um site exclusivo para apresentar a nossa linha de produtos da marca Raiz do Brasil.</p>
+
+							<p>lorem</p>
+
+						</div>
+
+						<footer class="ProductFooter flex justify-center">
+
+							<a href="#" class="btn ghost font-red-900 border-red-900 h-red-900 hfont-white">Visite o hotsite</a>
+
+						</footer>
+
+					</li>
+
+				</ul>
+
+				<footer class="ProductsFooter flex justify-center">
+
+					<p>Todos os produtos atendem as exigências de qualidade do mercado.</p>
+
+				</footer>
+
+			</section>
+
+			<section id="fadel-frame" class="SwipeFrame SwipeFrame--left red-800">
+
+				<button id="close-fadel-frame">fechar</button>
+
+			</section>
+
+		</section>
 
 	</article>
 
 	<!-- Recipes -->
-	<article id="recipes" class="Block Block--institutional Recipes pink-800">
+	<!--<article id="recipes" class="Block Block&#45;&#45;recipes Recipes pink-800">-->
 
-	</article>
-
-	<!-- Reps -->
-	<article id="reps" class="Block Block--institutional Reps grey-800">
-
-	</article>
+	<!--</article>-->
 
 	<!-- Reps -->
-	<article id="footer" class="Block Block--institutional Reps grey-800">
+	<article id="reps" class="Block Block--reps Reps grey-800">
+
+		<section id="reps-frames" class="Frames">
+
+			<section id="reps-intro" class="Frame RepsIntroFrame flex flex-column justify-center align-center grey-100 active">
+
+				<h1>Representantes</h1>
+
+				<p>Preparamos uma lista pra te ajudar a encontrar o representante mais próximo de você, clique no botão abaixo e encontrará uma lista de representantes</p>
+
+				<a id="reps-modal-open" class="btn ghost toggle border-red-900 font-red-900 h-red-900 hfont-white">Abrir</a>
+
+			</section>
+
+			<section id="reps-content" class="Frame RepsContentFrame flex child-grow-1">
+
+				<header class="RepsContentOptions grey-100 flex flex-column child-grow-1">
+
+					<a class="option toggle">
+
+						<span class="icon-left-open"></span>
+
+					</a>
+
+				</header>
+
+				<div id="reps-wrapper" class="RepsWrapper flex grey-100 width-100">
+
+					<header class="RepsHeader">
+
+						<div id="reps-select" class="RepsSelect"></div>
+
+						<ul id="reps-list" class="RepsList flex flex-wrap align-start content-start"></ul>
+
+					</header>
+
+					<div id="reps-map" class="RepsMap red-600 flex justify-center align-center">
+
+						<span class="icon-spin4 animate-spin font-white" style="font-size: 3em;"></span>
+
+					</div>
+
+				</div>
+
+			</section>
+
+		</section>
 
 	</article>
 
 </main>
 
+<script src="dist/js/jquery-2.1.4.min.js"></script>
+
 <script src="js/f.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/modal.js"></script>
+<script src="js/maps.js"></script>
+<script src="js/local.js"></script>
+<script src="js/contact.js"></script>
 <script src="js/gallery.js"></script>
+<script src="js/reps.js"></script>
+<script src="js/swipe.js"></script>
+
 <script>
 
 	var Promafa = (function() {
 
 		var activeClass = 'is-active';
 
+		var productsThings = [
+			{
+				item: document.getElementById('swipe-fadel-frame'),
+				swipeTarget: document.getElementById('fadel-frame')
+			},
+			{
+				item: document.getElementById('close-fadel-frame'),
+				swipeTarget: false
+			}
+		];
+
+		var repsData = [
+			{
+				name: 'promafa',
+				title: 'PROMAFA - Produtos de Mandioca FADEL LTDA.',
+				address: 'R. São Paulo, 43, Palmital - SP, 19970-000, Brasil',
+				city: 'palmital',
+				state: 'sp',
+				zip: '19970-000',
+				country: 'brasil',
+				phone: '+55 18 3351 5050',
+				email: {
+					string: 'rep@promafa.com.br',
+					url: 'mailto:rep@promafa.com.br'
+				},
+				website: {
+					string: 'www.promafa.com.br',
+					url: 'http://www.promafa.com.br'
+				},
+				position: {
+					lat: -22.7753073,
+					lng: -50.2077834
+				}
+			}
+		];
+
+		var mapsScript = document.getElementById('maps-script');
+
+		var center = {
+			lat: -22.7753073,
+			lng: -50.2077834
+		};
+
+		/**
+		 * The constructor
+		 * @constructor
+		 */
 		function Promafa() {
 
 			// Nav instance
@@ -478,24 +876,45 @@
 					scrollTarget: document.getElementById('products'),
 					activeClass: activeClass
 				},
-				{
-					menuItem: document.getElementById('recipes-anchor'),
-					scrollTarget: document.getElementById('recipes'),
-					activeClass: activeClass
-				},
+//				{
+//					menuItem: document.getElementById('recipes-anchor'),
+//					scrollTarget: document.getElementById('recipes'),
+//					activeClass: activeClass
+//				},
 				{
 					menuItem: document.getElementById('reps-anchor'),
 					scrollTarget: document.getElementById('reps'),
 					activeClass: activeClass
 				}
-			]);
+			], document.documentElement);
 
 			// Modal instance
 			this.modalContact = new Modal(document.getElementById('modal-contact'));
 			this.modalLocal = new Modal(document.getElementById('modal-local'));
 
+			// Contact Form
+			this.contactForm = new Contact(document.getElementById('contact-form'), {
+				url: 'i/mail/'
+			});
+
+			// Maps instance
+			this.mapLocal = new Maps(document.getElementById('local-map'), mapsScript, {
+				scrollwheel: false,
+				center: center,
+				zoom: 15
+			});
+
+			// Local instance
+			this.local = new Local(this.mapLocal, this.modalLocal, document.getElementById('local-trigger'));
+
 			// Hero Gallery
 			this.gallery = new Gallery();
+
+			// Products Swipe
+//			this.productsSwipe = new Swipe(document.getElementById('products-swipe'));
+
+			// Reps
+			reps.list.data = repsData;
 
 		}
 
@@ -506,7 +925,20 @@
 			this.modalContact.init();
 			this.modalLocal.init();
 
+			this.contactForm.init();
+
+			this.local.init();
+
 			this.gallery.init();
+
+//			this.productsSwipe.init(productsThings);
+
+			reps.init();
+
+			setTimeout(function() {
+//				reps.map.init();
+//				reps.list.init();
+			}, 8000);
 
 		};
 

@@ -1,0 +1,40 @@
+/* Local */
+
+.Local {
+	justify-content: space-around;
+	overflow-y: visible;
+	padding-bottom: 1em;
+}
+
+.LocalMap {
+	height: 8em;
+	margin-bottom: 2.25em;
+	width: 100%;
+}
+
+@media (min-width: 48em) {
+
+	.LocalMap {
+		height: 14em;
+		margin-bottom: 1em;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	.LocalMap {
+		height: 16em;
+		margin-bottom: 1.125em;
+	}
+
+}
+
+@media (min-width: 96em) {
+
+	.LocalMap {
+		height: 24em;
+		margin-bottom: 2.25em;
+	}
+
+}

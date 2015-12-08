@@ -1,7 +1,6 @@
 /* Header */
 
 .Header {
-	min-height: 50vh;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -14,8 +13,12 @@
 }
 
 .is-landscape .Header {
-	height: 100vh;
-	width: 33.333333333%;
-	position: fixed;
 	float: left;
+	height: 100vh;
+	position: fixed;
+	width: 33.333333333%;
+}
+
+.is-portrait .Header {
+	margin-bottom: 1.5em;
 }

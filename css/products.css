@@ -1,0 +1,121 @@
+/* Products */
+
+.ProductsFooter,
+.ProductsHeader {
+	width: 100%;
+}
+
+.ProductsHeader,
+.ProductList {
+	margin-bottom: 1em;
+}
+
+.ProductsHeader h1,
+.ProductsHeader p,
+.ProductsFooter p {
+	/*margin: 0 auto;*/
+	text-align: center;
+}
+
+.ProductsHeader h1 {
+	line-height: 1.5;
+}
+
+.ProductsFooter p {
+	font-weight: 300;
+}
+
+/* Product List */
+
+.ProductList {
+	width: 100%;
+	margin: 1.5em 0 2.25em;
+}
+
+/* Product */
+
+.Product {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	border-radius: 1px;
+	cursor: default;
+	width: 100%;
+	max-width: 24em;
+	min-width: 18em;
+	padding: 1.5em 0 2.25em;
+	margin: 0 0 1.5em;
+}
+
+.Product p {
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+.Product .btn {
+	font-size: .875em;
+}
+
+.ProductHeader {
+	height: 3em;
+	width: 100%;
+	padding: 0 3em;
+	margin: 0 0 1em
+}
+
+.ProductLogo {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 6em;
+}
+
+.ProductLogo img {
+	width: 100%;
+}
+
+.ProductBody {
+	padding: 0 1em;
+	margin: 0 0 1.5em;
+	max-width: 21em;
+}
+
+.ProductBody p {
+	font-weight: 400;
+	margin: 0;
+	text-align: center;
+}
+
+@media (min-width: 36em) {
+
+	.ProductHeader {
+		height: 4.5em;
+	}
+
+	.ProductLogo {
+		max-height: 6em;
+	}
+
+}
+
+@media (min-width: 60em) {
+
+	.ProductList {
+		margin: 4.5em 0;
+	}
+
+	.Product {
+		margin-bottom: 1.5em;
+	}
+
+}
