@@ -1,6 +1,8 @@
 /* Toggle */
 
 .Toggle {
+	color: #424242;
+	cursor: default;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
@@ -14,11 +16,36 @@
 	position: fixed;
 	right: 0;
 	top: 0;
+	-webkit-transition: color .3s;
+	-moz-transition: color .3s;
+	-ms-transition: color .3s;
+	-o-transition: color .3s;
+	transition: color .3s;
 	z-index: 100;
 }
 
 .is-landscape .Toggle {
 	display: none;
+}
+
+html[data-target=institutional] .Toggle {
+	color: #ffffff;
+}
+
+html[data-target=products] .Toggle {
+	color: #b71c1c;
+}
+
+html[data-target=recipes] .Toggle {
+	color: #ffffff;
+}
+
+html[data-target=reps] .Toggle {
+	color: #b71c1c;
+}
+
+.Toggle.is-active {
+	color: #ffffff;
 }
 
 .Toggle span {
@@ -37,4 +64,12 @@
 .ToggleText {
 	font-size: .875em;
 	text-transform: uppercase;
+}
+
+.ToggleText:before {
+	content: 'menu';
+}
+
+.Toggle.is-active .ToggleText:before {
+	content: 'fechar';
 }

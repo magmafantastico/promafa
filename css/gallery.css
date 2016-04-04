@@ -5,10 +5,6 @@
 	position: relative;
 }
 
-.is-portrait .Gallery {
-	height: 12em;
-}
-
 .GalleryContent {
 	display: inline-block;
 	height: 100%;

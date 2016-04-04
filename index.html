@@ -12,10 +12,12 @@
 <link rel="stylesheet" href="css/main.css"/>
 <link rel="stylesheet" href="css/nav.css"/>
 <link rel="stylesheet" href="css/toggle.css"/>
+<link rel="stylesheet" href="css/next.css"/>
 <link rel="stylesheet" href="css/menu.css"/>
 <link rel="stylesheet" href="css/logo.css"/>
 <link rel="stylesheet" href="css/social.css"/>
 <link rel="stylesheet" href="css/certificate.css"/>
+<link rel="stylesheet" href="css/lock.css"/>
 <link rel="stylesheet" href="css/block.css"/>
 <link rel="stylesheet" href="css/modal.css"/>
 <link rel="stylesheet" href="css/info.css"/>
@@ -36,9 +38,11 @@
 <script src="js/is.js"></script>
 <script id="maps-script"></script>
 
-<div class="Toggle">
+<div id="next-frame" class="Next Next--raiz"></div>
 
-	<span class="ToggleText">menu</span>
+<div id="toggle" class="Toggle">
+
+	<span class="ToggleText"></span>
 	<span class="ToggleIcon icon icon-menu"></span>
 
 </div>
@@ -268,7 +272,7 @@
 </div>
 
 <!-- Header -->
-<header class="Header">
+<header class="Header roboto-condensed">
 
 	<!-- Header Logo element area -->
 	<div class="Logo">
@@ -393,7 +397,7 @@
 	</div>
 
 	<!-- Main Nav -->
-	<nav class="MainNav">
+	<nav id="main-nav" class="MainNav">
 
 		<!-- Main Nav Logo element area -->
 		<div class="Logo Logo--white">
@@ -407,7 +411,7 @@
 
 			<li class="MenuItem">
 
-				<a href="#institutional" id="institutional-anchor" class="MenuItem-select-area hfont-red-a700">
+				<a href="#institutional" id="institutional-anchor" class="MenuItem-select-area hfont-red-a700" data-target="institutional">
 
 					<span>Institucional</span>
 
@@ -417,7 +421,7 @@
 
 			<li class="MenuItem">
 
-				<a href="#products" id="products-anchor" class="MenuItem-select-area hfont-red-a700">
+				<a href="#products" id="products-anchor" class="MenuItem-select-area hfont-red-a700" data-target="products">
 
 					<span>Produtos</span>
 
@@ -427,7 +431,7 @@
 
 			<!--<li class="MenuItem">-->
 
-				<!--<a href="#recipes" id="recipes-anchor" class="MenuItem-select-area hfont-red-a700">-->
+				<!--<a href="#recipes" id="recipes-anchor" class="MenuItem-select-area hfont-red-a700" data-target="recipes">-->
 
 					<!--<span>Receitas</span>-->
 
@@ -437,7 +441,7 @@
 
 			<li class="MenuItem">
 
-				<a href="#reps" id="reps-anchor" class="MenuItem-select-area hfont-red-a700">
+				<a href="#reps" id="reps-anchor" class="MenuItem-select-area hfont-red-a700" data-target="reps">
 
 					<span>Representantes</span>
 
@@ -502,7 +506,7 @@
 	<div class="flex flex-column">
 
 		<!-- Certificate Information -->
-		<div class="Certificate">
+		<div class="Certificate" style="display: none">
 
 			<div class="CertificateHeader">
 
@@ -546,6 +550,11 @@
 
 		</ul>
 
+		<!-- Lock Button -->
+		<a href="http://promafa.com.br/webmail" class="Lock">
+			<span class="icon-lock"></span>
+		</a>
+
 	</div>
 
 </header>
@@ -572,7 +581,7 @@
 
 			</section>
 
-			<section class="GalleryContent">
+			<!--<section class="GalleryContent">
 
 				<div class="HeroInner">
 
@@ -584,7 +593,7 @@
 
 				</div>
 
-			</section>
+			</section>-->
 
 			<section class="GalleryContent">
 
@@ -713,7 +722,7 @@
 
 						<footer class="ProductFooter flex justify-center">
 
-							<a href="#" class="btn ghost font-red-900 border-red-900 h-red-900 hfont-white">Visite o hotsite</a>
+							<a id="next-raiz" class="NextTrigger btn ghost font-red-900 border-red-900 h-red-900 hfont-white">Visite o hotsite</a>
 
 						</footer>
 
@@ -801,10 +810,12 @@
 
 <script src="js/f.js"></script>
 <script src="js/nav.js"></script>
+<script src="js/next.js"></script>
 <script src="js/modal.js"></script>
 <script src="js/maps.js"></script>
 <script src="js/local.js"></script>
 <script src="js/contact.js"></script>
+<script src="js/toggle.js"></script>
 <script src="js/gallery.js"></script>
 <script src="js/reps.js"></script>
 <script src="js/swipe.js"></script>
@@ -888,6 +899,14 @@
 				}
 			], document.documentElement);
 
+			// Toggle Button instance
+			this.toggle = new Toggle(document.getElementById('toggle'), document.getElementById('main-nav'));
+
+			// Raiz do Brasil Next instance
+			this.nextRaiz = new Next(document.getElementById('next-raiz'), document.getElementById('next-frame'), {
+				url: 'raiz-do-brasil/'
+			});
+
 			// Modal instance
 			this.modalContact = new Modal(document.getElementById('modal-contact'));
 			this.modalLocal = new Modal(document.getElementById('modal-local'));
@@ -921,6 +940,10 @@
 		Promafa.prototype.init = function() {
 
 			this.nav.init();
+
+			this.toggle.init();
+
+			this.nextRaiz.init();
 
 			this.modalContact.init();
 			this.modalLocal.init();

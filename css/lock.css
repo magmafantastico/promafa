@@ -1,0 +1,22 @@
+.Lock {
+	display: none;
+	padding: 0 2.25em 1em;
+	text-align: right;
+}
+
+.is-landscape .Lock {
+	display: block;
+}
+
+.Lock span {
+	-webkit-transition: color .6s;
+	-moz-transition: color .6s;
+	-ms-transition: color .6s;
+	-o-transition: color .6s;
+	transition: color .6s;
+	color: #9e9e9e;
+}
+
+.Lock:hover span {
+	color: #424242;
+}

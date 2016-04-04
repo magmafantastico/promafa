@@ -2,11 +2,12 @@
 
 var Nav = (function() {
 
-	function Nav(items) {
+	function Nav(items, target) {
 
 		var self = this;
 
 		this.items = items;
+		this.target = target;
 
 		/**
 		 * Controller to item click events
@@ -22,7 +23,7 @@ var Nav = (function() {
 		 * Controller to scroll events
 		 * @param event
 		 */
-		this.scrollCtrl = function(event) {
+		this.scrollCtrl = function() {
 
 			var x = false;
 
@@ -46,7 +47,12 @@ var Nav = (function() {
 		for (var i = this.items.length; i--; )
 			this.items[i].menuItem.classList.remove(this.items[i].menuItem.activeClass);
 
-		if (item) item.classList.add(item.activeClass);
+		if (item) {
+			this.target.setAttribute('data-target', item.getAttribute('data-target'));
+			item.classList.add(item.activeClass);
+		} else {
+			this.target.setAttribute('data-target', '');
+		}
 
 	};
 

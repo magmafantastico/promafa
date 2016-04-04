@@ -22,3 +22,11 @@
 .is-portrait .Header {
 	margin-bottom: 1.5em;
 }
+
+@media (min-width: 60em) {
+
+	.is-landscape .Header {
+		width: 24%;
+	}
+
+}

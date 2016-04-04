@@ -165,13 +165,21 @@ var Gallery = (function () {
 	 */
 	Gallery.prototype.resizeGallery = function () {
 
-		var h, w;
+		if (is.portrait()) {
 
-		//h = this.viewport.offsetWidth * .7;
-		h = this.viewport.offsetHeight;
-		w = this.viewport.offsetWidth * this.slides.length;
+			var h;
 
-		if (h > window.innerHeight) h = window.innerHeight;
+			h = this.viewport.offsetWidth * .7;
+
+			if (h > window.innerHeight) h = window.innerHeight;
+
+			this.gallery.style.height = h + 'px';
+
+		} else {
+
+			this.gallery.style.height = '100vh';
+
+		}
 
 	};
 
