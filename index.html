@@ -1,33 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="roboto grey-100">
+<html lang="pt-br" class="roboto roboto-condensed grey-100">
 <meta charset="UTF-8">
 <title>Promafa</title>
 <meta name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 <script src="dist/js/villa.min.js"></script>
 <link rel="stylesheet" href="dist/css/villa.min.css"/>
-<link rel="stylesheet" href="css/element.css"/>
-<link rel="stylesheet" href="css/icon.css"/>
-<link rel="stylesheet" href="css/header.css"/>
-<link rel="stylesheet" href="css/main.css"/>
-<link rel="stylesheet" href="css/nav.css"/>
-<link rel="stylesheet" href="css/toggle.css"/>
-<link rel="stylesheet" href="css/next.css"/>
-<link rel="stylesheet" href="css/menu.css"/>
-<link rel="stylesheet" href="css/logo.css"/>
-<link rel="stylesheet" href="css/social.css"/>
-<link rel="stylesheet" href="css/certificate.css"/>
-<link rel="stylesheet" href="css/lock.css"/>
-<link rel="stylesheet" href="css/block.css"/>
-<link rel="stylesheet" href="css/modal.css"/>
-<link rel="stylesheet" href="css/info.css"/>
-<link rel="stylesheet" href="css/contact.css"/>
-<link rel="stylesheet" href="css/local.css"/>
-<link rel="stylesheet" href="css/hero.css"/>
-<link rel="stylesheet" href="css/gallery.css"/>
-<link rel="stylesheet" href="css/swipe.css"/>
-<link rel="stylesheet" href="css/products.css"/>
-<link rel="stylesheet" href="css/reps.css"/>
+<link rel="stylesheet" href="dist/css/promafa.css"/>
 <!--[if lt IE 9]>
 <link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
 <link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
@@ -36,6 +15,9 @@
 <script src="dist/js/classList.min.js"></script>
 <![endif]-->
 <script src="js/is.js"></script>
+
+<body class="roboto">
+
 <script id="maps-script"></script>
 
 <div id="next-frame" class="Next Next--raiz"></div>
@@ -80,7 +62,7 @@
 
 							<span class="icon icon-phone"></span>
 
-							<h1>Telefone</h1>
+							<span>Telefone</span>
 
 						</header>
 
@@ -108,7 +90,7 @@
 
 							<span class="icon icon-fax"></span>
 
-							<h1>Fax</h1>
+							<span>Fax</span>
 
 						</header>
 
@@ -130,7 +112,7 @@
 
 							<span class="icon icon-mail"></span>
 
-							<h1>E-mail</h1>
+							<span>E-mail</span>
 
 						</header>
 
@@ -237,7 +219,7 @@
 
 					<span class="icon icon-map"></span>
 
-					<h1>Endereço</h1>
+					<span>Endereço</span>
 
 				</header>
 
@@ -431,11 +413,11 @@
 
 			<!--<li class="MenuItem">-->
 
-				<!--<a href="#recipes" id="recipes-anchor" class="MenuItem-select-area hfont-red-a700" data-target="recipes">-->
+			<!--<a href="#recipes" id="recipes-anchor" class="MenuItem-select-area hfont-red-a700" data-target="recipes">-->
 
-					<!--<span>Receitas</span>-->
+			<!--<span>Receitas</span>-->
 
-				<!--</a>-->
+			<!--</a>-->
 
 			<!--</li>-->
 
@@ -632,7 +614,7 @@
 
 		<h1>Institucional</h1>
 
-		<p>A empresa foi fundada em 13 de março de 1.969, um dos fundadores foi o atual proprietário Antonio Fadel, que com irmãos e primos vieram de Conchal, cidadezinha próxima a Mogi Mirim, para investir em Palmital, cidade que tinha muitas previsões de crescimento devido à terra produtiva.</p>
+		<p>A empresa foi fundada em 13 de março de 1969, um dos fundadores foi o atual proprietário Antonio Fadel, que com irmãos e primos vieram de Conchal, cidadezinha próxima a Mogi Mirim, para investir em Palmital, cidade que tinha muitas previsões de crescimento devido à terra produtiva.</p>
 
 		<p>No ano de 1.988 a sociedade foi dissolvida e Antonio começa uma nova sociedade com seus filhos. Nesta época o principal produto era farinha de raspa de mandioca, esta farinha era utilizada na mistura com farinha de trigo, devido à escassez do trigo nacional nesta época.</p>
 
@@ -807,18 +789,7 @@
 </main>
 
 <script src="dist/js/jquery-2.1.4.min.js"></script>
-
-<script src="js/f.js"></script>
-<script src="js/nav.js"></script>
-<script src="js/next.js"></script>
-<script src="js/modal.js"></script>
-<script src="js/maps.js"></script>
-<script src="js/local.js"></script>
-<script src="js/contact.js"></script>
-<script src="js/toggle.js"></script>
-<script src="js/gallery.js"></script>
-<script src="js/reps.js"></script>
-<script src="js/swipe.js"></script>
+<script src="dist/js/promafa.js"></script>
 
 <script>
 
@@ -875,17 +846,22 @@
 		 */
 		function Promafa() {
 
+			// Toggle Button instance
+			this.toggle = new Toggle(document.getElementById('toggle'), document.getElementById('main-nav'));
+
 			// Nav instance
 			this.nav = new Nav([
 				{
 					menuItem: document.getElementById('institutional-anchor'),
 					scrollTarget: document.getElementById('institutional'),
-					activeClass: activeClass
+					activeClass: activeClass,
+					after: this.toggle.close
 				},
 				{
 					menuItem: document.getElementById('products-anchor'),
 					scrollTarget: document.getElementById('products'),
-					activeClass: activeClass
+					activeClass: activeClass,
+					after: this.toggle.close
 				},
 //				{
 //					menuItem: document.getElementById('recipes-anchor'),
@@ -895,12 +871,10 @@
 				{
 					menuItem: document.getElementById('reps-anchor'),
 					scrollTarget: document.getElementById('reps'),
-					activeClass: activeClass
+					activeClass: activeClass,
+					after: this.toggle.close
 				}
 			], document.documentElement);
-
-			// Toggle Button instance
-			this.toggle = new Toggle(document.getElementById('toggle'), document.getElementById('main-nav'));
 
 			// Raiz do Brasil Next instance
 			this.nextRaiz = new Next(document.getElementById('next-raiz'), document.getElementById('next-frame'), {
@@ -979,5 +953,7 @@
 	promafa.init();
 
 </script>
+
+</body>
 
 </html>

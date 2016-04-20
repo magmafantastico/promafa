@@ -2,7 +2,7 @@
 
 .Toggle {
 	color: #424242;
-	cursor: default;
+	cursor: pointer;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;

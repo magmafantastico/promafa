@@ -19,23 +19,23 @@ var Toggle = (function(){
 
 		};
 
+		this.open = function() {
+
+			self.isActive = true;
+			self.viewport.classList.add('is-active');
+			self.nav.viewport.classList.add('is-active');
+
+		};
+
+		this.close = function() {
+
+			self.isActive = false;
+			self.viewport.classList.remove('is-active');
+			self.nav.viewport.classList.remove('is-active');
+
+		};
+
 	}
-
-	Toggle.prototype.open = function() {
-
-		this.isActive = true;
-		this.viewport.classList.add('is-active');
-		this.nav.viewport.classList.add('is-active');
-
-	};
-
-	Toggle.prototype.close = function() {
-
-		this.isActive = false;
-		this.viewport.classList.remove('is-active');
-		this.nav.viewport.classList.remove('is-active');
-
-	};
 
 	Toggle.prototype.toggle = function() {
 

@@ -10,20 +10,10 @@ var Nav = (function() {
 		this.target = target;
 
 		/**
-		 * Controller to item click events
-		 */
-		this.itemClickCtrl = function() {
-
-			// scroll to scrollTarget element based on his offsetTop value
-			scrollTo(this.scrollTarget.offsetTop);
-
-		};
-
-		/**
 		 * Controller to scroll events
-		 * @param event
+		 * @param {object} ev
 		 */
-		this.scrollCtrl = function() {
+		this.scrollCtrl = function(ev) {
 
 			var x = false;
 
@@ -57,28 +47,13 @@ var Nav = (function() {
 	};
 
 	/**
-	 * Add listeners and test the item
-	 * @param {object} item
-	 */
-	Nav.prototype.processItem = function(item) {
-
-		item.menuItem.scrollTarget = item.scrollTarget;
-		item.menuItem.activeClass = item.activeClass;
-		item.scrollTarget.menuItem = item.menuItem;
-		addListener(item.menuItem, 'click', 'onclick', this.itemClickCtrl, false);
-
-	};
-
-	/**
 	 * Process the items list based on a items array
 	 * @param {Array} items
 	 */
 	Nav.prototype.processItems = function(items) {
 
-		var arr = [];
-
 		for (var i = items.length; i--; )
-			arr.push(this.processItem(items[i]));
+			items[i] = new NavItem(items[i]);
 
 	};
 
@@ -87,7 +62,7 @@ var Nav = (function() {
 		this.processItems(this.items);
 
 		// add window scroll listener
-		addListener(window, 'scroll', 'onscroll', this.scrollCtrl, false);
+		//addListener(window, 'scroll', 'onscroll', this.scrollCtrl, false);
 
 	};
 

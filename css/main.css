@@ -3,8 +3,9 @@
 .Main {  }
 
 .is-landscape .Main {
-	width: 66.666666666%;
 	float: right;
+	padding-left: 18em;
+	width: 100%;
 }
 
 .Main h1 {
@@ -60,7 +61,7 @@
 @media (min-width: 60em) {
 
 	.is-landscape .Main {
-		width: 76%;
+		padding-left: 24em;
 	}
 
 }
