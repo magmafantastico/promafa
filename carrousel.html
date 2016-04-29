@@ -17,12 +17,19 @@
 <style>
 
 	.HeroGallery {
-
+		position: relative;
 	}
 
 	.HeroGalleryItem {
-		position: relative;
+		visibility: hidden;
+		position: absolute;
 		overflow: hidden;
+		width: 100%;
+		min-height: 100vh;
+	}
+
+	.HeroGalleryItem.is-active {
+		visibility: visible;
 	}
 
 	.HeroGalleryItem-background {
@@ -42,8 +49,8 @@
 	}
 
 	.HeroGalleryItem-inner {
+		height: 100%;
 		left: 0;
-		min-height: 100vh;
 		position: relative;
 		top: 0;
 		width: 100%;
@@ -127,10 +134,19 @@
 				itemSelector: '.HeroGalleryItem'
 			};
 
+			this.slider = new HeroGallerySlider();
+
 			if (this.viewport)
 				this.init();
 
 		}
+
+		HeroGallery.prototype.initSlider = function () {
+
+			this.slider.gallery = this;
+			this.slider.init();
+
+		};
 
 		/**
 		 * Init Gallery Items
@@ -166,17 +182,21 @@
 		 */
 		HeroGallery.prototype.init = function() {
 
+			// give to viewport Node a instance of this
 			if (!this.viewport.heroGallery)
 				this.viewport.heroGallery = this;
 
+			// normalize the gallery and the items
 			this.normalize();
+
+			// init and start the slider
+			this.initSlider();
 
 		};
 
 		return HeroGallery;
 
 	})();
-
 
 	/* Hero Gallery item */
 
@@ -266,6 +286,7 @@
 		 */
 		HeroGalleryItem.prototype.init = function () {
 
+			// give to viewport Node a instance of this
 			if (!this.viewport.heroGalleryItem)
 				this.viewport.heroGalleryItem = this;
 
@@ -274,6 +295,100 @@
 		};
 
 		return HeroGalleryItem;
+
+	})();
+
+	/* Hero Gallery Slider */
+
+	var HeroGallerySlider = (function () {
+
+		/**
+		 * Hero Gallery Slider constructor
+		 * @constructor
+		 */
+		function HeroGallerySlider(gallery) {
+
+			var self = this;
+
+			this.gallery = gallery;
+
+			this.config = {
+				activeClass: 'is-active'
+			};
+
+			this.activeItem = false;
+
+			this.start = function () {
+
+
+			};
+
+			this.resume = function () {
+
+
+
+			};
+
+			this.pause = function () {
+
+
+
+			};
+
+			this.stop = function () {
+
+
+
+			};
+
+			this.change = function () {
+
+
+
+			};
+
+			if (this.gallery)
+				this.init();
+
+		}
+
+		HeroGallerySlider.prototype.getActive = function () {
+
+			if (this.activeItem)
+				return this.activeItem;
+
+			for (var i = 0; i < this.gallery.items.length; i++)
+				if (this.gallery.items[i].classList.contains(this.config.activeClass))
+					return this.gallery.items[i];
+
+			if (this.gallery.items[0])
+				return this.gallery.items[0];
+
+			console.log('aopdfijsdf');
+
+			return false;
+
+		};
+
+		HeroGallerySlider.prototype.normalize = function () {
+
+			this.activeItem = this.getActive();
+
+			for (var i = this.gallery.items.length; i--; )
+				this.gallery.items[i].classList.remove(this.config.activeClass);
+
+			if (this.activeItem)
+				this.activeItem.classList.add('is-active');
+
+		};
+
+		HeroGallerySlider.prototype.init = function () {
+
+			this.normalize();
+
+		};
+
+		return HeroGallerySlider;
 
 	})();
 
