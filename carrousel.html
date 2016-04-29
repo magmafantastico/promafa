@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="roboto-condensed">
+<meta charset="UTF-8">
+<title>Promafa | Carrousel</title>
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<script src="dist/js/villa.min.js"></script>
+<link rel="stylesheet" href="dist/css/villa.min.css"/>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
+<link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
+<script src="dist/js/html5shiv.js"></script>
+<script src="dist/js/html5shiv-printshiv.js"></script>
+<script src="dist/js/classList.min.js"></script>
+<![endif]-->
+
+<style>
+
+	.HeroGallery {
+		position: relative;
+		height: 100vh;
+	}
+
+	.HeroGalleryItem {
+		background-color: #e5e5e5;
+		height: 100%;
+		left: 0;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		-webkit-transition: opacity .3s, visibility 0s .3s;
+		-moz-transition: opacity .3s, visibility 0s .3s;
+		-ms-transition: opacity .3s, visibility 0s .3s;
+		-o-transition: opacity .3s, visibility 0s .3s;
+		transition: opacity .3s, visibility 0s .3s;
+		visibility: hidden;
+		width: 100%;
+	}
+
+	.HeroGalleryItem.is-active {
+		opacity: 1;
+		-webkit-transition: opacity .0s, visibility 0s .6s;
+		-moz-transition: opacity .0s, visibility 0s .6s;
+		-ms-transition: opacity .0s, visibility 0s .6s;
+		-o-transition: opacity .0s, visibility 0s .6s;
+		transition: opacity .0s, visibility 0s .6s;
+		visibility: visible;
+	}
+
+	.HeroGalleryItemBorder {
+		height: 100%;
+		left: 0;
+		padding: 3em 4.5em;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	.HeroGalleryItemBorder-inner {
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}
+
+	.HeroGalleryItemBorder-bottom,
+	.HeroGalleryItemBorder-left,
+	.HeroGalleryItemBorder-right,
+	.HeroGalleryItemBorder-top {
+		background-color: #d50000;
+		-webkit-transition-duration: .3s;
+		-moz-transition-duration: .3s;
+		-ms-transition-duration: .3s;
+		-o-transition-duration: .3s;
+		transition-duration: .3s;
+		-webkit-transition-timing-function: ease;
+		-moz-transition-timing-function: ease;
+		-ms-transition-timing-function: ease;
+		-o-transition-timing-function: ease;
+		transition-timing-function: ease;
+		position: absolute;
+	}
+
+	.HeroGalleryItemBorder-bottom,
+	.HeroGalleryItemBorder-top,
+	.HeroGalleryItem.is-active .HeroGalleryItemBorder-left,
+	.HeroGalleryItem.is-active .HeroGalleryItemBorder-right {
+		-webkit-transition-delay: .5s;
+		-moz-transition-delay: .5s;
+		-ms-transition-delay: .5s;
+		-o-transition-delay: .5s;
+		transition-delay: .5s;
+	}
+
+	.HeroGalleryItemBorder-left,
+	.HeroGalleryItemBorder-right,
+	.HeroGalleryItem.is-active .HeroGalleryItemBorder-bottom,
+	.HeroGalleryItem.is-active .HeroGalleryItemBorder-top {
+		-webkit-transition-delay: .8s;
+		-moz-transition-delay: .8s;
+		-ms-transition-delay: .8s;
+		-o-transition-delay: .8s;
+		transition-delay: .8s;
+	}
+
+	.HeroGalleryItemBorder-left,
+	.HeroGalleryItemBorder-right {
+		-webkit-transition-property: height;
+		-moz-transition-property: height;
+		-ms-transition-property: height;
+		-o-transition-property: height;
+		transition-property: height;
+		height: 0;
+		width: 1em;
+	}
+
+	.HeroGalleryItem.is-active .HeroGalleryItemBorder-left,
+	.HeroGalleryItem.is-active .HeroGalleryItemBorder-right {
+		height: 100%;
+	}
+
+	.HeroGalleryItemBorder-bottom,
+	.HeroGalleryItemBorder-top {
+		-webkit-transition-property: width;
+		-moz-transition-property: width;
+		-ms-transition-property: width;
+		-o-transition-property: width;
+		transition-property: width;
+		height: 1em;
+		width: 0;
+	}
+
+	.HeroGalleryItem.is-active .HeroGalleryItemBorder-bottom,
+	.HeroGalleryItem.is-active .HeroGalleryItemBorder-top {
+		width: 100%;
+	}
+
+	.HeroGalleryItemBorder-bottom,
+	.HeroGalleryItemBorder-left {
+		bottom: 0;
+	}
+
+	.HeroGalleryItemBorder-right,
+	.HeroGalleryItemBorder-top {
+		top: 0;
+	}
+
+	.HeroGalleryItemBorder-left,
+	.HeroGalleryItemBorder-top {
+		left: 0;
+	}
+
+	.HeroGalleryItemBorder-bottom,
+	.HeroGalleryItemBorder-right {
+		right: 0;
+	}
+
+
+	.HeroGalleryItem-inner {
+		-webkit-align-items: center;
+		align-items: center;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		height: 100%;
+		-webkit-justify-content: center;
+		justify-content: center;
+		position: relative;
+		width: 100%;
+	}
+
+	.HeroGalleryItem h1 {
+		color: #000000;
+		font-size: 3em;
+		font-weight: 600;
+		line-height: 1;
+		opacity: 0;
+		text-transform: uppercase;
+		-webkit-transform: scale(.8);
+		-moz-transform: scale(.8);
+		-ms-transform: scale(.8);
+		-o-transform: scale(.8);
+		transform: scale(.8);
+		-webkit-transition: opacity .3s, transform .6s;
+		-moz-transition: opacity .3s, transform .6s;
+		-ms-transition: opacity .3s, transform .6s;
+		-o-transition: opacity .3s, transform .6s;
+		transition: opacity .3s, transform .6s;
+	}
+
+	.HeroGalleryItem.is-active h1 {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-ms-transform: scale(1);
+		-o-transform: scale(1);
+		transform: scale(1);
+		-webkit-transition: opacity .9s, transform 1.2s .3s;
+		-moz-transition: opacity .9s, transform 1.2s .3s;
+		-ms-transition: opacity .9s, transform 1.2s .3s;
+		-o-transition: opacity .9s, transform 1.2s .3s;
+		transition: opacity .9s, transform 1.2s .3s;
+	}
+
+	@media (min-width: 72em) {
+
+		.HeroGalleryItemBorder {
+			padding: 3.75em 6em;
+		}
+
+		.HeroGalleryItemBorder-left,
+		.HeroGalleryItemBorder-right {
+			width: 1.125em;
+		}
+
+		.HeroGalleryItemBorder-bottom,
+		.HeroGalleryItemBorder-top {
+			height: 1.125em;
+		}
+
+		.HeroGalleryItem h1 {
+			font-size: 4.5em;
+		}
+
+	}
+
+	@media (min-width: 96em) {
+
+		.HeroGalleryItemBorder-left,
+		.HeroGalleryItemBorder-right {
+			width: 1.5em;
+		}
+
+		.HeroGalleryItemBorder-bottom,
+		.HeroGalleryItemBorder-top {
+			height: 1.5em;
+		}
+
+		.HeroGalleryItemBorder {
+			padding: 4.5em 8em;
+		}
+
+		.HeroGalleryItem h1 {
+			font-size: 6em;
+		}
+
+	}
+
+</style>
+
+<body>
+
+<section class="HeroGallery">
+
+	<article class="HeroGalleryItem">
+
+		<div class="HeroGalleryItemBorder">
+
+			<div class="HeroGalleryItemBorder-inner">
+
+				<div class="HeroGalleryItemBorder-top"></div>
+				<div class="HeroGalleryItemBorder-right"></div>
+				<div class="HeroGalleryItemBorder-bottom"></div>
+				<div class="HeroGalleryItemBorder-left"></div>
+
+			</div>
+
+		</div>
+
+		<div class="HeroGalleryItem-inner">
+
+			<h1>padrão e <br/> controle <br/> rigoroso <br/> de qualidade</h1>
+
+		</div>
+
+	</article>
+
+	<article class="HeroGalleryItem">
+
+		<div class="HeroGalleryItemBorder">
+
+			<div class="HeroGalleryItemBorder-inner">
+
+				<div class="HeroGalleryItemBorder-top"></div>
+				<div class="HeroGalleryItemBorder-right"></div>
+				<div class="HeroGalleryItemBorder-bottom"></div>
+				<div class="HeroGalleryItemBorder-left"></div>
+
+			</div>
+
+		</div>
+
+		<div class="HeroGalleryItem-inner">
+
+			<h1>empresa <br/> que respeita <br/> o meio <br/> ambiente</h1>
+
+		</div>
+
+	</article>
+
+	<article class="HeroGalleryItem">
+
+		<div class="HeroGalleryItemBorder">
+
+			<div class="HeroGalleryItemBorder-inner">
+
+				<div class="HeroGalleryItemBorder-top"></div>
+				<div class="HeroGalleryItemBorder-right"></div>
+				<div class="HeroGalleryItemBorder-bottom"></div>
+				<div class="HeroGalleryItemBorder-left"></div>
+
+			</div>
+
+		</div>
+
+		<div class="HeroGalleryItem-inner">
+
+			<h1>tradição <br/> em produtos <br/> de qualidade <br/> superior</h1>
+
+		</div>
+
+	</article>
+	
+</section>
+
+<script>
+
+	var items = document.querySelectorAll('.HeroGalleryItem');
+
+	var current = 0;
+	var last = false;
+
+	function changeCurrent() {
+
+		if (last)
+			last.classList.remove('is-active');
+
+		items[current].classList.add('is-active');
+
+		last = items[current];
+
+		if (++current >= items.length)
+			current = 0;
+
+	}
+
+	setInterval(changeCurrent, 2400);
+
+</script>
+
+</body>
+
+</html>

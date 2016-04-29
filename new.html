@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8">
+<title>Promafa</title>
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<script src="dist/js/villa.min.js"></script>
+<link rel="stylesheet" href="dist/css/villa.min.css"/>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
+<link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
+<script src="dist/js/html5shiv.js"></script>
+<script src="dist/js/html5shiv-printshiv.js"></script>
+<script src="dist/js/classList.min.js"></script>
+<![endif]-->
+
+<style>
+
+	main {
+		overflow-x: hidden;
+	}
+
+	.Header {
+		width: 100%;
+		height: 18em;
+	}
+
+	.Logo--header {
+		-webkit-align-items: center;
+		align-items: center;
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		height: 100%;
+		-webkit-justify-content: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.Logo--header .Logo-inner {
+		width: 10em;
+	}
+
+	.Logo--header svg {
+		-webkit-transition: fill .6s;
+		-moz-transition: fill .6s;
+		-ms-transition: fill .6s;
+		-o-transition: fill .6s;
+		transition: fill .6s;
+	}
+
+	#PromafaLogoMain-background,
+	#PromafaLogoLines {
+		fill: #e53935;
+	}
+
+	#PromafaLogoMain-text {
+		fill: #ffffff;
+	}
+
+	#PromafaLogoTypo {
+		fill: #000000;
+	}
+
+	.SectionBlock {
+		padding: 0 1em;
+		position: relative;
+		width: 100%;
+		/*overflow: hidden;*/
+	}
+
+	.SectionBlock-inner {
+		box-shadow: -1px 2px 4px 0 rgba(0,0,0,.36);
+		margin: 0 auto;
+		min-height: 100vh;
+	}
+
+	.SectionBlock:first-of-type .SectionBlock-inner {
+		box-shadow: -2px -2px 6px 1px rgba(0,0,0,.24);
+	}
+
+	.SectionBlock-container {
+		width: 100%;
+	}
+
+	.SectionBlock--hero .SectionBlock-inner {
+		min-height: 0;
+		height: 18em;
+	}
+
+	.Footer {
+		width: 100%;
+		height: 100vh;
+	}
+
+	.HeroGallery {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+
+	.HeroGallery h1 {
+		color: #000000;
+		font-size: 3em;
+		font-weight: 700;
+		line-height: .96;
+		text-transform: uppercase;
+		-webkit-transition: color 0s .6s;
+		-moz-transition: color 0s .6s;
+		-ms-transition: color 0s .6s;
+		-o-transition: color 0s .6s;
+		transition: color 0s .6s;
+	}
+
+	.HeroGallery:hover h1 {
+		color: #ffffff;
+		-webkit-transition: color .8s;
+		-moz-transition: color .8s;
+		-ms-transition: color .8s;
+		-o-transition: color .8s;
+		transition: color .8s;
+	}
+
+	.HeroGallery-background {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url("img/fdo_type%201.png") no-repeat center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	.HeroGallery-inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		-webkit-transform: translateX(-100%);
+		-moz-transform: translateX(-100%);
+		-ms-transform: translateX(-100%);
+		-o-transform: translateX(-100%);
+		transform: translateX(-100%);
+		-webkit-transition: none;
+		-moz-transition: none;
+		-ms-transition: none;
+		-o-transition: none;
+		transition: none;
+	}
+
+	.HeroGallery:hover .HeroGallery-inner {
+		-webkit-transform: translateX(100%);
+		-moz-transform: translateX(100%);
+		-ms-transform: translateX(100%);
+		-o-transform: translateX(100%);
+		transform: translateX(100%);
+		-webkit-transition: transform 3s cubic-bezier(.06,1,1,.02);
+		-moz-transition: transform 3s cubic-bezier(.06,1,1,.02);
+		-ms-transition: transform 3s cubic-bezier(.06,1,1,.02);
+		-o-transition: transform 3s cubic-bezier(.06,1,1,.02);
+		transition: transform 3s cubic-bezier(.06,1,1,.02);
+	}
+
+	.HeroGallery-content {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-align-items: center;
+		align-items: center;
+		padding: 1em;
+		margin: 0 auto;
+		height: 100%;
+	}
+
+	.HeroGallery:hover .HeroGallery-inner {
+
+	}
+
+	@media (min-width: 21em) {
+
+		.SectionBlock--hero .SectionBlock-inner {
+			height: 24em;
+		}
+
+	}
+
+	@media (min-width: 48em) {
+
+		.Header {
+			height: 24em;
+		}
+
+		.SectionBlock-container {
+			max-width: 48em;
+		}
+
+		.SectionBlock--hero .SectionBlock-inner {
+			height: 36em;
+		}
+
+		.SectionBlock--hero {
+			margin-bottom: 2.25em;
+		}
+
+		.Footer {
+			height: 100vh;
+		}
+
+		.HeroGallery h1 {
+			font-size: 6em;
+			line-height: .96;
+		}
+
+	}
+
+	@media (min-width: 60em) {
+
+		.SectionBlock {
+			padding: 0;
+		}
+
+	}
+
+	@media (min-width: 72em) {
+
+		.Header {
+			height: 16em;
+		}
+
+		.SectionBlock-container {
+			max-width: 60em;
+		}
+
+		.SectionBlock--hero .SectionBlock-inner {
+			height: 30em;
+		}
+
+	}
+
+	@media (min-width: 96em) {
+
+		.Header {
+			height: 21em;
+		}
+
+		.SectionBlock-container {
+			max-width: 72em;
+		}
+
+		.SectionBlock--hero {
+			margin-bottom: 3em;
+		}
+
+		.SectionBlock--hero .SectionBlock-inner {
+			height: 36em;
+		}
+
+		.HeroGallery h1 {
+			font-size: 8em;
+			line-height: .96;
+		}
+
+	}
+
+</style>
+
+<body class="">
+
+<nav></nav>
+
+<main class="grey-200">
+
+	<header class="Header">
+
+		<div class="Logo Logo--header">
+
+			<a class="Logo-select-area">
+
+				<div id="logo" class="Logo-inner"></div>
+
+			</a>
+
+		</div>
+
+	</header>
+
+	<section class="SectionBlock SectionBlock--hero">
+
+		<div class="SectionBlock-inner SectionBlock-container">
+
+			<div class="HeroGallery">
+
+				<div class="HeroGallery-background"></div>
+
+				<div class="HeroGallery-inner">
+
+					<div class="SectionBlock-container HeroGallery-content roboto-condensed font-white">
+
+						<h1>padrão e <br/> controle <br/> rigoroso <br/> de qualidade</h1>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+	<section class="SectionBlock">
+
+		<div class="SectionBlock-inner SectionBlock-container blue"></div>
+
+	</section>
+
+	<section class="SectionBlock">
+
+		<div class="SectionBlock-inner SectionBlock-container green"></div>
+
+	</section>
+
+	<section class="SectionBlock">
+
+		<div class="SectionBlock-inner SectionBlock-container yellow"></div>
+
+	</section>
+
+	<footer class="Footer red-900"></footer>
+
+</main>
+
+<script src="js/logo.js"></script>
+
+<script>
+
+	var Logo = new Logo(document.getElementById('logo'), 'PromafaLogo-pure.svg');
+
+
+	/* Hero Gallery */
+
+	var HeroGallery = (function () {
+
+		/**
+		 * Hero Gallery constructor
+		 * @param {Element|Node} viewport
+		 * @constructor
+		 */
+		function HeroGallery(viewport) {
+
+			this.viewport = viewport;
+
+			console.log(this.viewport.offsetWidth);
+
+			if (this.viewport)
+				this.init();
+
+		}
+
+		HeroGallery.prototype.init = function () {
+
+//			this.viewport.querySelector('.HeroGallery-content').style.width = this.viewport.offsetWidth + 'px';
+
+		};
+
+		return HeroGallery;
+
+	})();
+
+	var hero = new HeroGallery(document.querySelector('.HeroGallery'));
+
+</script>
+
+</body>
+
+</html>
