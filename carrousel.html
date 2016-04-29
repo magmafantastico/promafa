@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="roboto-condensed">
+<html lang="pt-br">
 <meta charset="UTF-8">
 <title>Promafa | Carrousel</title>
 <meta name="viewport"
@@ -17,336 +17,271 @@
 <style>
 
 	.HeroGallery {
-		position: relative;
-		height: 100vh;
+
 	}
 
 	.HeroGalleryItem {
-		background-color: #e5e5e5;
-		height: 100%;
-		left: 0;
-		opacity: 0;
-		overflow: hidden;
-		position: absolute;
-		top: 0;
-		-webkit-transition: opacity .3s, visibility 0s .3s;
-		-moz-transition: opacity .3s, visibility 0s .3s;
-		-ms-transition: opacity .3s, visibility 0s .3s;
-		-o-transition: opacity .3s, visibility 0s .3s;
-		transition: opacity .3s, visibility 0s .3s;
-		visibility: hidden;
-		width: 100%;
-	}
-
-	.HeroGalleryItem.is-active {
-		opacity: 1;
-		-webkit-transition: opacity .0s, visibility 0s .6s;
-		-moz-transition: opacity .0s, visibility 0s .6s;
-		-ms-transition: opacity .0s, visibility 0s .6s;
-		-o-transition: opacity .0s, visibility 0s .6s;
-		transition: opacity .0s, visibility 0s .6s;
-		visibility: visible;
-	}
-
-	.HeroGalleryItemBorder {
-		height: 100%;
-		left: 0;
-		padding: 3em 4.5em;
-		position: absolute;
-		top: 0;
-		width: 100%;
-	}
-
-	.HeroGalleryItemBorder-inner {
 		position: relative;
+		overflow: hidden;
+	}
+
+	.HeroGalleryItem-background {
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
 		height: 100%;
-		width: 100%;
-	}
-
-	.HeroGalleryItemBorder-bottom,
-	.HeroGalleryItemBorder-left,
-	.HeroGalleryItemBorder-right,
-	.HeroGalleryItemBorder-top {
-		background-color: #d50000;
-		-webkit-transition-duration: .3s;
-		-moz-transition-duration: .3s;
-		-ms-transition-duration: .3s;
-		-o-transition-duration: .3s;
-		transition-duration: .3s;
-		-webkit-transition-timing-function: ease;
-		-moz-transition-timing-function: ease;
-		-ms-transition-timing-function: ease;
-		-o-transition-timing-function: ease;
-		transition-timing-function: ease;
-		position: absolute;
-	}
-
-	.HeroGalleryItemBorder-bottom,
-	.HeroGalleryItemBorder-top,
-	.HeroGalleryItem.is-active .HeroGalleryItemBorder-left,
-	.HeroGalleryItem.is-active .HeroGalleryItemBorder-right {
-		-webkit-transition-delay: .5s;
-		-moz-transition-delay: .5s;
-		-ms-transition-delay: .5s;
-		-o-transition-delay: .5s;
-		transition-delay: .5s;
-	}
-
-	.HeroGalleryItemBorder-left,
-	.HeroGalleryItemBorder-right,
-	.HeroGalleryItem.is-active .HeroGalleryItemBorder-bottom,
-	.HeroGalleryItem.is-active .HeroGalleryItemBorder-top {
-		-webkit-transition-delay: .8s;
-		-moz-transition-delay: .8s;
-		-ms-transition-delay: .8s;
-		-o-transition-delay: .8s;
-		transition-delay: .8s;
-	}
-
-	.HeroGalleryItemBorder-left,
-	.HeroGalleryItemBorder-right {
-		-webkit-transition-property: height;
-		-moz-transition-property: height;
-		-ms-transition-property: height;
-		-o-transition-property: height;
-		transition-property: height;
-		height: 0;
-		width: 1em;
-	}
-
-	.HeroGalleryItem.is-active .HeroGalleryItemBorder-left,
-	.HeroGalleryItem.is-active .HeroGalleryItemBorder-right {
-		height: 100%;
-	}
-
-	.HeroGalleryItemBorder-bottom,
-	.HeroGalleryItemBorder-top {
-		-webkit-transition-property: width;
-		-moz-transition-property: width;
-		-ms-transition-property: width;
-		-o-transition-property: width;
-		transition-property: width;
-		height: 1em;
-		width: 0;
-	}
-
-	.HeroGalleryItem.is-active .HeroGalleryItemBorder-bottom,
-	.HeroGalleryItem.is-active .HeroGalleryItemBorder-top {
-		width: 100%;
-	}
-
-	.HeroGalleryItemBorder-bottom,
-	.HeroGalleryItemBorder-left {
-		bottom: 0;
-	}
-
-	.HeroGalleryItemBorder-right,
-	.HeroGalleryItemBorder-top {
-		top: 0;
-	}
-
-	.HeroGalleryItemBorder-left,
-	.HeroGalleryItemBorder-top {
 		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
 	}
 
-	.HeroGalleryItemBorder-bottom,
-	.HeroGalleryItemBorder-right {
-		right: 0;
+	.HeroGalleryItem-background img.is-hide {
+		display: none;
 	}
-
 
 	.HeroGalleryItem-inner {
-		-webkit-align-items: center;
-		align-items: center;
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		height: 100%;
-		-webkit-justify-content: center;
-		justify-content: center;
+		left: 0;
+		min-height: 100vh;
 		position: relative;
+		top: 0;
 		width: 100%;
-	}
-
-	.HeroGalleryItem h1 {
-		color: #000000;
-		font-size: 3em;
-		font-weight: 600;
-		line-height: 1;
-		opacity: 0;
-		text-transform: uppercase;
-		-webkit-transform: scale(.8);
-		-moz-transform: scale(.8);
-		-ms-transform: scale(.8);
-		-o-transform: scale(.8);
-		transform: scale(.8);
-		-webkit-transition: opacity .3s, transform .6s;
-		-moz-transition: opacity .3s, transform .6s;
-		-ms-transition: opacity .3s, transform .6s;
-		-o-transition: opacity .3s, transform .6s;
-		transition: opacity .3s, transform .6s;
-	}
-
-	.HeroGalleryItem.is-active h1 {
-		opacity: 1;
-		-webkit-transform: scale(1);
-		-moz-transform: scale(1);
-		-ms-transform: scale(1);
-		-o-transform: scale(1);
-		transform: scale(1);
-		-webkit-transition: opacity .9s, transform 1.2s .3s;
-		-moz-transition: opacity .9s, transform 1.2s .3s;
-		-ms-transition: opacity .9s, transform 1.2s .3s;
-		-o-transition: opacity .9s, transform 1.2s .3s;
-		transition: opacity .9s, transform 1.2s .3s;
-	}
-
-	@media (min-width: 72em) {
-
-		.HeroGalleryItemBorder {
-			padding: 3.75em 6em;
-		}
-
-		.HeroGalleryItemBorder-left,
-		.HeroGalleryItemBorder-right {
-			width: 1.125em;
-		}
-
-		.HeroGalleryItemBorder-bottom,
-		.HeroGalleryItemBorder-top {
-			height: 1.125em;
-		}
-
-		.HeroGalleryItem h1 {
-			font-size: 4.5em;
-		}
-
-	}
-
-	@media (min-width: 96em) {
-
-		.HeroGalleryItemBorder-left,
-		.HeroGalleryItemBorder-right {
-			width: 1.5em;
-		}
-
-		.HeroGalleryItemBorder-bottom,
-		.HeroGalleryItemBorder-top {
-			height: 1.5em;
-		}
-
-		.HeroGalleryItemBorder {
-			padding: 4.5em 8em;
-		}
-
-		.HeroGalleryItem h1 {
-			font-size: 6em;
-		}
-
 	}
 
 </style>
 
 <body>
 
-<section class="HeroGallery">
+<section id="hero-gallery" class="HeroGallery">
 
 	<article class="HeroGalleryItem">
 
-		<div class="HeroGalleryItemBorder">
+		<figure class="HeroGalleryItem-background">
 
-			<div class="HeroGalleryItemBorder-inner">
+			<img src="img/fdo_type%201.png" alt=""/>
 
-				<div class="HeroGalleryItemBorder-top"></div>
-				<div class="HeroGalleryItemBorder-right"></div>
-				<div class="HeroGalleryItemBorder-bottom"></div>
-				<div class="HeroGalleryItemBorder-left"></div>
+		</figure>
 
-			</div>
-
-		</div>
-
-		<div class="HeroGalleryItem-inner">
-
-			<h1>padrão e <br/> controle <br/> rigoroso <br/> de qualidade</h1>
-
-		</div>
+		<div class="HeroGalleryItem-inner"></div>
 
 	</article>
 
 	<article class="HeroGalleryItem">
 
-		<div class="HeroGalleryItemBorder">
+		<figure class="HeroGalleryItem-background">
 
-			<div class="HeroGalleryItemBorder-inner">
+			<img src="img/fdo_type%202.png" alt=""/>
 
-				<div class="HeroGalleryItemBorder-top"></div>
-				<div class="HeroGalleryItemBorder-right"></div>
-				<div class="HeroGalleryItemBorder-bottom"></div>
-				<div class="HeroGalleryItemBorder-left"></div>
+		</figure>
 
-			</div>
-
-		</div>
-
-		<div class="HeroGalleryItem-inner">
-
-			<h1>empresa <br/> que respeita <br/> o meio <br/> ambiente</h1>
-
-		</div>
+		<div class="HeroGalleryItem-inner"></div>
 
 	</article>
 
 	<article class="HeroGalleryItem">
 
-		<div class="HeroGalleryItemBorder">
+		<figure class="HeroGalleryItem-background">
 
-			<div class="HeroGalleryItemBorder-inner">
+			<img src="img/fdo_type%203.png" alt=""/>
 
-				<div class="HeroGalleryItemBorder-top"></div>
-				<div class="HeroGalleryItemBorder-right"></div>
-				<div class="HeroGalleryItemBorder-bottom"></div>
-				<div class="HeroGalleryItemBorder-left"></div>
+		</figure>
 
-			</div>
-
-		</div>
-
-		<div class="HeroGalleryItem-inner">
-
-			<h1>tradição <br/> em produtos <br/> de qualidade <br/> superior</h1>
-
-		</div>
+		<div class="HeroGalleryItem-inner"></div>
 
 	</article>
-	
+
+	<article class="HeroGalleryItem">
+
+		<figure class="HeroGalleryItem-background">
+
+			<img src="img/fdo_type%204.png" alt=""/>
+
+		</figure>
+
+		<div class="HeroGalleryItem-inner"></div>
+
+	</article>
+
 </section>
 
 <script>
 
-	var items = document.querySelectorAll('.HeroGalleryItem');
+	/* Hero Gallery */
 
-	var current = 0;
-	var last = false;
+	var HeroGallery = (function () {
 
-	function changeCurrent() {
+		/**
+		 * Hero Gallery constructor
+		 * @param {Element} viewport
+		 * @constructor
+		 */
+		function HeroGallery(viewport) {
 
-		if (last)
-			last.classList.remove('is-active');
+			var self = this;
 
-		items[current].classList.add('is-active');
+			this.viewport = viewport;
 
-		last = items[current];
+			this.config = {
+				viewportSelector: '.HeroGallery',
+				itemSelector: '.HeroGalleryItem'
+			};
 
-		if (++current >= items.length)
-			current = 0;
+			if (this.viewport)
+				this.init();
 
-	}
+		}
 
-	setInterval(changeCurrent, 2400);
+		/**
+		 * Init Gallery Items
+		 */
+		HeroGallery.prototype.initGalleryItems = function () {
+
+			for (var i = this.items.length; i--; )
+				this.items[i].galleryItem = new HeroGalleryItem(this.items[i], this);
+
+		};
+
+		/**
+		 * Get Gallery Items and normalize them
+		 */
+		HeroGallery.prototype.getGalleryItems = function() {
+
+			this.items = this.viewport.querySelectorAll(this.config.itemSelector);
+
+		};
+
+		/**
+		 * Normalize this
+		 */
+		HeroGallery.prototype.normalize = function () {
+
+			this.getGalleryItems();
+			this.initGalleryItems();
+
+		};
+
+		/**
+		 * Init this
+		 */
+		HeroGallery.prototype.init = function() {
+
+			if (!this.viewport.heroGallery)
+				this.viewport.heroGallery = this;
+
+			this.normalize();
+
+		};
+
+		return HeroGallery;
+
+	})();
+
+
+	/* Hero Gallery item */
+
+	var HeroGalleryItem = (function () {
+
+		/**
+		 * Hero Gallery item constructor
+		 * @param {Element} viewport
+		 * @param {Element} gallery
+		 * @constructor
+		 */
+		function HeroGalleryItem(viewport, gallery) {
+
+			var self = this;
+
+			this.viewport = viewport;
+			this.gallery = gallery;
+
+			this.config = {
+				viewportSelector: '.HeroGalleryItem',
+				backgroundSelector: '.HeroGalleryItem-background',
+				backgroundImgSelector: '.HeroGalleryItem-background img',
+				innerSelector: '.HeroGalleryItem-inner'
+			};
+
+			if (this.viewport)
+				this.init();
+
+		}
+
+		/**
+		 * Get Hero Gallery Item Inner
+		 */
+		HeroGalleryItem.prototype.getInner = function () {
+
+			this.inner = this.viewport.querySelector(this.config.innerSelector);
+
+		};
+
+		/**
+		 * Set Hero Gallery Item Background Image property
+		 * The value is based on Background Image Element src
+		 */
+		HeroGalleryItem.prototype.setBackgroundImage = function () {
+
+			this.background.style.backgroundImage = 'url(' + this.background.img.src + ')';
+			this.background.img.classList.add('is-hide');
+
+		};
+
+		/**
+		 * Get Hero Gallery Item Background Image element
+		 */
+		HeroGalleryItem.prototype.getBackgroundImage = function () {
+
+			this.background.img = this.background.querySelector(this.config.backgroundImgSelector);
+
+			if (this.background.img)
+				this.setBackgroundImage();
+
+		};
+
+		/**
+		 * Get Hero Gallery Item Background
+		 */
+		HeroGalleryItem.prototype.getBackground = function () {
+
+			this.background = this.viewport.querySelector(this.config.backgroundSelector);
+
+			if (this.background)
+				this.getBackgroundImage();
+
+		};
+
+		/**
+		 * Normalize this
+		 */
+		HeroGalleryItem.prototype.normalize = function () {
+
+			this.getBackground();
+			this.getInner();
+
+		};
+
+		/**
+		 * Init this
+		 */
+		HeroGalleryItem.prototype.init = function () {
+
+			if (!this.viewport.heroGalleryItem)
+				this.viewport.heroGalleryItem = this;
+
+			this.normalize();
+
+		};
+
+		return HeroGalleryItem;
+
+	})();
+
+</script>
+
+<script>
+
+	var heroGallery = new HeroGallery(document.getElementById('hero-gallery'));
 
 </script>
 

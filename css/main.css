@@ -4,7 +4,7 @@
 
 .is-landscape .Main {
 	float: right;
-	padding-left: 18em;
+	padding-left: 14em;
 	width: 100%;
 }
 
@@ -21,7 +21,7 @@
 	max-width: 40em;
 }
 
-@media (min-height: 24rem) {
+@media (min-height: 24em) {
 
 	.Main p {
 		font-size: 1.125em;
@@ -29,7 +29,7 @@
 
 }
 
-@media (max-width: 21rem) {
+@media (max-width: 21em) {
 
 	.Main h1 {
 		font-size: 2.25em;
@@ -38,7 +38,7 @@
 
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 48em) {
 
 	.Main h1 {
 		font-size: 3.75em;
@@ -46,7 +46,11 @@
 
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 48em) {
+
+	.is-landscape .Main {
+		padding-left: 16em;
+	}
 
 	.Main h1 {
 		font-size: 4.5em;
@@ -58,7 +62,15 @@
 
 }
 
-@media (min-width: 60em) {
+@media (min-width: 72em) {
+
+	.is-landscape .Main {
+		padding-left: 18em;
+	}
+
+}
+
+@media (min-width: 96em) {
 
 	.is-landscape .Main {
 		padding-left: 24em;

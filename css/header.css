@@ -16,14 +16,30 @@
 	float: left;
 	height: 100vh;
 	position: fixed;
-	width: 18em;
+	width: 14em;
 }
 
 .is-portrait .Header {
 	margin-bottom: 1.5em;
 }
 
-@media (min-width: 60em) {
+@media (min-width: 48em) {
+
+	.is-landscape .Header {
+		width: 16em;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	.is-landscape .Header {
+		width: 18em;
+	}
+
+}
+
+@media (min-width: 96em) {
 
 	.is-landscape .Header {
 		width: 24em;
