@@ -40,8 +40,27 @@
 		height: 100%;
 		left: 0;
 		position: absolute;
+		opacity: 0;
+		-webkit-transition: opacity 1s ease-in;
+		-moz-transition: opacity 1s ease-in;
+		-ms-transition: opacity 1s ease-in;
+		-o-transition: opacity 1s ease-in;
+		transition: opacity 1s ease-in;
 		top: 0;
 		width: 100%;
+	}
+
+	.HeroGalleryItem.is-active .HeroGalleryItem-background {
+		opacity: .96;
+	}
+
+	.HeroGalleryItem.is-fade-out .HeroGalleryItem-background {
+		-webkit-transition: opacity 1s ease-out;
+		-moz-transition: opacity 1s ease-out;
+		-ms-transition: opacity 1s ease-out;
+		-o-transition: opacity 1s ease-out;
+		transition: opacity 1s ease-out;
+		opacity: 0;
 	}
 
 	.HeroGalleryItem-background img.is-hide {
@@ -49,18 +68,60 @@
 	}
 
 	.HeroGalleryItem-inner {
+		background-color: transparent;
 		height: 100%;
 		left: 0;
-		position: relative;
+		position: absolute;
+		padding: 6em 2.25em 2.25em 8em;
 		top: 0;
 		width: 100%;
+		-webkit-transition: transform 4.5s cubic-bezier(0,.8,0,1);
+		-moz-transition: transform 4.5s cubic-bezier(0,.8,0,1);
+		-ms-transition: transform 4.5s cubic-bezier(0,.8,0,1);
+		-o-transition: transform 4.5s cubic-bezier(0,.8,0,1);
+		transition: transform 4.5s cubic-bezier(0,.8,0,1);
+		-webkit-transform: translateX(-100%);
+		-moz-transform: translateX(-100%);
+		-ms-transform: translateX(-100%);
+		-o-transform: translateX(-100%);
+		transform: translateX(-100%);
+		opacity: 1;
+	}
+
+	.HeroGalleryItem.is-active .HeroGalleryItem-inner {
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-ms-transform: translateX(0);
+		-o-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	.HeroGalleryItem.is-fade-out .HeroGalleryItem-inner {
+		-webkit-transition: transform 1s cubic-bezier(.96,0,0,1);
+		-moz-transition: transform 1s cubic-bezier(.96,0,0,1);
+		-ms-transition: transform 1s cubic-bezier(.96,0,0,1);
+		-o-transition: transform 1s cubic-bezier(.96,0,0,1);
+		transition: transform 1s cubic-bezier(.96,0,0,1);
+		-webkit-transform: translateX(100%);
+		-moz-transform: translateX(100%);
+		-ms-transform: translateX(100%);
+		-o-transform: translateX(100%);
+		transform: translateX(100%);
+	}
+
+	.HeroGallery h1 {
+		color: #ffffff;
+		font-size: 9em;
+		font-weight: 600;
+		line-height: .96;
+		text-transform: uppercase;
 	}
 
 </style>
 
 <body>
 
-<section id="hero-gallery" class="HeroGallery">
+<section id="hero-gallery" class="HeroGallery roboto-condensed">
 
 	<article class="HeroGalleryItem">
 
@@ -70,7 +131,11 @@
 
 		</figure>
 
-		<div class="HeroGalleryItem-inner"></div>
+		<div class="HeroGalleryItem-inner purple">
+
+			<h1>padrão e <br/> controle <br/> rigoroso <br/> de qualidade</h1>
+
+		</div>
 
 	</article>
 
@@ -82,7 +147,11 @@
 
 		</figure>
 
-		<div class="HeroGalleryItem-inner"></div>
+		<div class="HeroGalleryItem-inner blue">
+
+			<h1>empresa <br/> que respeita <br/> o meio <br/> ambiente</h1>
+
+		</div>
 
 	</article>
 
@@ -90,310 +159,21 @@
 
 		<figure class="HeroGalleryItem-background">
 
-			<img src="img/fdo_type%203.png" alt=""/>
+			<img src="img/fdo_type%205.png" alt=""/>
 
 		</figure>
 
-		<div class="HeroGalleryItem-inner"></div>
+		<div class="HeroGalleryItem-inner green">
 
-	</article>
+			<h1>tradição <br/> em produtos <br/> de qualidade <br/> superior</h1>
 
-	<article class="HeroGalleryItem">
-
-		<figure class="HeroGalleryItem-background">
-
-			<img src="img/fdo_type%204.png" alt=""/>
-
-		</figure>
-
-		<div class="HeroGalleryItem-inner"></div>
+		</div>
 
 	</article>
 
 </section>
 
-<script>
-
-	/* Hero Gallery */
-
-	var HeroGallery = (function () {
-
-		/**
-		 * Hero Gallery constructor
-		 * @param {Element} viewport
-		 * @constructor
-		 */
-		function HeroGallery(viewport) {
-
-			var self = this;
-
-			this.viewport = viewport;
-
-			this.config = {
-				viewportSelector: '.HeroGallery',
-				itemSelector: '.HeroGalleryItem'
-			};
-
-			this.slider = new HeroGallerySlider();
-
-			if (this.viewport)
-				this.init();
-
-		}
-
-		HeroGallery.prototype.initSlider = function () {
-
-			this.slider.gallery = this;
-			this.slider.init();
-
-		};
-
-		/**
-		 * Init Gallery Items
-		 */
-		HeroGallery.prototype.initGalleryItems = function () {
-
-			for (var i = this.items.length; i--; )
-				this.items[i].galleryItem = new HeroGalleryItem(this.items[i], this);
-
-		};
-
-		/**
-		 * Get Gallery Items and normalize them
-		 */
-		HeroGallery.prototype.getGalleryItems = function() {
-
-			this.items = this.viewport.querySelectorAll(this.config.itemSelector);
-
-		};
-
-		/**
-		 * Normalize this
-		 */
-		HeroGallery.prototype.normalize = function () {
-
-			this.getGalleryItems();
-			this.initGalleryItems();
-
-		};
-
-		/**
-		 * Init this
-		 */
-		HeroGallery.prototype.init = function() {
-
-			// give to viewport Node a instance of this
-			if (!this.viewport.heroGallery)
-				this.viewport.heroGallery = this;
-
-			// normalize the gallery and the items
-			this.normalize();
-
-			// init and start the slider
-			this.initSlider();
-
-		};
-
-		return HeroGallery;
-
-	})();
-
-	/* Hero Gallery item */
-
-	var HeroGalleryItem = (function () {
-
-		/**
-		 * Hero Gallery item constructor
-		 * @param {Element} viewport
-		 * @param {Element} gallery
-		 * @constructor
-		 */
-		function HeroGalleryItem(viewport, gallery) {
-
-			var self = this;
-
-			this.viewport = viewport;
-			this.gallery = gallery;
-
-			this.config = {
-				viewportSelector: '.HeroGalleryItem',
-				backgroundSelector: '.HeroGalleryItem-background',
-				backgroundImgSelector: '.HeroGalleryItem-background img',
-				innerSelector: '.HeroGalleryItem-inner'
-			};
-
-			if (this.viewport)
-				this.init();
-
-		}
-
-		/**
-		 * Get Hero Gallery Item Inner
-		 */
-		HeroGalleryItem.prototype.getInner = function () {
-
-			this.inner = this.viewport.querySelector(this.config.innerSelector);
-
-		};
-
-		/**
-		 * Set Hero Gallery Item Background Image property
-		 * The value is based on Background Image Element src
-		 */
-		HeroGalleryItem.prototype.setBackgroundImage = function () {
-
-			this.background.style.backgroundImage = 'url(' + this.background.img.src + ')';
-			this.background.img.classList.add('is-hide');
-
-		};
-
-		/**
-		 * Get Hero Gallery Item Background Image element
-		 */
-		HeroGalleryItem.prototype.getBackgroundImage = function () {
-
-			this.background.img = this.background.querySelector(this.config.backgroundImgSelector);
-
-			if (this.background.img)
-				this.setBackgroundImage();
-
-		};
-
-		/**
-		 * Get Hero Gallery Item Background
-		 */
-		HeroGalleryItem.prototype.getBackground = function () {
-
-			this.background = this.viewport.querySelector(this.config.backgroundSelector);
-
-			if (this.background)
-				this.getBackgroundImage();
-
-		};
-
-		/**
-		 * Normalize this
-		 */
-		HeroGalleryItem.prototype.normalize = function () {
-
-			this.getBackground();
-			this.getInner();
-
-		};
-
-		/**
-		 * Init this
-		 */
-		HeroGalleryItem.prototype.init = function () {
-
-			// give to viewport Node a instance of this
-			if (!this.viewport.heroGalleryItem)
-				this.viewport.heroGalleryItem = this;
-
-			this.normalize();
-
-		};
-
-		return HeroGalleryItem;
-
-	})();
-
-	/* Hero Gallery Slider */
-
-	var HeroGallerySlider = (function () {
-
-		/**
-		 * Hero Gallery Slider constructor
-		 * @constructor
-		 */
-		function HeroGallerySlider(gallery) {
-
-			var self = this;
-
-			this.gallery = gallery;
-
-			this.config = {
-				activeClass: 'is-active'
-			};
-
-			this.activeItem = false;
-
-			this.start = function () {
-
-
-			};
-
-			this.resume = function () {
-
-
-
-			};
-
-			this.pause = function () {
-
-
-
-			};
-
-			this.stop = function () {
-
-
-
-			};
-
-			this.change = function () {
-
-
-
-			};
-
-			if (this.gallery)
-				this.init();
-
-		}
-
-		HeroGallerySlider.prototype.getActive = function () {
-
-			if (this.activeItem)
-				return this.activeItem;
-
-			for (var i = 0; i < this.gallery.items.length; i++)
-				if (this.gallery.items[i].classList.contains(this.config.activeClass))
-					return this.gallery.items[i];
-
-			if (this.gallery.items[0])
-				return this.gallery.items[0];
-
-			console.log('aopdfijsdf');
-
-			return false;
-
-		};
-
-		HeroGallerySlider.prototype.normalize = function () {
-
-			this.activeItem = this.getActive();
-
-			for (var i = this.gallery.items.length; i--; )
-				this.gallery.items[i].classList.remove(this.config.activeClass);
-
-			if (this.activeItem)
-				this.activeItem.classList.add('is-active');
-
-		};
-
-		HeroGallerySlider.prototype.init = function () {
-
-			this.normalize();
-
-		};
-
-		return HeroGallerySlider;
-
-	})();
-
-</script>
-
+<script src="dist/js/promafa.js"></script>
 <script>
 
 	var heroGallery = new HeroGallery(document.getElementById('hero-gallery'));
