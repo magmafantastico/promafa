@@ -14,7 +14,7 @@ var HeroGallerySlider = (function () {
 
 		this.config = {
 			activeClass: 'is-active',
-			delayTime: 5000 /* ( fade in delay  + fade out delay ) */
+			delayTime: 8000 /* ( fade in delay  + fade out delay ) */
 		};
 
 		this.activeItem = false;
@@ -76,7 +76,7 @@ var HeroGallerySlider = (function () {
 	 */
 	HeroGallerySlider.prototype.startController = function () {
 
-		this.normalize(this.getFirst());
+		this.normalize(this.getFirst(), true);
 		this.delayController(false);
 
 	};
@@ -95,7 +95,7 @@ var HeroGallerySlider = (function () {
 	 */
 	HeroGallerySlider.prototype.stopController = function () {
 
-		this.normalize(this.getFirst());
+		this.normalize(this.getFirst(), false);
 		this.delayController(true);
 
 	};
@@ -114,7 +114,7 @@ var HeroGallerySlider = (function () {
 	 */
 	HeroGallerySlider.prototype.changeController = function () {
 
-		this.normalize(this.getNext());
+		this.normalize(this.getNext(), true);
 		this.delayController(false);
 
 	};
@@ -190,15 +190,16 @@ var HeroGallerySlider = (function () {
 
 	/**
 	 * Normalize the gallery items state
-	 * @param next
+	 * @param {object} next
+	 * @param {boolean} inactive
 	 */
-	HeroGallerySlider.prototype.normalize = function (next) {
+	HeroGallerySlider.prototype.normalize = function (next, inactive) {
 
 		for (var i = this.gallery.items.length; i--;)
 			this.gallery.items[i].inactive();
 
 		if (this.isGalleryItem(next))
-			next.active();
+			next.active(!!inactive);
 
 	};
 
@@ -207,7 +208,7 @@ var HeroGallerySlider = (function () {
 	 */
 	HeroGallerySlider.prototype.init = function () {
 
-		this.normalize(this.isGalleryItem(this.getActive()));
+		this.normalize(this.getActive(), false);
 		this.start();
 
 	};

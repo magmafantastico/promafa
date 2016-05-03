@@ -23,32 +23,42 @@ var HeroGalleryItem = (function () {
 			innerSelector: '.HeroGalleryItem-inner',
 			viewportSelector: '.HeroGalleryItem',
 			isFadeInClass: 'is-fade-in',
-			isFadeInDelay: 4000,
+			isFadeInDelay: 7000,
 			isFadeOutClass: 'is-fade-out',
 			isFadeOutDelay: 1000
 		};
+
+		this.delay = false;
 
 		/* Controllers */
 
 		this.isActive = false;
 
-		this.active = function () {
+		this.active = function (inactive) {
 
 			self.isActive = true;
 
 			self.viewport.classList.add(self.config.activeClass);
 			self.viewport.classList.add(self.config.isFadeInClass);
 
-			setTimeout(function () {
+			if (self.delay)
+				clearTimeout(self.delay);
+
+			self.delay = setTimeout(function () {
 
 				self.viewport.classList.remove(self.config.isFadeInClass);
-				self.viewport.classList.add(self.config.isFadeOutClass);
 
-				setTimeout(function () {
+				if (inactive) {
 
-					self.viewport.classList.remove(self.config.isFadeOutClass);
+					self.viewport.classList.add(self.config.isFadeOutClass);
 
-				}, self.config.isFadeInDelay);
+					self.delay = setTimeout(function () {
+
+						self.viewport.classList.remove(self.config.isFadeOutClass);
+
+					}, self.config.isFadeOutDelay);
+
+				}
 
 			}, self.config.isFadeInDelay);
 
@@ -56,9 +66,10 @@ var HeroGalleryItem = (function () {
 
 		this.inactive = function () {
 
-			this.isActive = false;
+			self.isActive = false;
 
-			this.viewport.classList.remove(this.config.activeClass);
+			self.viewport.classList.remove(self.config.activeClass);
+			self.viewport.classList.remove(self.config.isFadeOutClass);
 
 		};
 
