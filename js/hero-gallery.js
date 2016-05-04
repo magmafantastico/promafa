@@ -32,6 +32,9 @@ var HeroGallery = (function () {
 
 	}
 
+	/**
+	 * Init Gallery Slider
+	 */
 	HeroGallery.prototype.initSlider = function () {
 
 		this.slider.gallery = this;

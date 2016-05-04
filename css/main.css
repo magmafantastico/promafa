@@ -15,16 +15,16 @@
 }
 
 .Main p {
-	font-size: 1em;
-	margin: 0 0 1em;
-	text-align: justify;
-	max-width: 40em;
+	/*font-size: 1em;*/
+	/*margin: 0 0 1em;*/
+	/*text-align: justify;*/
+	/*max-width: 40em;*/
 }
 
 @media (min-height: 24em) {
 
 	.Main p {
-		font-size: 1.125em;
+		/*font-size: 1.125em;*/
 	}
 
 }
@@ -57,7 +57,7 @@
 	}
 
 	.Main p {
-		margin: 0 2.25em 1em 3em;
+		/*margin: 0 2.25em 1em 3em;*/
 	}
 
 }

@@ -1,0 +1,177 @@
+
+/* Hero Gallery Item Border */
+
+.HeroGalleryItemBorder {
+	height: 100%;
+	left: 0;
+	padding: .875em;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/* Hero Gallery Item Border inner */
+
+.HeroGalleryItemBorder-inner {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+
+/* Hero Gallery Item Border bottom, left, right and top */
+
+.HeroGalleryItemBorder-bottom,
+.HeroGalleryItemBorder-left,
+.HeroGalleryItemBorder-right,
+.HeroGalleryItemBorder-top {
+	background-color: #d50000; /* border color */
+	position: absolute;
+	-webkit-transition-duration: .6s;
+	-moz-transition-duration: .6s;
+	-ms-transition-duration: .6s;
+	-o-transition-duration: .6s;
+	transition-duration: .6s;
+	-webkit-transition-timing-function: ease;
+	-moz-transition-timing-function: ease;
+	-ms-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+
+/* border position */
+
+.HeroGalleryItemBorder-bottom,
+.HeroGalleryItemBorder-left {
+	bottom: 0;
+}
+
+.HeroGalleryItemBorder-right,
+.HeroGalleryItemBorder-top {
+	top: 0;
+}
+
+.HeroGalleryItemBorder-left,
+.HeroGalleryItemBorder-top {
+	left: 0;
+}
+
+.HeroGalleryItemBorder-bottom,
+.HeroGalleryItemBorder-right {
+	right: 0;
+}
+
+.HeroGalleryItemBorder-left,
+.HeroGalleryItemBorder-right {
+	-webkit-transition-property: height;
+	-moz-transition-property: height;
+	-ms-transition-property: height;
+	-o-transition-property: height;
+	transition-property: height;
+	height: 0; /* border width */
+	width: 2px;
+}
+
+.HeroGalleryItem.is-fade-in .HeroGalleryItemBorder-left,
+.HeroGalleryItem.is-fade-in .HeroGalleryItemBorder-right {
+	height: 100%;
+}
+
+.HeroGalleryItemBorder-bottom,
+.HeroGalleryItemBorder-top {
+	-webkit-transition-property: width;
+	-moz-transition-property: width;
+	-ms-transition-property: width;
+	-o-transition-property: width;
+	transition-property: width;
+	height: 2px; /* border width */
+	width: 0;
+}
+
+.HeroGalleryItem.is-fade-in .HeroGalleryItemBorder-bottom,
+.HeroGalleryItem.is-fade-in .HeroGalleryItemBorder-top {
+	width: 100%;
+}
+
+.HeroGalleryItem.is-fade-in .HeroGalleryItemBorder-top {
+	-webkit-transition-delay: .6s;
+	-moz-transition-delay: .6s;
+	-ms-transition-delay: .6s;
+	-o-transition-delay: .6s;
+	transition-delay: .6s;
+}
+
+.HeroGalleryItem.is-fade-in .HeroGalleryItemBorder-right {
+	-webkit-transition-delay: 1.2s;
+	-moz-transition-delay: 1.2s;
+	-ms-transition-delay: 1.2s;
+	-o-transition-delay: 1.2s;
+	transition-delay: 1.2s;
+}
+
+.HeroGalleryItem.is-fade-in .HeroGalleryItemBorder-bottom {
+	-webkit-transition-delay: 1.8s;
+	-moz-transition-delay: 1.8s;
+	-ms-transition-delay: 1.8s;
+	-o-transition-delay: 1.8s;
+	transition-delay: 1.8s;
+}
+
+.HeroGalleryItem.is-fade-in .HeroGalleryItemBorder-left {
+	-webkit-transition-delay: 2.4s;
+	-moz-transition-delay: 2.4s;
+	-ms-transition-delay: 2.4s;
+	-o-transition-delay: 2.4s;
+	transition-delay: 2.4s;
+}
+
+/* Hero Gallery Item Border media width */
+
+@media (min-width: 21em) {
+
+	/* Hero Gallery Item Border */
+
+	.HeroGalleryItemBorder {
+		padding: 1em;
+	}
+
+}
+
+@media (min-width: 48em) {
+
+	/* Hero Gallery Item Border */
+
+	.HeroGalleryItemBorder {
+		padding: 1.125em;
+	}
+
+}
+
+@media (min-width: 60em) {
+
+	/* Hero Gallery Item Border */
+
+	.HeroGalleryItemBorder {
+		padding: 1.3125em;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	/* Hero Gallery Item Border */
+
+	.HeroGalleryItemBorder {
+		padding: 1.5em;
+	}
+
+}
+
+@media (min-width: 96em) {
+
+	/* Hero Gallery Item Border */
+
+	.HeroGalleryItemBorder {
+		padding: 2.25em;
+	}
+
+}

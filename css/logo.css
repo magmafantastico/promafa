@@ -1,48 +1,52 @@
 .Logo {
-	width: 100%;
 	display: -webkit-box;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
+	width: 100%;
+}
+
+.Logo--header {
 	-webkit-justify-content: flex-end;
 	justify-content: flex-end;
 }
 
-.is-portrait .Logo {
+.is-portrait .Logo--header {
 	-webkit-justify-content: center;
 	justify-content: center;
 	-webkit-align-items: center;
 	align-items: center;
-	height: 36vh;
 }
 
-.Logo-select-area {
+.Logo--header .Logo-select-area {
 	padding: 1.125em;
 }
 
-.Logo-svg {
+.Logo--header .Logo-inner {
 	width: 8em;
 }
 
-.Logo-svg-main,
-.Logo-svg-mark {
-	display: none;
+.Logo--header svg {
+	-webkit-transition: fill .6s;
+	-moz-transition: fill .6s;
+	-ms-transition: fill .6s;
+	-o-transition: fill .6s;
+	transition: fill .6s;
+	width: 100%;
 }
 
-.Logo-svg-main-marked,
-.Logo-svg-lines {
+#PromafaLogoMain-background,
+#PromafaLogoLines {
 	fill: #e53935;
 }
 
-.Logo-svg-text {
-	fill: #000000;
+#PromafaLogoMain-text {
+	fill: #ffffff;
 }
 
-.Logo--white .Logo-svg-main-marked,
-.Logo--white .Logo-svg-lines,
-.Logo--white .Logo-svg-text {
-	fill: #ffffff;
+#PromafaLogoTypo {
+	fill: #000000;
 }
 
 @media (max-height: 24em) {
@@ -55,7 +59,7 @@
 
 @media (min-width: 96em) {
 
-	.Logo-svg {
+	.Logo--header .Logo-inner {
 		width: 10em;
 	}
 

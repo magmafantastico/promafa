@@ -6,6 +6,7 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 <script src="dist/js/villa.min.js"></script>
 <link rel="stylesheet" href="dist/css/villa.min.css"/>
+<link rel="stylesheet" href="dist/css/promafa.css"/>
 <!--[if lt IE 9]>
 <link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
 <link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
@@ -13,162 +14,6 @@
 <script src="dist/js/html5shiv-printshiv.js"></script>
 <script src="dist/js/classList.min.js"></script>
 <![endif]-->
-
-<style>
-
-	.HeroGallery {
-		position: relative;
-	}
-
-	.HeroGalleryItem {
-		visibility: hidden;
-		position: absolute;
-		overflow: hidden;
-		width: 100%;
-		min-height: 100vh;
-	}
-
-	.HeroGalleryItem.is-active {
-		visibility: visible;
-	}
-
-	.HeroGalleryItem-background {
-		background-position: center;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
-		background-size: cover;
-		height: 100%;
-		left: 0;
-		position: absolute;
-		top: 0;
-		width: 100%;
-		-webkit-transition: opacity 1s ease-out;
-		-moz-transition: opacity 1s ease-out;
-		-ms-transition: opacity 1s ease-out;
-		-o-transition: opacity 1s ease-out;
-		transition: opacity 1s ease-out;
-		opacity: 0;
-	}
-
-	.HeroGalleryItem.is-fade-in .HeroGalleryItem-background {
-		-webkit-transition: opacity 1s ease-in;
-		-moz-transition: opacity 1s ease-in;
-		-ms-transition: opacity 1s ease-in;
-		-o-transition: opacity 1s ease-in;
-		transition: opacity 1s ease-in;
-		opacity: 1;
-	}
-
-	.HeroGalleryItem.is-fade-out .HeroGalleryItem-background {
-
-	}
-
-	.HeroGalleryItem-background img.is-hide {
-		display: none;
-	}
-
-	.HeroGalleryItem-inner {
-		background-color: transparent;
-		height: 100%;
-		left: 0;
-		position: absolute;
-		padding: 2.25em 1em 1em 2.25em;
-		top: 0;
-		width: 100%;
-		-webkit-transform: translateX(-100%);
-		-moz-transform: translateX(-100%);
-		-ms-transform: translateX(-100%);
-		-o-transform: translateX(-100%);
-		transform: translateX(-100%);
-		opacity: 1;
-	}
-
-	.HeroGalleryItem.is-fade-in .HeroGalleryItem-inner {
-		-webkit-transition: transform 8s cubic-bezier(0,.9,0,1);
-		-moz-transition: transform 8s cubic-bezier(0,.9,0,1);
-		-ms-transition: transform 8s cubic-bezier(0,.9,0,1);
-		-o-transition: transform 8s cubic-bezier(0,.9,0,1);
-		transition: transform 8s cubic-bezier(0,.9,0,1);
-		-webkit-transform: translateX(0);
-		-moz-transform: translateX(0);
-		-ms-transform: translateX(0);
-		-o-transform: translateX(0);
-		transform: translateX(0);
-	}
-
-	.HeroGalleryItem.is-fade-out .HeroGalleryItem-inner {
-		-webkit-transition: transform 1s cubic-bezier(.96,0,0,1);
-		-moz-transition: transform 1s cubic-bezier(.96,0,0,1);
-		-ms-transition: transform 1s cubic-bezier(.96,0,0,1);
-		-o-transition: transform 1s cubic-bezier(.96,0,0,1);
-		transition: transform 1s cubic-bezier(.96,0,0,1);
-		-webkit-transform: translateX(100%);
-		-moz-transform: translateX(100%);
-		-ms-transform: translateX(100%);
-		-o-transform: translateX(100%);
-		transform: translateX(100%);
-	}
-
-	.HeroGallery h1 {
-		color: #ffffff;
-		font-size: 3em;
-		font-weight: 700;
-		line-height: .96;
-		text-transform: uppercase;
-	}
-
-	@media (min-width: 48em) {
-
-		.HeroGalleryItem-inner {
-			padding: 4.5em 1.5em 1.5em 6em;
-		}
-
-		.HeroGallery h1 {
-			font-size: 6em;
-		}
-
-	}
-
-	@media (min-width: 60em) {
-
-		.HeroGalleryItem-inner {
-			padding: 4.5em 1.5em 1.5em 6em;
-		}
-
-		.HeroGallery h1 {
-			font-size: 7em;
-		}
-
-	}
-
-	@media (min-width: 72em) {
-
-		.HeroGalleryItem-inner {
-			padding: 6em 2.25em 2.25em 8em;
-		}
-
-		.HeroGallery h1 {
-			font-size: 7em;
-		}
-
-	}
-
-	@media (min-width: 96em) {
-
-		.HeroGalleryItem-inner {
-			padding: 6em 2.25em 2.25em 8em;
-		}
-
-		.HeroGallery h1 {
-			font-size: 9em;
-			font-weight: 600;
-			line-height: .96;
-		}
-
-	}
-
-</style>
 
 <body class="grey-200">
 
@@ -178,9 +23,22 @@
 
 		<figure class="HeroGalleryItem-background">
 
-			<img src="img/fdo_type%201.png" alt=""/>
+			<img src="dist/img/largePhotos/fdo_type-1.jpg" alt=""/>
 
 		</figure>
+
+		<div class="HeroGalleryItemBorder">
+
+			<div class="HeroGalleryItemBorder-inner">
+
+				<div class="HeroGalleryItemBorder-top"></div>
+				<div class="HeroGalleryItemBorder-right"></div>
+				<div class="HeroGalleryItemBorder-bottom"></div>
+				<div class="HeroGalleryItemBorder-left"></div>
+
+			</div>
+
+		</div>
 
 		<div class="HeroGalleryItem-inner purple">
 
@@ -194,9 +52,22 @@
 
 		<figure class="HeroGalleryItem-background">
 
-			<img src="img/fdo_type%203.png" alt=""/>
+			<img src="dist/img/largePhotos/fdo_type-3.jpg" alt=""/>
 
 		</figure>
+
+		<div class="HeroGalleryItemBorder">
+
+			<div class="HeroGalleryItemBorder-inner">
+
+				<div class="HeroGalleryItemBorder-top"></div>
+				<div class="HeroGalleryItemBorder-right"></div>
+				<div class="HeroGalleryItemBorder-bottom"></div>
+				<div class="HeroGalleryItemBorder-left"></div>
+
+			</div>
+
+		</div>
 
 		<div class="HeroGalleryItem-inner blue">
 
@@ -210,9 +81,22 @@
 
 		<figure class="HeroGalleryItem-background">
 
-			<img src="img/fdo_type%205.png" alt=""/>
+			<img src="dist/img/largePhotos/fdo_type-5.jpg" alt=""/>
 
 		</figure>
+
+		<div class="HeroGalleryItemBorder">
+
+			<div class="HeroGalleryItemBorder-inner">
+
+				<div class="HeroGalleryItemBorder-top"></div>
+				<div class="HeroGalleryItemBorder-right"></div>
+				<div class="HeroGalleryItemBorder-bottom"></div>
+				<div class="HeroGalleryItemBorder-left"></div>
+
+			</div>
+
+		</div>
 
 		<div class="HeroGalleryItem-inner green">
 

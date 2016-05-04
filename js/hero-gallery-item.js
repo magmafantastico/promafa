@@ -34,6 +34,10 @@ var HeroGalleryItem = (function () {
 
 		this.isActive = false;
 
+		/**
+		 * Set the active state to true
+		 * @param {boolean} inactive
+		 */
 		this.active = function (inactive) {
 
 			self.isActive = true;
@@ -64,6 +68,9 @@ var HeroGalleryItem = (function () {
 
 		};
 
+		/**
+		 * Set the active state to false
+		 */
 		this.inactive = function () {
 
 			self.isActive = false;

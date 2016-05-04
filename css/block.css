@@ -6,8 +6,7 @@
 }
 
 .Block--hero {
-	overflow-x: hidden;
-	min-height: 0;
+	display: block;
 }
 
 .Block--institutional {
