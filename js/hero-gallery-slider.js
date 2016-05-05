@@ -54,7 +54,7 @@ var HeroGallerySlider = (function () {
 	HeroGallerySlider.prototype.delayClear = function () {
 
 		if (this.interval)
-			clearInterval(this.interval);
+			clearTimeout(this.interval);
 
 	};
 
@@ -66,6 +66,7 @@ var HeroGallerySlider = (function () {
 
 		this.delayClear();
 
+		// if pause is true, it doesn't init the next timer
 		if (!pause)
 			this.delayInit();
 
@@ -86,6 +87,7 @@ var HeroGallerySlider = (function () {
 	 */
 	HeroGallerySlider.prototype.pauseController = function () {
 
+		this.normalize(this.getActive(), false);
 		this.delayController(true);
 
 	};

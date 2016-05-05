@@ -48,12 +48,11 @@ var HeroGalleryItem = (function () {
 			if (self.delay)
 				clearTimeout(self.delay);
 
-			self.delay = setTimeout(function () {
+			if (inactive) {
 
-				self.viewport.classList.remove(self.config.isFadeInClass);
+				self.delay = setTimeout(function () {
 
-				if (inactive) {
-
+					self.viewport.classList.remove(self.config.isFadeInClass);
 					self.viewport.classList.add(self.config.isFadeOutClass);
 
 					self.delay = setTimeout(function () {
@@ -62,9 +61,9 @@ var HeroGalleryItem = (function () {
 
 					}, self.config.isFadeOutDelay);
 
-				}
+				}, self.config.isFadeInDelay);
 
-			}, self.config.isFadeInDelay);
+			}
 
 		};
 
