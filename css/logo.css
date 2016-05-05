@@ -1,3 +1,6 @@
+
+/* Logo */
+
 .Logo {
 	display: -webkit-box;
 	display: -moz-box;
@@ -8,24 +11,25 @@
 }
 
 .Logo--header {
+	-webkit-align-items: center;
+	align-items: center;
 	-webkit-justify-content: flex-end;
 	justify-content: flex-end;
+	padding: .875em;
 }
 
 .is-portrait .Logo--header {
 	-webkit-justify-content: center;
 	justify-content: center;
-	-webkit-align-items: center;
-	align-items: center;
 }
 
-.Logo--header .Logo-select-area {
-	padding: 1.125em;
-}
+/* Logo inner */
 
 .Logo--header .Logo-inner {
 	width: 8em;
 }
+
+/* Logo svg */
 
 .Logo--header svg {
 	-webkit-transition: fill .6s;
@@ -36,35 +40,77 @@
 	width: 100%;
 }
 
-#PromafaLogoMain-background,
-#PromafaLogoLines {
+/* SVG STYLE */
+
+.Logo--header #PromafaLogoMain-background,
+.Logo--header #PromafaLogoLines {
 	fill: #e53935;
 }
 
-#PromafaLogoMain-text {
+.Logo--header #PromafaLogoMain-text {
 	fill: #ffffff;
 }
 
-#PromafaLogoTypo {
+.Logo--header #PromafaLogoTypo {
 	fill: #000000;
 }
 
-@media (max-height: 24em) {
+/* Hero Gallery Item Border media height */
 
-	.Logo-select-area {
+@media (min-width: 21em) {
+
+	/* Hero Gallery Item Border */
+
+	.Logo--header {
 		padding: 1em;
+	}
+
+}
+
+/* Hero Gallery Item Border media width */
+
+@media (min-width: 48em) {
+
+	/* Logo */
+
+	.Logo--header {
+		padding: 1.125em;
+	}
+
+}
+
+@media (min-width: 60em) {
+
+	/* Logo */
+
+	.Logo--header {
+		padding: 1.3125em;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	/* Logo */
+
+	.Logo--header {
+		padding: 1.5em;
 	}
 
 }
 
 @media (min-width: 96em) {
 
-	.Logo--header .Logo-inner {
-		width: 10em;
+	/* Logo */
+
+	.Logo--header {
+		padding: 2.25em;
 	}
 
-	.Logo-select-area {
-		padding: 2.25em;
+	/* Logo inner */
+
+	.Logo--header .Logo-inner {
+		width: 10em;
 	}
 
 }

@@ -2,15 +2,15 @@
 /* Hero Gallery Item */
 
 .HeroGalleryItem {
-	visibility: hidden;
-	position: absolute;
-	overflow: hidden;
-	width: 100%;
 	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	width: 100%;
+	z-index: 0;
 }
 
 .HeroGalleryItem.is-active {
-	visibility: visible;
+	z-index: 1;
 }
 
 /* Hero Gallery Item background */
@@ -23,6 +23,7 @@
 	background-size: cover;
 	height: 100%;
 	left: 0;
+	opacity: 0;
 	position: absolute;
 	top: 0;
 	width: 100%;
@@ -31,16 +32,15 @@
 	-ms-transition: opacity 1s ease-out;
 	-o-transition: opacity 1s ease-out;
 	transition: opacity 1s ease-out;
-	opacity: 0;
 }
 
 .HeroGalleryItem.is-fade-in .HeroGalleryItem-background {
+	opacity: 1;
 	-webkit-transition: opacity 1s ease-in;
 	-moz-transition: opacity 1s ease-in;
 	-ms-transition: opacity 1s ease-in;
 	-o-transition: opacity 1s ease-in;
 	transition: opacity 1s ease-in;
-	opacity: 1;
 }
 
 /* Hero Gallery Item background img */
@@ -55,16 +55,16 @@
 	background-color: transparent;
 	height: 100%;
 	left: 0;
-	position: absolute;
+	opacity: 1;
 	padding: 2.25em 1em 1em 2.25em;
+	position: absolute;
 	top: 0;
-	width: 100%;
 	-webkit-transform: translate3D(-100%,0,0) scale(0.8);
 	-moz-transform: translate3D(-100%,0,0) scale(0.8);
 	-ms-transform: translate3D(-100%,0,0) scale(0.8);
 	-o-transform: translate3D(-100%,0,0) scale(0.8);
 	transform: translate3D(-100%,0,0) scale(0.8);
-	opacity: 1;
+	width: 100%;
 }
 
 .HeroGalleryItem.is-fade-in .HeroGalleryItem-inner {
@@ -86,11 +86,11 @@
 	-ms-transition: transform 1s cubic-bezier(.96,0,0,1);
 	-o-transition: transform 1s cubic-bezier(.96,0,0,1);
 	transition: transform 1s cubic-bezier(.96,0,0,1);
-	-webkit-transform: translate3D(100%,0,0) scale(.6);
-	-moz-transform: translate3D(100%,0,0) scale(.6);
-	-ms-transform: translate3D(100%,0,0) scale(.6);
-	-o-transform: translate3D(100%,0,0) scale(.6);
-	transform: translate3D(100%,0,0) scale(.6);
+	-webkit-transform: translate3D(100%,0,0) scale(.9);
+	-moz-transform: translate3D(100%,0,0) scale(.9);
+	-ms-transform: translate3D(100%,0,0) scale(.9);
+	-o-transform: translate3D(100%,0,0) scale(.9);
+	transform: translate3D(100%,0,0) scale(.9);
 }
 
 /* Hero Gallery Item p */

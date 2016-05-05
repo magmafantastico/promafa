@@ -24,7 +24,7 @@
 .HeroGalleryItemBorder-left,
 .HeroGalleryItemBorder-right,
 .HeroGalleryItemBorder-top {
-	background-color: #d50000; /* border color */
+	background-color: #ffffff; /* border color */
 	position: absolute;
 	-webkit-transition-duration: .6s;
 	-moz-transition-duration: .6s;
@@ -37,8 +37,6 @@
 	-o-transition-timing-function: ease;
 	transition-timing-function: ease;
 }
-
-/* border position */
 
 .HeroGalleryItemBorder-bottom,
 .HeroGalleryItemBorder-left {
@@ -62,13 +60,13 @@
 
 .HeroGalleryItemBorder-left,
 .HeroGalleryItemBorder-right {
-	-webkit-transition-property: height;
-	-moz-transition-property: height;
-	-ms-transition-property: height;
-	-o-transition-property: height;
-	transition-property: height;
-	height: 0; /* border width */
-	width: 2px;
+	-webkit-transition-property: height, width;
+	-moz-transition-property: height, width;
+	-ms-transition-property: height, width;
+	-o-transition-property: height, width;
+	transition-property: height, width;
+	height: 0;
+	width: 2px; /* border width */
 }
 
 .HeroGalleryItem.is-fade-in .HeroGalleryItemBorder-left,
@@ -78,11 +76,11 @@
 
 .HeroGalleryItemBorder-bottom,
 .HeroGalleryItemBorder-top {
-	-webkit-transition-property: width;
-	-moz-transition-property: width;
-	-ms-transition-property: width;
-	-o-transition-property: width;
-	transition-property: width;
+	-webkit-transition-property: width, height;
+	-moz-transition-property: width, height;
+	-ms-transition-property: width, height;
+	-o-transition-property: width, height;
+	transition-property: width, height;
 	height: 2px; /* border width */
 	width: 0;
 }
@@ -144,6 +142,18 @@
 		padding: 1.125em;
 	}
 
+	/* Hero Gallery Item Border bottom, left, right and top */
+
+	.HeroGalleryItemBorder-left,
+	.HeroGalleryItemBorder-right {
+		width: 4px; /* border width */
+	}
+
+	.HeroGalleryItemBorder-bottom,
+	.HeroGalleryItemBorder-top {
+		height: 4px; /* border width */
+	}
+
 }
 
 @media (min-width: 60em) {
@@ -172,6 +182,18 @@
 
 	.HeroGalleryItemBorder {
 		padding: 2.25em;
+	}
+
+	/* Hero Gallery Item Border bottom, left, right and top */
+
+	.HeroGalleryItemBorder-left,
+	.HeroGalleryItemBorder-right {
+		width: 6px; /* border width */
+	}
+
+	.HeroGalleryItemBorder-bottom,
+	.HeroGalleryItemBorder-top {
+		height: 6px; /* border width */
 	}
 
 }

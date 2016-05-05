@@ -15,3 +15,21 @@
 .is-landscape .HeroGallery {
 	height: 100vh;
 }
+
+@media (min-width: 48em) {
+
+	.HeroGallery {
+		position: relative;
+		height: 36em;
+	}
+
+}
+
+@media (min-width: 60em) {
+
+	.HeroGallery {
+		position: relative;
+		height: 42em;
+	}
+
+}

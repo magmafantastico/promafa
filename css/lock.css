@@ -20,3 +20,35 @@
 .Lock:hover span {
 	color: #424242;
 }
+
+@media (min-width: 48em) {
+
+	.Lock {
+		padding: .125em;
+	}
+
+}
+
+@media (min-width: 60em) {
+
+	.Lock {
+		padding: 1.3125em;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	.Lock {
+		padding: 1.5em;
+	}
+
+}
+
+@media (min-width: 96em) {
+
+	.Lock {
+		padding: 2.25em;
+	}
+
+}

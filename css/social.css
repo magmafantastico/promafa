@@ -71,7 +71,30 @@
 
 	.Social {
 		display: none;
-		padding: 0 1em;
+	}
+
+}
+
+@media (min-width: 48em) {
+
+	.Social {
+		padding: .125em;
+	}
+
+}
+
+@media (min-width: 60em) {
+
+	.Social {
+		padding: 1.3125em;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	.Social {
+		padding: 1.5em;
 	}
 
 }

@@ -79,6 +79,30 @@ a.MenuItem-select-area {
 
 }
 
+@media (min-width: 48em) {
+
+	.MenuItem-select-area {
+		padding: .375em.125em;
+	}
+
+}
+
+@media (min-width: 60em) {
+
+	.MenuItem-select-area {
+		padding: .3675em 1.3125em;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	.MenuItem-select-area {
+		padding: .5em 1.5em;
+	}
+
+}
+
 @media (min-width: 96em) {
 
 	.MenuItem span {
