@@ -1,0 +1,68 @@
+
+/* Article */
+
+.Article {
+	/*background-color: blue !important;*/
+}
+
+/* Article h2 */
+
+.Article h2 {
+	font-size: 3em;
+	line-height: 1.1;
+	margin-bottom: .5em;
+}
+
+/* Article p */
+
+.Article p {
+	font-size: 1.125em;
+	margin-bottom: 1em;
+	line-height: 1.48;
+	font-weight: 400;
+	/*text-align: justify;*/
+}
+
+@media (min-width: 48em) {
+
+	/* Article h2 */
+
+	.Article h2 {
+		font-size: 4.5em;
+	}
+
+	/* Article p */
+
+	.Article p {
+		font-size: 1.3125em;
+	}
+
+}
+
+@media (min-width: 60em) {
+
+	/* Article p */
+
+	.Article p {
+		max-width: 36em;
+		width: 100%;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	/* Article h2 */
+
+	.Article h2 {
+		font-size: 6em;
+		margin-bottom: .375em;
+	}
+
+	/* Article p */
+
+	.Article p {
+		font-size: 1.3125em;
+	}
+
+}
