@@ -253,182 +253,91 @@
 
 </div>
 
-<!-- Header -->
-<header class="Header roboto-condensed">
+<aside class="Sidebar">
 
-	<!-- Header Logo element area -->
-	<div class="Logo Logo--header">
+	<div class="Sidebar-background"></div>
 
-		<a id="header-logo-area" class="Logo-select-area">
+	<div class="Sidebar-inner">
 
-			<div id="logo" class="Logo-inner"></div>
+		<header class="Header Sidebar-header">
 
-		</a>
+			<!-- Header Logo element area -->
+			<div class="Logo Logo--header">
 
-	</div>
+				<a id="header-logo-area" class="Logo-select-area">
 
-	<!-- Main Nav -->
-	<nav id="main-nav" class="MainNav">
-
-		<!-- Main Nav Logo element area -->
-		<div class="Logo Logo--white">
-
-			<div id="nav-logo-area"></div>
-
-		</div>
-
-		<!-- Main Nav Menu -->
-		<ul class="Menu Menu--main">
-
-			<li class="MenuItem">
-
-				<a href="#institutional" id="institutional-anchor" class="MenuItem-select-area hfont-red-a700" data-target="institutional">
-
-					<span>Institucional</span>
+					<div id="logo" class="Logo-inner"></div>
 
 				</a>
-
-			</li>
-
-			<li class="MenuItem">
-
-				<a href="#products" id="products-anchor" class="MenuItem-select-area hfont-red-a700" data-target="products">
-
-					<span>Produtos</span>
-
-				</a>
-
-			</li>
-
-			<!--<li class="MenuItem">-->
-
-			<!--<a href="#recipes" id="recipes-anchor" class="MenuItem-select-area hfont-red-a700" data-target="recipes">-->
-
-			<!--<span>Receitas</span>-->
-
-			<!--</a>-->
-
-			<!--</li>-->
-
-			<li class="MenuItem">
-
-				<a href="#reps" id="reps-anchor" class="MenuItem-select-area hfont-red-a700" data-target="reps">
-
-					<span>Representantes</span>
-
-				</a>
-
-			</li>
-
-		</ul>
-
-		<!-- Social Information -->
-		<ul class="Social Social--nav">
-
-			<li class="SocialItem">
-
-				<a href="https://www.facebook.com/promafa/" class="SocialItem-select-area">
-
-					<span class="SocialItem-icon icon-facebook"></span>
-
-				</a>
-
-			</li>
-
-			<li class="SocialItem">
-
-				<a href="https://www.instagram.com/promafa/" class="SocialItem-select-area">
-
-					<span class="SocialItem-icon icon-instagram"></span>
-
-				</a>
-
-			</li>
-
-		</ul>
-
-	</nav>
-
-	<!-- Information Menu -->
-	<ul class="Menu Menu--portrait-centered">
-
-		<li class="MenuItem">
-
-			<a href="#local" id="local-trigger" class="MenuItem-select-area">
-
-				<span>Localização</span>
-
-			</a>
-
-		</li>
-
-		<li class="MenuItem">
-
-			<a href="#contact" class="MenuItem-select-area" onclick="promafa.modalContact.triggerCtrl();">
-
-				<span>Contato</span>
-
-			</a>
-
-		</li>
-
-	</ul>
-
-	<div class="flex flex-column">
-
-		<!-- Certificate Information -->
-		<div class="Certificate" style="display: none">
-
-			<div class="CertificateHeader">
-
-				<img class="Certificate-img" src="dist/img/sgs_iso_9001_tpl.png" alt="Empresa certificada ISO 9001 pela SGS"/>
 
 			</div>
 
-			<div class="CertificateBody">
+		</header>
 
-				<p>
-					Empresa certificada
-					<br/>iso 9001:2008
-				</p>
+		<nav id="main-nav" class="Nav Nav--main Sidebar-nav">
 
-			</div>
+			<!-- Main Nav Menu -->
+			<ul id="main-nav-menu" class="Menu Menu--main">
 
-		</div>
+				<li class="MenuItem is-active">
 
-		<!-- Social Information -->
-		<ul class="Social">
+					<a href="#home" id="home-anchor" class="MenuItem-select-area hfont-red-a700" data-target="institutional">
 
-			<li class="SocialItem">
+						<span>Início</span>
 
-				<a href="https://www.facebook.com/promafa/" class="SocialItem-select-area">
+					</a>
 
-					<span class="SocialItem-icon icon-facebook"></span>
+				</li>
 
-				</a>
+				<li class="MenuItem">
 
-			</li>
+					<a href="#institutional" id="institutional-anchor" class="MenuItem-select-area hfont-red-a700" data-target="institutional">
 
-			<li class="SocialItem">
+						<span>Institucional</span>
 
-				<a href="https://www.instagram.com/promafa/" class="SocialItem-select-area">
+					</a>
 
-					<span class="SocialItem-icon icon-instagram"></span>
+				</li>
 
-				</a>
+				<li class="MenuItem">
 
-			</li>
+					<a href="#products" id="products-anchor" class="MenuItem-select-area hfont-red-a700" data-target="products">
 
-		</ul>
+						<span>Produtos</span>
 
-		<!-- Lock Button -->
-		<a href="http://promafa.com.br/webmail" class="Lock">
-			<span class="icon-lock"></span>
-		</a>
+					</a>
+
+				</li>
+
+				<li class="MenuItem">
+
+					<a href="#local" id="local-trigger" class="MenuItem-select-area">
+
+						<span>Localização</span>
+
+					</a>
+
+				</li>
+
+				<li class="MenuItem">
+
+					<a href="#contact" class="MenuItem-select-area" onclick="promafa.modalContact.triggerCtrl();">
+
+						<span>Contato</span>
+
+					</a>
+
+				</li>
+
+			</ul>
+
+		</nav>
+
+		<footer class="Footer Sidebar-footer has-border"></footer>
 
 	</div>
 
-</header>
+</aside>
 
 <!-- Main -->
 <main id="main" class="Main roboto">
@@ -643,62 +552,6 @@
 
 	</article>
 
-	<!-- Recipes -->
-	<!--<article id="recipes" class="Block Block&#45;&#45;recipes Recipes pink-800">-->
-
-	<!--</article>-->
-
-	<!-- Reps -->
-	<article id="reps" class="Block Block--reps Reps grey-800">
-
-		<section id="reps-frames" class="Frames">
-
-			<section id="reps-intro" class="Frame RepsIntroFrame flex flex-column justify-center align-center grey-100 active">
-
-				<h1>Representantes</h1>
-
-				<p>Preparamos uma lista pra te ajudar a encontrar o representante mais próximo de você, clique no botão abaixo e encontrará uma lista de representantes</p>
-
-				<a id="reps-modal-open" class="btn ghost toggle border-red-900 font-red-900 h-red-900 hfont-white">Abrir</a>
-
-			</section>
-
-			<section id="reps-content" class="Frame RepsContentFrame flex child-grow-1">
-
-				<header class="RepsContentOptions grey-100 flex flex-column child-grow-1">
-
-					<a class="option toggle">
-
-						<span class="icon-left-open"></span>
-
-					</a>
-
-				</header>
-
-				<div id="reps-wrapper" class="RepsWrapper flex grey-100 width-100">
-
-					<header class="RepsHeader">
-
-						<div id="reps-select" class="RepsSelect"></div>
-
-						<ul id="reps-list" class="RepsList flex flex-wrap align-start content-start"></ul>
-
-					</header>
-
-					<div id="reps-map" class="RepsMap red-600 flex justify-center align-center">
-
-						<span class="icon-spin4 animate-spin font-white" style="font-size: 3em;"></span>
-
-					</div>
-
-				</div>
-
-			</section>
-
-		</section>
-
-	</article>
-
 </main>
 
 <script src="dist/js/jquery-2.1.4.min.js"></script>
@@ -718,31 +571,6 @@
 			{
 				item: document.getElementById('close-fadel-frame'),
 				swipeTarget: false
-			}
-		];
-
-		var repsData = [
-			{
-				name: 'promafa',
-				title: 'PROMAFA - Produtos de Mandioca FADEL LTDA.',
-				address: 'R. São Paulo, 43, Palmital - SP, 19970-000, Brasil',
-				city: 'palmital',
-				state: 'sp',
-				zip: '19970-000',
-				country: 'brasil',
-				phone: '+55 18 3351 5050',
-				email: {
-					string: 'rep@promafa.com.br',
-					url: 'mailto:rep@promafa.com.br'
-				},
-				website: {
-					string: 'www.promafa.com.br',
-					url: 'http://www.promafa.com.br'
-				},
-				position: {
-					lat: -22.7753073,
-					lng: -50.2077834
-				}
 			}
 		];
 
@@ -775,19 +603,10 @@
 					scrollTarget: document.getElementById('products'),
 					activeClass: activeClass,
 					after: this.toggle.close
-				},
-//				{
-//					menuItem: document.getElementById('recipes-anchor'),
-//					scrollTarget: document.getElementById('recipes'),
-//					activeClass: activeClass
-//				},
-				{
-					menuItem: document.getElementById('reps-anchor'),
-					scrollTarget: document.getElementById('reps'),
-					activeClass: activeClass,
-					after: this.toggle.close
 				}
 			], document.documentElement);
+
+			this.menu = new Menu(document.getElementById('main-nav-menu'));
 
 			// Raiz do Brasil Next instance
 			this.nextRaiz = new Next(document.getElementById('next-raiz'), document.getElementById('next-frame'), {
@@ -817,12 +636,6 @@
 			this.heroGallery = new HeroGallery();
 			this.heroGallery.viewport = document.getElementById('hero-gallery');
 
-			// Products Swipe
-//			this.productsSwipe = new Swipe(document.getElementById('products-swipe'));
-
-			// Reps
-			reps.list.data = repsData;
-
 		}
 
 		Promafa.prototype.init = function() {
@@ -843,13 +656,6 @@
 			this.heroGallery.init();
 
 //			this.productsSwipe.init(productsThings);
-
-			reps.init();
-
-			setTimeout(function() {
-//				reps.map.init();
-//				reps.list.init();
-			}, 8000);
 
 		};
 

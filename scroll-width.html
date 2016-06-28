@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="">
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<script src="dist/js/villa.min.js"></script>
+<link rel="stylesheet" href="dist/css/villa.min.css"/>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
+<link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
+<script src="dist/js/html5shiv.js"></script>
+<script src="dist/js/html5shiv-printshiv.js"></script>
+<script src="dist/js/classList.min.js"></script>
+<![endif]-->
+
+<style>
+
+	body {
+		overflow-x: hidden;
+		position: relative;
+	}
+
+	.scrollbar-measure {
+		position: absolute;
+		background-color: red;
+		height: 100vh;
+		overflow: scroll;
+		overflow-x: hidden;
+		left: 0;
+	}
+
+</style>
+
+<body>
+
+
+<script>
+
+	// Create the measurement node
+	var scrollDiv = document.createElement("div");
+	scrollDiv.className = "scrollbar-measure";
+	document.body.appendChild(scrollDiv);
+
+	// Get the scrollbar width
+	var scrollbarWidth = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+
+	console.log(scrollbarWidth); // Mac:  15
+
+	scrollDiv.style.right = - scrollbarWidth + 'px';
+	scrollDiv.classList.add('no-scroll');
+
+</script>
+
+</body>
+
+</html>

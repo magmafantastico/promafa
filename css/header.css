@@ -1,3 +1,4 @@
+
 /* Header */
 
 .Header {
@@ -10,39 +11,4 @@
 	justify-content: space-between;
 	-webkit-flex-direction: column;
 	flex-direction: column;
-}
-
-.is-landscape .Header {
-	float: left;
-	height: 100vh;
-	position: fixed;
-	width: 14em;
-}
-
-.is-portrait .Header {
-	margin-bottom: 1.5em;
-}
-
-@media (min-width: 48em) {
-
-	.is-landscape .Header {
-		width: 16em;
-	}
-
-}
-
-@media (min-width: 72em) {
-
-	.is-landscape .Header {
-		width: 18em;
-	}
-
-}
-
-@media (min-width: 96em) {
-
-	.is-landscape .Header {
-		width: 24em;
-	}
-
 }

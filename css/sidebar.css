@@ -1,0 +1,113 @@
+
+/* Sidebar */
+
+.Sidebar {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+}
+
+.is-landscape .Sidebar {
+	float: left;
+	height: 100vh;
+	position: fixed;
+	width: 14em;
+}
+
+.is-portrait .Sidebar {
+	margin-bottom: 1.5em;
+}
+
+/* Sidebar has border state */
+.Sidebar .has-border {
+	border-color: #b71c1c;
+	border-width: 1px;
+}
+
+/* Sidebar background */
+
+.Sidebar-background {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+/* Sidebar container */
+
+.Sidebar-container {
+	flex: 1;
+	width: 100%;
+}
+
+/* Sidebar header */
+
+.Sidebar-header {
+	padding: 2.25em 0;
+}
+
+/* Sidebar inner */
+
+.Sidebar-inner {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+	height: 100%;
+	left: 0;
+	position: relative;
+	padding: 0 2.25em;
+	top: 0;
+	width: 100%;
+}
+
+/* Sidebar nav */
+
+.Sidebar-nav {
+}
+
+/* Sidebar footer */
+
+.Sidebar-footer {
+	border-right-style: solid;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	height: 100%;
+}
+
+/* Sidebar media width */
+
+@media (min-width: 48em) {
+
+	.is-landscape .Sidebar {
+		width: 16em;
+	}
+
+}
+
+@media (min-width: 72em) {
+
+	.is-landscape .Sidebar {
+		width: 18em;
+	}
+
+}
+
+@media (min-width: 96em) {
+
+	.is-landscape .Sidebar {
+		width: 18em;
+	}
+
+}

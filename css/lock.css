@@ -1,7 +1,7 @@
 .Lock {
 	display: none;
 	padding: 0 2.25em 1em;
-	text-align: right;
+	text-align: left;
 }
 
 .is-landscape .Lock {
@@ -24,7 +24,7 @@
 @media (min-width: 48em) {
 
 	.Lock {
-		padding: .125em;
+		padding: 0;
 	}
 
 }
@@ -32,7 +32,7 @@
 @media (min-width: 60em) {
 
 	.Lock {
-		padding: 1.3125em;
+		padding: 0;
 	}
 
 }
@@ -40,7 +40,7 @@
 @media (min-width: 72em) {
 
 	.Lock {
-		padding: 1.5em;
+		padding: 0;
 	}
 
 }
@@ -48,7 +48,7 @@
 @media (min-width: 96em) {
 
 	.Lock {
-		padding: 2.25em;
+		padding: 0;
 	}
 
 }
