@@ -1,0 +1,51 @@
+
+/* Footer */
+
+.Footer {
+	position: relative;
+}
+
+.Footer-background {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.Footer-inner {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+	height: 100%;
+	position: relative;
+	padding-left: .5em;
+	margin-top: 3em;
+	width: 100%;
+}
+
+.Footer-about {
+	position: relative;
+	display: block;
+	padding: 1em 0;
+	margin-top: 1em;
+}
+
+.Footer-about::before {
+	border-top: solid 1px #b71c1c;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3em;
+}
+
+.Footer-about p {
+	color: #424242;
+	font-size: .875em;
+	font-weight: 300;
+}

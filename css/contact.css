@@ -5,11 +5,22 @@
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: -webkit-flex;
-	-webkit-flex-wrap: wrap;
-	-ms-flex-wrap: wrap;
-	flex-wrap: wrap;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+}
+
+/* Contact methods */
+
+.Contact-methods {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
 	display: flex;
 }
+
+/* Contact Info and Form */
 
 .ContactInfo,
 .ContactForm {

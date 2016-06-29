@@ -29,230 +29,6 @@
 
 </div>
 
-<!-- Contact Modal -->
-<div id="modal-contact" class="Modal Modal--promafa ModalBackDrop">
-
-	<div class="ModalInner">
-
-		<div class="ModalHeader flex justify-end">
-
-			<a class="ModalClose">
-
-				<span class="text">voltar</span>
-
-				<span class="icon icon-cancel"></span>
-
-			</a>
-
-		</div>
-
-		<div class="ModalBody Contact flex justify-between align-center">
-
-			<section class="ContactInfo flex flex-column">
-
-				<div class="Contact-title">
-					<h1>Nossos contatos</h1>
-				</div>
-
-				<div class="ContactInfoList">
-
-					<section class="Info">
-
-						<header class="InfoHeader">
-
-							<span class="icon icon-phone"></span>
-
-							<span>Telefone</span>
-
-						</header>
-
-						<ul class="InfoList">
-
-							<li class="InfoItem">
-
-								<span>18 3351 1457</span>
-
-							</li>
-
-							<li class="InfoItem">
-
-								<span>18 3351 1491</span>
-
-							</li>
-
-						</ul>
-
-					</section>
-
-					<section class="Info">
-
-						<header class="InfoHeader">
-
-							<span class="icon icon-fax"></span>
-
-							<span>Fax</span>
-
-						</header>
-
-						<ul class="InfoList">
-
-							<li class="InfoItem">
-
-								<span>18 3351 5576</span>
-
-							</li>
-
-						</ul>
-
-					</section>
-
-					<section class="Info">
-
-						<header class="InfoHeader">
-
-							<span class="icon icon-mail"></span>
-
-							<span>E-mail</span>
-
-						</header>
-
-						<ul class="InfoList">
-
-							<li class="InfoItem">
-
-								<span>promafa@promafa.com.br</span>
-
-							</li>
-
-						</ul>
-
-					</section>
-
-				</div>
-
-			</section>
-
-			<section id="contact-form" class="ContactForm flex flex-column">
-
-				<div class="Contact-title">
-					<h1>Entre em contato conosco</h1>
-				</div>
-
-				<div class="ContactForm-wrapper ContactForm-wrapper--personal-info flex flex-column">
-
-					<div class="ContactForm-field ContactForm-field--name">
-						<input class="name-text" type="text" size="26" name="tNome" id="cNome" maxlength="50"
-						       placeholder="Nome"
-						       title="Ops, o campo nome deve ser preenchido corretamente :)"
-						       x-moz-errormessage="Ops, o campo nome deve ser preenchido corretamente :)"/>
-						<label class="name" for="cNome">Nome</label>
-					</div>
-
-					<div class="ContactForm-field ContactForm-field--email">
-						<input class="email-text" type="text" size="26" name="tEmail" id="cPhone" maxlength="60"
-						       placeholder="Telefone"
-						       title="Ops, o campo email deve ser preenchido corretamente :)"
-						       x-moz-errormessage="Ops, o campo email deve ser preenchido corretamente :)"/>
-						<label class="phone" for="cPhone">Email</label>
-					</div>
-
-					<div class="ContactForm-field ContactForm-field--email">
-						<input class="email-text" type="email" size="26" name="tEmail" id="cEmail" maxlength="60"
-						       placeholder="E-mail"
-						       title="Ops, o campo email deve ser preenchido corretamente :)"
-						       x-moz-errormessage="Ops, o campo email deve ser preenchido corretamente :)"/>
-						<label class="email" for="cEmail">Email</label>
-					</div>
-
-				</div>
-
-				<div class="ContactForm-wrapper ContactForm-wrapper--personal-info flex flex-column">
-
-					<div class="ContactForm-field ContactForm-field--message">
-					<textarea class="lato" name="tMensagem" id="cMensagem" cols="36"
-					          placeholder="Digite a sua mensagem"
-					          title="Ops, o campo mensagem deve ser preenchido corretamente :)"
-					          x-moz-errormessage="Ops, o campo mensagem deve ser preenchido corretamente :)"></textarea>
-						<label class="text-message" for="cMensagem">Mensagem</label>
-					</div>
-
-					<div class="ContactForm-field ContactForm-field--submit flex align-end">
-						<input id="cSubmit" class="ContactForm-submit" name="ir" type="submit" value="Enviar"/>
-					</div>
-
-				</div>
-
-			</section>
-
-		</div>
-
-		<div class="ModalFooter"></div>
-
-	</div>
-
-</div>
-
-<!-- Local Modal -->
-<div id="modal-local" class="Modal Modal--promafa ModalBackDrop">
-
-	<div class="ModalInner">
-
-		<div class="ModalHeader flex justify-end">
-
-			<a class="ModalClose">
-
-				<span class="text">voltar</span>
-
-				<span class="icon icon-cancel"></span>
-
-			</a>
-
-		</div>
-
-		<div class="ModalBody Local flex flex-column justify-center align-center font-deep-orange-900">
-
-			<h1>Nossa Localização</h1>
-
-			<section class="Info">
-
-				<header class="InfoHeader">
-
-					<span class="icon icon-map"></span>
-
-					<span>Endereço</span>
-
-				</header>
-
-				<ul class="InfoList">
-
-					<li class="InfoItem">
-
-						<span>R. São Paulo, 43, Palmital - SP, 19970-000, Brasil</span>
-
-					</li>
-
-				</ul>
-
-			</section>
-
-			<div id="local-map" class="LocalMap red"></div>
-
-			<a href="https://maps.google.com/?daddr=Promafa+-+Produtos+de+Mandioca+Fadel+LTDA" class="btn ghost font-red-900 border-red-900 h-red-900 hfont-white">
-
-				<span class="icon icon-direction"></span>
-
-				<span>Como Chegar</span>
-
-			</a>
-
-		</div>
-
-		<div class="ModalFooter"></div>
-
-	</div>
-
-</div>
-
 <aside class="Sidebar">
 
 	<div class="Sidebar-background"></div>
@@ -311,7 +87,7 @@
 
 				<li class="MenuItem">
 
-					<a href="#local" id="local-trigger" class="MenuItem-select-area">
+					<a href="#local" class="MenuItem-select-area">
 
 						<span>Localização</span>
 
@@ -321,7 +97,7 @@
 
 				<li class="MenuItem">
 
-					<a href="#contact" class="MenuItem-select-area" onclick="promafa.modalContact.triggerCtrl();">
+					<a href="#contact" class="MenuItem-select-area">
 
 						<span>Contato</span>
 
@@ -333,14 +109,77 @@
 
 		</nav>
 
-		<footer class="Footer Sidebar-footer has-border"></footer>
+		<footer class="Footer Sidebar-footer has-border">
+
+			<div class="Footer-background"></div>
+
+			<div class="Footer-inner">
+
+				<div class="Certificate" style="display: none">
+
+					<div class="CertificateHeader">
+
+						<img class="Certificate-img" src="dist/img/sgs_iso_9001_tpl.png" alt="Empresa certificada ISO 9001 pela SGS"/>
+
+					</div>
+
+					<div class="CertificateBody">
+
+						<p>
+							Empresa certificada
+							<br/>iso 9001:2008
+						</p>
+
+					</div>
+
+				</div>
+
+				<ul class="Social Footer-social">
+
+					<li class="SocialItem">
+
+						<a href="https://www.facebook.com/promafa/" class="SocialItem-select-area">
+
+							<span class="SocialItem-icon icon-facebook"></span>
+
+						</a>
+
+					</li>
+
+					<li class="SocialItem">
+
+						<a href="https://www.instagram.com/promafa/" class="SocialItem-select-area">
+
+							<span class="SocialItem-icon icon-instagram"></span>
+
+						</a>
+
+					</li>
+
+				</ul>
+
+				<div class="Footer-about">
+
+					<p>© Promafa 2016<br/> Todos direitos reservados</p>
+
+				</div>
+
+				<a href="http://promafa.com.br/webmail" class="Lock">
+
+					<span class="icon-lock"></span>
+
+				</a>
+
+			</div>
+
+		</footer>
 
 	</div>
 
 </aside>
 
 <!-- Main -->
-<main id="main" class="Main roboto">
+<main id="main" class="Main roboto font-red-900">
 
 	<section id="hero-gallery" class="HeroGallery Block--hero roboto-condensed">
 
@@ -434,7 +273,7 @@
 	</section>
 
 	<!-- Institutional -->
-	<article id="institutional" class="Institutional Article Block Block--institutional  font-red-900">
+	<article id="institutional" class="Institutional Article Block Block--institutional ">
 
 		<h2>Institucional</h2>
 
@@ -453,15 +292,15 @@
 	</article>
 
 	<!-- Products -->
-	<article id="products" class="Block Block--products Products">
+	<article id="products" class="Article Block Block--products Products">
+
+		<h2>Produtos</h2>
 
 		<section id="products-swipe" class="Swipe Swipe--products">
 
 			<section id="main-swipe" class="SwipeFrame SwipeFrame--main flex flex-column justify-center">
 
 				<header class="ProductsHeader flex flex-column align-center font-red-900">
-
-					<h2>Produtos</h2>
 
 					<p>
 						A PROMAFA produz derivados de mandioca como: <br/>
@@ -552,6 +391,188 @@
 
 	</article>
 
+	<!-- Local -->
+	<article class="Local Article Block">
+
+		<h2>Localização</h2>
+
+		<div class="Local-inner">
+
+			<section class="Info">
+
+				<header class="InfoHeader">
+
+					<span class="icon icon-map"></span>
+
+					<span>Endereço</span>
+
+				</header>
+
+				<ul class="InfoList">
+
+					<li class="InfoItem">
+
+						<span>R. São Paulo, 43, Palmital - SP, 19970-000, Brasil</span>
+
+					</li>
+
+				</ul>
+
+			</section>
+
+			<div id="local-map" class="LocalMap red"></div>
+
+			<a href="https://maps.google.com/?daddr=Promafa+-+Produtos+de+Mandioca+Fadel+LTDA" class="btn ghost font-red-900 border-red-900 h-red-900 hfont-white">
+
+				<span class="icon icon-direction"></span>
+
+				<span>Como Chegar</span>
+
+			</a>
+
+		</div>
+
+	</article>
+
+	<!-- Contact -->
+	<article class="Contact Article Block">
+
+		<h2>Contato</h2>
+
+		<div class="Contact-methods">
+
+			<section class="ContactInfo flex flex-column">
+
+				<div class="ContactInfoList">
+
+					<section class="Info">
+
+						<header class="InfoHeader">
+
+							<span class="icon icon-phone"></span>
+
+							<span>Telefone</span>
+
+						</header>
+
+						<ul class="InfoList">
+
+							<li class="InfoItem">
+
+								<span>18 3351 1457</span>
+
+							</li>
+
+							<li class="InfoItem">
+
+								<span>18 3351 1491</span>
+
+							</li>
+
+						</ul>
+
+					</section>
+
+					<section class="Info">
+
+						<header class="InfoHeader">
+
+							<span class="icon icon-fax"></span>
+
+							<span>Fax</span>
+
+						</header>
+
+						<ul class="InfoList">
+
+							<li class="InfoItem">
+
+								<span>18 3351 5576</span>
+
+							</li>
+
+						</ul>
+
+					</section>
+
+					<section class="Info">
+
+						<header class="InfoHeader">
+
+							<span class="icon icon-mail"></span>
+
+							<span>E-mail</span>
+
+						</header>
+
+						<ul class="InfoList">
+
+							<li class="InfoItem">
+
+								<span>promafa@promafa.com.br</span>
+
+							</li>
+
+						</ul>
+
+					</section>
+
+				</div>
+
+			</section>
+
+			<section id="contact-form" class="ContactForm flex flex-column">
+
+				<div class="ContactForm-wrapper ContactForm-wrapper--personal-info flex flex-column">
+
+					<div class="ContactForm-field ContactForm-field--name">
+						<input class="name-text" type="text" size="26" name="tNome" id="cNome" maxlength="50"
+						       placeholder="Nome"
+						       title="Ops, o campo nome deve ser preenchido corretamente :)"
+						       x-moz-errormessage="Ops, o campo nome deve ser preenchido corretamente :)"/>
+						<label class="name" for="cNome">Nome</label>
+					</div>
+
+					<div class="ContactForm-field ContactForm-field--email">
+						<input class="email-text" type="text" size="26" name="tEmail" id="cPhone" maxlength="60"
+						       placeholder="Telefone"
+						       title="Ops, o campo email deve ser preenchido corretamente :)"
+						       x-moz-errormessage="Ops, o campo email deve ser preenchido corretamente :)"/>
+						<label class="phone" for="cPhone">Email</label>
+					</div>
+
+					<div class="ContactForm-field ContactForm-field--email">
+						<input class="email-text" type="email" size="26" name="tEmail" id="cEmail" maxlength="60"
+						       placeholder="E-mail"
+						       title="Ops, o campo email deve ser preenchido corretamente :)"
+						       x-moz-errormessage="Ops, o campo email deve ser preenchido corretamente :)"/>
+						<label class="email" for="cEmail">Email</label>
+					</div>
+
+				</div>
+
+				<div class="ContactForm-wrapper ContactForm-wrapper--personal-info flex flex-column">
+
+					<div class="ContactForm-field ContactForm-field--message">
+					<textarea class="lato" name="tMensagem" id="cMensagem" cols="36"
+					          placeholder="Digite a sua mensagem"
+					          title="Ops, o campo mensagem deve ser preenchido corretamente :)"
+					          x-moz-errormessage="Ops, o campo mensagem deve ser preenchido corretamente :)"></textarea>
+						<label class="text-message" for="cMensagem">Mensagem</label>
+					</div>
+
+					<div class="ContactForm-field ContactForm-field--submit flex align-end">
+						<input id="cSubmit" class="ContactForm-submit" name="ir" type="submit" value="Enviar"/>
+					</div>
+
+				</div>
+
+			</section>
+
+		</div>
+
+	</article>
+
 </main>
 
 <script src="dist/js/jquery-2.1.4.min.js"></script>
@@ -613,10 +634,6 @@
 				url: 'raiz-do-brasil/'
 			});
 
-			// Modal instance
-			this.modalContact = new Modal(document.getElementById('modal-contact'));
-			this.modalLocal = new Modal(document.getElementById('modal-local'));
-
 			// Contact Form
 			this.contactForm = new Contact(document.getElementById('contact-form'), {
 				url: 'i/mail/'
@@ -646,16 +663,11 @@
 
 			this.nextRaiz.init();
 
-			this.modalContact.init();
-			this.modalLocal.init();
-
 			this.contactForm.init();
 
 			this.local.init();
 
 			this.heroGallery.init();
-
-//			this.productsSwipe.init(productsThings);
 
 		};
 

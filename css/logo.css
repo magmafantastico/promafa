@@ -53,3 +53,13 @@
 .Logo--header #PromafaLogoTypo {
 	fill: #000000;
 }
+
+@media (min-width: 72em) {
+
+	/* Logo inner */
+
+	.Logo--header .Logo-inner {
+		width: 9em;
+	}
+
+}

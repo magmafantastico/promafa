@@ -31,7 +31,7 @@
 }
 
 .SocialItem {
-	padding: 0 .5em 0 0;
+	padding-right: .5em;
 }
 
 .SocialItem-select-area {
@@ -42,11 +42,11 @@
 }
 
 .SocialItem-icon:before {
-	-webkit-transform: scale(.8);
-	-moz-transform: scale(.8);
-	-ms-transform: scale(.8);
-	-o-transform: scale(.8);
-	transform: scale(.8);
+	-webkit-transform: scale(.9);
+	-moz-transform: scale(.9);
+	-ms-transform: scale(.9);
+	-o-transform: scale(.9);
+	transform: scale(.9);
 	-webkit-transition: transform .3s;
 	-moz-transition: transform .3s;
 	-ms-transition: transform .3s;
@@ -59,11 +59,11 @@
 }
 
 .SocialItem-select-area:hover .SocialItem-icon:before {
-	-webkit-transform: scale(1);
-	-moz-transform: scale(1);
-	-ms-transform: scale(1);
-	-o-transform: scale(1);
-	transform: scale(1);
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	transform: scale(1.1);
 }
 
 @media (max-height: 24em) {

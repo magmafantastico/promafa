@@ -3,14 +3,11 @@
 .Block {
 	display: block;
 	min-height: 100vh;
+	padding: 1em 1em;
 }
 
 .Block--hero {
 	display: block;
-}
-
-.Block--institutional {
-	padding: 1em 1em;
 }
 
 .Block--products {
@@ -20,7 +17,7 @@
 
 @media (min-width: 48em) {
 
-	.Block--institutional {
+	.Block {
 		padding: 2.25em 1.5em;
 	}
 
@@ -28,7 +25,7 @@
 
 @media (min-width: 60em) {
 
-	.Block--institutional {
+	.Block {
 		padding: 3.75em 2.25em;
 	}
 
@@ -36,7 +33,7 @@
 
 @media (min-width: 96em) {
 
-	.Block--institutional {
+	.Block {
 		padding: 4.5em;
 	}
 
