@@ -18,13 +18,14 @@
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
 }
 
 /* Contact Info and Form */
 
 .ContactInfo,
 .ContactForm {
-	height: 100%;
 	width: 100%;
 	min-width: 21em;
 	overflow-y: auto;
@@ -39,17 +40,13 @@
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
-	-webkit-flex-direction: column;
-	-ms-flex-direction: column;
-	flex-direction: column;
-	-webkit-align-items: center;
-	align-items: center;
+	-webkit-flex-flow: column;
+	flex-flow: column;
 }
 
 /* Contact Form */
 
 .ContactForm {
-	padding: 2.25em 0 0;
 	border-top: dashed 2px #ef9a9a;
 }
 
@@ -84,7 +81,6 @@
 }
 
 .ContactForm-wrapper {
-	padding: 0 1em;
 	width: 100%;
 }
 
@@ -217,7 +213,6 @@
 @media (min-width: 36em) {
 
 	.ContactForm-wrapper {
-		padding: 0 2.25em;
 		width: 100%;
 	}
 
@@ -231,8 +226,6 @@
 	}
 
 	.ContactForm {
-		border-left: dashed 2px #ef9a9a;
-		padding: 0 2.25em;
 		border-top: none;
 	}
 
@@ -240,24 +233,12 @@
 
 @media (min-width: 72em) {
 
-	.ContactForm {
-		padding: 0 4.5em;
-	}
-
 	.ContactForm-field textarea {
 		font-size: 1em;
 		line-height: 1.5;
 		min-height: 6em;
 		min-width: 100%;
 		padding: .5em 0;
-	}
-
-}
-
-@media (min-width: 96em) {
-
-	.ContactForm {
-		padding: 0 6em;
 	}
 
 }
