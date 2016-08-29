@@ -57,7 +57,7 @@
 
 				<li class="MenuItem is-active">
 
-					<a href="#home" id="home-anchor" class="MenuItem-select-area hfont-red-a700" data-target="institutional">
+					<a href="#home" id="home-anchor" class="MenuItem-select-area hfont-red-a700" data-target="home">
 
 						<span>Início</span>
 
@@ -87,7 +87,7 @@
 
 				<li class="MenuItem">
 
-					<a href="#local" class="MenuItem-select-area">
+					<a href="#local" id="local-anchor" class="MenuItem-select-area" data-target="contact">
 
 						<span>Localização</span>
 
@@ -97,7 +97,7 @@
 
 				<li class="MenuItem">
 
-					<a href="#contact" class="MenuItem-select-area">
+					<a href="#contact" id="contact-anchor" class="MenuItem-select-area" data-target="contact">
 
 						<span>Contato</span>
 
@@ -180,6 +180,8 @@
 
 <!-- Main -->
 <main id="main" class="Main roboto font-red-900">
+
+	<div id="home"></div>
 
 	<section id="hero-gallery" class="HeroGallery Block--hero roboto-condensed">
 
@@ -283,11 +285,15 @@
 
 		<p>Atualmente a empresa produz derivados de mandioca como: fécula, farinha de raspa, polvilho doce, polvilho azedo e tapioca hidratada. A Promafa cresceu de forma consistente e seu crescimento foi baseado sempre na qualidade de seu produto e no atendimento primordial ao cliente.</p>
 
+		<img src="dist/img/esteira3.jpg" alt="Esteira"/>
+
 		<p>Trabalhos que preservem a segurança e saúde dos seus funcionários e a preservação do meio ambiente serão considerados prioritários e terão o respaldo da diretoria.</p>
 
 		<p>A preservação do meio ambiente será ponto estratégico do nosso negócio, na busca constante do melhoramento contínuo dos processos.</p>
 
-		<p>Para atender a esta política, delega a cada funcionário individualmente, o comprometimento pessoal, encorajando e facilitando a autoconfiança, simplicidade e agilidade em cada tarefa executada.</p>
+		<img src="dist/img/caminhao2.jpg" alt="Caminhão"/>
+
+		<p>Para atender a esta política, delega a cada funcionário individualmente, o compro<wbr/>metimento pessoal, encorajando e facilitando a autoconfiança, simplicidade e agilidade em cada tarefa executada.</p>
 
 	</article>
 
@@ -311,7 +317,7 @@
 
 				<ul class="ProductList flex font-red-900 flex-wrap flex-row child-flex justify-around child-justify-start child-align-center">
 
-					<li class="Product flex-column grey-50 border-red-900">
+					<!--<li class="Product flex-column grey-50 border-red-900">
 
 						<header class="ProductHeader flex justify-center align-center">
 
@@ -339,7 +345,7 @@
 
 						</footer>
 
-					</li>
+					</li>-->
 
 					<li class="Product flex-column grey-50 border-red-900">
 
@@ -392,7 +398,7 @@
 	</article>
 
 	<!-- Local -->
-	<article class="Local Article Block">
+	<article id="local" class="Local Article Block">
 
 		<h2>Localização</h2>
 
@@ -435,7 +441,7 @@
 	</article>
 
 	<!-- Contact -->
-	<article class="Contact Article Block">
+	<article id="contact" class="Contact Article Block">
 
 		<h2>Contato</h2>
 
@@ -614,6 +620,12 @@
 			// Nav instance
 			this.nav = new Nav([
 				{
+					menuItem: document.getElementById('home-anchor'),
+					scrollTarget: document.getElementById('home'),
+					activeClass: activeClass,
+					after: this.toggle.close
+				},
+				{
 					menuItem: document.getElementById('institutional-anchor'),
 					scrollTarget: document.getElementById('institutional'),
 					activeClass: activeClass,
@@ -624,6 +636,18 @@
 					scrollTarget: document.getElementById('products'),
 					activeClass: activeClass,
 					after: this.toggle.close
+				},
+				{
+					menuItem: document.getElementById('local-anchor'),
+					scrollTarget: document.getElementById('local'),
+					activeClass: activeClass,
+					after: this.toggle.close
+				},
+				{
+					menuItem: document.getElementById('contact-anchor'),
+					scrollTarget: document.getElementById('contact'),
+					activeClass: activeClass,
+					after: this.toggle.close
 				}
 			], document.documentElement);
 
@@ -631,7 +655,7 @@
 
 			// Raiz do Brasil Next instance
 			this.nextRaiz = new Next(document.getElementById('next-raiz'), document.getElementById('next-frame'), {
-				url: 'raiz-do-brasil/'
+				url: 'https://raizdobrasil.com.br/'
 			});
 
 			// Contact Form
@@ -657,6 +681,8 @@
 
 		Promafa.prototype.init = function() {
 
+			var self = this;
+
 			this.nav.init();
 
 			this.toggle.init();
@@ -668,6 +694,18 @@
 			this.local.init();
 
 			this.heroGallery.init();
+
+			this.mapLocal.init();
+
+			setTimeout(function () {
+
+				try {
+
+					self.mapLocal.initMap();
+
+				} catch (e) { }
+
+			}, 2000);
 
 		};
 

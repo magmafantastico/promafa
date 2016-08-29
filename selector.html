@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<meta charset="UTF-8">
+<title></title>
+<meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+<script src="dist/js/villa.min.js"></script>
+<link rel="stylesheet" href="dist/css/villa.min.css"/>
+<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="dist/css/material-colors.css"/>
+<link rel="stylesheet" type="text/css" href="dist/css/villa-cross.min.css"/>
+<script src="dist/js/html5shiv.js"></script>
+<script src="dist/js/html5shiv-printshiv.js"></script>
+<script src="dist/js/classList.min.js"></script>
+<![endif]-->
+
+<style>
+
+	[data-image] {
+		background-color: red !important;
+	}
+
+	/* Pai */
+
+	.Pai {
+		display: block;
+	}
+
+	/* Filho */
+
+	.Filho {
+		height: 20px;
+	}
+
+	.Pai .Filho {
+		height: 50px;
+	}
+
+	.Pai > .Filho {
+		height: 200px;
+	}
+
+	.Pai ~ .Filho {
+		height: 1000px;
+	}
+
+	.Pai + .Filho {
+		height: 600px;
+	}
+
+	.Pai.Filho {
+		border: solid 4px black;
+	}
+
+	[data-image].Filho {
+		height: 200px;
+	}
+
+	/* Neto */
+
+	.Neto {
+		height: 60px;
+	}
+
+	.Pai.Filho .Neto {
+		border: solid 8px green;
+	}
+
+</style>
+
+<body>
+
+<div class="Filho teal"></div>
+
+<div class="Pai blue">
+
+	<div class="Neto orange"></div>
+
+	<div class="Pai Filho red">
+
+		<div class="Filho blue"></div>
+
+	</div>
+
+	<div class="Pai Filho red-400">
+
+	</div>
+
+	<div class="Pai Filho red-300">
+
+		<div class="Neto orange"></div>
+
+	</div>
+
+	<div class="a">
+
+		<div class="Pai Filho green" data-image="none">
+
+			<div class="Neto orange"></div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<div class="Filho black"></div>
+<div class="Filho yellow"></div>
+
+</body>
+
+</html>

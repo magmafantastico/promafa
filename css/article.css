@@ -18,10 +18,18 @@
 
 .Article p {
 	font-size: 1.125em;
+	hyphens: auto;
 	margin-bottom: 1em;
 	line-height: 1.48;
 	font-weight: 400;
 	text-align: justify;
+}
+
+/* Article img */
+
+.Article img {
+	width: 100%;
+	margin-bottom: 1em;
 }
 
 @media (min-width: 48em) {
@@ -42,10 +50,16 @@
 
 @media (min-width: 60em) {
 
+	/* Article img */
+
+	.Article img {
+		max-width: 48rem;
+	}
+
 	/* Article p */
 
 	.Article p {
-		max-width: 36em;
+		max-width: 48rem;
 		width: 100%;
 	}
 
